@@ -56,6 +56,10 @@ class BeerListViewController: BaseTableViewController {
     self.tableView.reloadData()
   }
   
+  override var preferredStatusBarStyle: UIStatusBarStyle {
+    return CurrentFest.preferredStatusBarStyle
+  }
+  
   private func setupNavBar() {
     if self.listType == .fullList {
       self.navigationItem.title = "\(CurrentFest.displayString) Beerfest"

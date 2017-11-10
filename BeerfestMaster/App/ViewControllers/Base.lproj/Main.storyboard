@@ -13,8 +13,7 @@
         <!--Beerfest Nav Scene-->
         <scene sceneID="O6H-Ur-ni0">
             <objects>
-                <placeholder placeholderIdentifier="IBFirstResponder" id="kNZ-BJ-NyP" userLabel="First Responder" sceneMemberID="firstResponder"/>
-                <navigationController title="Beerfest Nav Scene" id="amo-nj-jdP" sceneMemberID="viewController">
+                <navigationController title="Beerfest Nav Scene" id="amo-nj-jdP" customClass="BaseNavigationController" customModule="BeerfestMaster" customModuleProvider="target" sceneMemberID="viewController">
                     <tabBarItem key="tabBarItem" title="Beer List" image="BeerTab" id="ZwD-xu-PFO"/>
                     <navigationBar key="navigationBar" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" id="nt6-YF-L3Z">
                         <rect key="frame" x="0.0" y="20" width="375" height="44"/>
@@ -24,6 +23,7 @@
                         <segue destination="7z1-Pi-NhV" kind="relationship" relationship="rootViewController" id="oA8-QA-JcU"/>
                     </connections>
                 </navigationController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="kNZ-BJ-NyP" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="233" y="766"/>
         </scene>
@@ -295,7 +295,7 @@
         <!--Tasted Nav Scene-->
         <scene sceneID="p0P-rC-EI0">
             <objects>
-                <navigationController title="Tasted Nav Scene" id="pbN-IG-1EV" sceneMemberID="viewController">
+                <navigationController title="Tasted Nav Scene" id="pbN-IG-1EV" customClass="BaseNavigationController" customModule="BeerfestMaster" customModuleProvider="target" sceneMemberID="viewController">
                     <tabBarItem key="tabBarItem" title="Tasted" image="TastedTab" id="JQ9-du-1VG"/>
                     <navigationBar key="navigationBar" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" id="7v4-5F-zZx">
                         <rect key="frame" x="0.0" y="20" width="375" height="44"/>
@@ -437,7 +437,7 @@
         <!--Favorite Nav Scene-->
         <scene sceneID="Yjj-cO-g3V">
             <objects>
-                <navigationController title="Favorite Nav Scene" id="chm-Ce-3rs" sceneMemberID="viewController">
+                <navigationController title="Favorite Nav Scene" id="chm-Ce-3rs" customClass="BaseNavigationController" customModule="BeerfestMaster" customModuleProvider="target" sceneMemberID="viewController">
                     <tabBarItem key="tabBarItem" title="Favorites" image="FavoriteTab" id="82z-7f-Tr8"/>
                     <navigationBar key="navigationBar" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" id="1EH-8Z-eSN">
                         <rect key="frame" x="0.0" y="20" width="375" height="44"/>
@@ -454,7 +454,7 @@
         <!--Map-->
         <scene sceneID="aHZ-xe-aHb">
             <objects>
-                <navigationController title="Map" id="56M-k0-lG8" sceneMemberID="viewController">
+                <navigationController title="Map" id="56M-k0-lG8" customClass="BaseNavigationController" customModule="BeerfestMaster" customModuleProvider="target" sceneMemberID="viewController">
                     <tabBarItem key="tabBarItem" title="Map" image="MapTab" id="0N5-lo-Aiv"/>
                     <navigationBar key="navigationBar" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" id="oAW-X3-0ZH">
                         <rect key="frame" x="0.0" y="20" width="375" height="44"/>

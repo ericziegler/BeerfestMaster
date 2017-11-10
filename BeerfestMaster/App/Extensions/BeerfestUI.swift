@@ -15,12 +15,21 @@ func applyApplicationAppearanceProperties() {
   UINavigationBar.appearance().tintColor = UIColor.accent
   UINavigationBar.appearance().barTintColor = UIColor.navBar
   UITabBar.appearance().tintColor = UIColor.accent
-  UITabBarItem.appearance().setTitleTextAttributes([NSAttributedStringKey.font : UIFont.applicationFontOfSize(13.0), NSAttributedStringKey.foregroundColor : UIColor.mediumText], for: .normal)
+  UITabBar.appearance().barTintColor = UIColor.tabBar
+  UITabBarItem.appearance().setTitleTextAttributes([NSAttributedStringKey.font : UIFont.applicationFontOfSize(13.0), NSAttributedStringKey.foregroundColor : UIColor.tabBarNormal], for: .normal)
   UITabBarItem.appearance().setTitleTextAttributes([NSAttributedStringKey.font : UIFont.applicationFontOfSize(13.0), NSAttributedStringKey.foregroundColor : UIColor.accent], for: .selected)
 }
 
 func navTitleTextAttributes() -> [NSAttributedStringKey : Any] {
-  return [NSAttributedStringKey.font : UIFont.applicationBoldFontOfSize(21.0), NSAttributedStringKey.foregroundColor : UIColor.darkText]
+  return [NSAttributedStringKey.font : UIFont.applicationBoldFontOfSize(21.0), NSAttributedStringKey.foregroundColor : UIColor.navBarTitle]
+}
+
+func applyIconColorsFor(tabBar: UITabBar) {
+  if let items = tabBar.items {
+    for curItem in items {
+      curItem.image = curItem.image?.maskedImageWithColor(UIColor.tabBarNormal)?.withRenderingMode(.alwaysOriginal)
+    }
+  }
 }
 
 // MARK: Styled Labels

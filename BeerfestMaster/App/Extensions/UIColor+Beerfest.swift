@@ -26,7 +26,7 @@ extension UIColor {
   }
   
   class var navBar: UIColor {
-    return UIColor(hex: 0xf2f2f2, alpha: 1)
+    return CurrentFest.navBarColor
   }
   
   class var tabBar: UIColor {
@@ -35,6 +35,14 @@ extension UIColor {
   
   class var accent: UIColor {
     return CurrentFest.accentColor
+  }
+  
+  class var navBarTitle: UIColor {
+    return CurrentFest.navBarTitleColor
+  }
+  
+  class var tabBarNormal: UIColor {
+    return CurrentFest.tabBarNormalColor
   }
   
   class var lightText: UIColor {

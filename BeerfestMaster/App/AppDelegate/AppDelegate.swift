@@ -16,6 +16,12 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
 
   func application(_ application: UIApplication, didFinishLaunchingWithOptions launchOptions: [UIApplicationLaunchOptionsKey: Any]?) -> Bool {
     applyApplicationAppearanceProperties()
+    
+    if let tabBarController = self.window?.rootViewController as? UITabBarController {
+      let tabBar = tabBarController.tabBar
+      applyIconColorsFor(tabBar: tabBar)
+    }
+    
     return true
   }
 
