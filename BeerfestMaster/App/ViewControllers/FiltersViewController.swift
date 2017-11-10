@@ -16,9 +16,9 @@ class FiltersViewController: BaseViewController {
   
   // MARK: Properties
   
-  @IBOutlet weak var connoisseurSwitch: UISwitch!
-  @IBOutlet weak var earlyAdmissionSwitch: UISwitch!
-  @IBOutlet weak var quickPourSwitch: UISwitch!
+  @IBOutlet var connoisseurSwitch: UISwitch!
+  @IBOutlet var earlyAdmissionSwitch: UISwitch!
+  @IBOutlet var quickPourSwitch: UISwitch!
   
   // MARK: Init
   

@@ -137,6 +137,28 @@ class BeerListViewController: BaseTableViewController {
     }
   }
   
+  override func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
+    var curBeer: Beer?
+    if (self.listType == .fullList) {
+      let key = AlphabeticalBeerList.shared.sortedKeys[indexPath.section]
+      curBeer = AlphabeticalBeerList.shared.beers[key]![indexPath.row]
+    }
+    else if (self.listType == .tasted) {
+      curBeer = TastedBeerList.shared.beers[indexPath.row]
+    } else {
+      curBeer = FavoriteBeerList.shared.beers[indexPath.row]
+    }
+    
+    if let curBeer = curBeer {
+      let beerController = BeerViewController.createControllerFor(beer: curBeer)
+      self.navigationController?.pushViewController(beerController, animated: true)
+    } else {
+      let alert = UIAlertController(title: "Error Loading Beer", message: "Sorry! We were unable to find information on this beer.", preferredStyle: .alert)
+      alert.addAction(UIAlertAction(title: "OK", style: .default, handler: nil))
+      self.present(alert, animated: true, completion: nil)
+    }
+  }
+  
 }
 
 extension BeerListViewController: BeerCellDelegate {

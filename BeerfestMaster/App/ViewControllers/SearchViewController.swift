@@ -16,10 +16,10 @@ class SearchViewController: BaseViewController {
   
   // MARK: Properties
   
-  @IBOutlet weak var searchIcon: UIImageView!
-  @IBOutlet weak var searchTextField: UITextField!
-  @IBOutlet weak var searchTable: UITableView!
-  @IBOutlet weak var searchTableBottomConstraint: NSLayoutConstraint!
+  @IBOutlet var searchIcon: UIImageView!
+  @IBOutlet var searchTextField: UITextField!
+  @IBOutlet var searchTable: UITableView!
+  @IBOutlet var searchTableBottomConstraint: NSLayoutConstraint!
   
   let searchManager = SearchManager()
   
@@ -160,6 +160,31 @@ extension SearchViewController: UITableViewDataSource, UITableViewDelegate {
     }
     
     return result
+  }
+  
+  func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
+    var curBeer: Beer?
+    
+    if (indexPath.section == 0) {
+      curBeer = self.searchManager.breweries[indexPath.row]
+    }
+    else if (indexPath.section == 1) {
+      curBeer = self.searchManager.beers[indexPath.row]
+    }
+    else if (indexPath.section == 2) {
+      curBeer = self.searchManager.styles[indexPath.row]
+    } else {
+      curBeer = self.searchManager.cities[indexPath.row]
+    }
+    
+    if let curBeer = curBeer {
+      let beerController = BeerViewController.createControllerFor(beer: curBeer)
+      self.navigationController?.pushViewController(beerController, animated: true)
+    } else {
+      let alert = UIAlertController(title: "Error Loading Beer", message: "Sorry! We were unable to find information on this beer.", preferredStyle: .alert)
+      alert.addAction(UIAlertAction(title: "OK", style: .default, handler: nil))
+      self.present(alert, animated: true, completion: nil)
+    }
   }
   
 }
