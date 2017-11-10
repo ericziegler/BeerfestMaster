@@ -1,0 +1,480 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="13196" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="79J-fR-G4b">
+    <device id="retina4_7" orientation="portrait">
+        <adaptation id="fullscreen"/>
+    </device>
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="13173"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <scenes>
+        <!--Beerfest Nav Scene-->
+        <scene sceneID="O6H-Ur-ni0">
+            <objects>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="kNZ-BJ-NyP" userLabel="First Responder" sceneMemberID="firstResponder"/>
+                <navigationController title="Beerfest Nav Scene" id="amo-nj-jdP" sceneMemberID="viewController">
+                    <tabBarItem key="tabBarItem" title="Beer List" image="BeerTab" id="ZwD-xu-PFO"/>
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" id="nt6-YF-L3Z">
+                        <rect key="frame" x="0.0" y="20" width="375" height="44"/>
+                        <autoresizingMask key="autoresizingMask"/>
+                    </navigationBar>
+                    <connections>
+                        <segue destination="7z1-Pi-NhV" kind="relationship" relationship="rootViewController" id="oA8-QA-JcU"/>
+                    </connections>
+                </navigationController>
+            </objects>
+            <point key="canvasLocation" x="233" y="766"/>
+        </scene>
+        <!--Beer!-->
+        <scene sceneID="jpy-zU-Xbb">
+            <objects>
+                <viewController storyboardIdentifier="BeerViewId" title="Beer!" id="Cgf-x4-j3b" customClass="BeerViewController" customModule="BeerfestMaster" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="Hkl-XN-Xbc">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="lUP-Vl-wcw">
+                                <rect key="frame" x="166" y="20" width="42" height="21"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <constraints>
+                            <constraint firstItem="lUP-Vl-wcw" firstAttribute="centerX" secondItem="Hkl-XN-Xbc" secondAttribute="centerX" id="W55-zy-1N2"/>
+                            <constraint firstItem="lUP-Vl-wcw" firstAttribute="top" secondItem="GQc-gR-zR2" secondAttribute="top" id="pVJ-oQ-ps1"/>
+                        </constraints>
+                        <viewLayoutGuide key="safeArea" id="GQc-gR-zR2"/>
+                    </view>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="ZcV-JP-NhM" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1265" y="2195"/>
+        </scene>
+        <!--Beerfest-->
+        <scene sceneID="OS1-Sk-jFN">
+            <objects>
+                <tableViewController storyboardIdentifier="BeerListViewId" title="Beerfest" useStoryboardIdentifierAsRestorationIdentifier="YES" id="7z1-Pi-NhV" customClass="BeerListViewController" customModule="BeerfestMaster" customModuleProvider="target" sceneMemberID="viewController">
+                    <tableView key="view" clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" id="4DL-dl-rA8">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <color key="backgroundColor" white="1" alpha="0.0" colorSpace="calibratedWhite"/>
+                        <prototypes>
+                            <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" selectionStyle="none" indentationWidth="10" reuseIdentifier="BeerCellId" rowHeight="66" id="4XI-Gc-08K" customClass="BeerCell" customModule="BeerfestMaster" customModuleProvider="target">
+                                <rect key="frame" x="0.0" y="28" width="375" height="66"/>
+                                <autoresizingMask key="autoresizingMask"/>
+                                <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="4XI-Gc-08K" id="edN-GD-S2n">
+                                    <rect key="frame" x="0.0" y="0.0" width="375" height="65.5"/>
+                                    <autoresizingMask key="autoresizingMask"/>
+                                    <subviews>
+                                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" horizontalCompressionResistancePriority="751" verticalCompressionResistancePriority="751" text="Brewery" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="1Wn-yd-En7" customClass="RegularLabel" customModule="BeerfestMaster" customModuleProvider="target">
+                                            <rect key="frame" x="8" y="3" width="59.5" height="20"/>
+                                            <constraints>
+                                                <constraint firstAttribute="height" constant="20" id="QxL-wZ-o93"/>
+                                            </constraints>
+                                            <fontDescription key="fontDescription" type="system" pointSize="16"/>
+                                            <nil key="textColor"/>
+                                            <nil key="highlightedColor"/>
+                                        </label>
+                                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Beer" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="slC-kS-XZn" customClass="LightLabel" customModule="BeerfestMaster" customModuleProvider="target">
+                                            <rect key="frame" x="8" y="23" width="268" height="22"/>
+                                            <fontDescription key="fontDescription" type="system" pointSize="13"/>
+                                            <color key="textColor" red="0.26666666666666666" green="0.26666666666666666" blue="0.26666666666666666" alpha="1" colorSpace="calibratedRGB"/>
+                                            <nil key="highlightedColor"/>
+                                        </label>
+                                        <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="vVx-i7-lpY" userLabel="Favorite">
+                                            <rect key="frame" x="331" y="11" width="36" height="42"/>
+                                            <constraints>
+                                                <constraint firstAttribute="width" constant="36" id="AMd-Pw-h5N"/>
+                                            </constraints>
+                                            <state key="normal" title="Button" image="FavoriteOutline"/>
+                                            <connections>
+                                                <action selector="favoriteTapped:" destination="4XI-Gc-08K" eventType="touchUpInside" id="cS6-gO-omJ"/>
+                                            </connections>
+                                        </button>
+                                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Style" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="b17-Uy-epW" customClass="LightLabel" customModule="BeerfestMaster" customModuleProvider="target">
+                                            <rect key="frame" x="8" y="46" width="30.5" height="16"/>
+                                            <fontDescription key="fontDescription" type="system" pointSize="13"/>
+                                            <color key="textColor" red="0.46666666666666667" green="0.46666666666666667" blue="0.46666666666666667" alpha="1" colorSpace="calibratedRGB"/>
+                                            <nil key="highlightedColor"/>
+                                        </label>
+                                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" text="Location" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="MQj-gA-zyH" customClass="LightLabel" customModule="BeerfestMaster" customModuleProvider="target">
+                                            <rect key="frame" x="76" y="7.5" width="200" height="14.5"/>
+                                            <constraints>
+                                                <constraint firstAttribute="height" constant="14.5" id="HfT-67-aKC"/>
+                                            </constraints>
+                                            <fontDescription key="fontDescription" type="system" pointSize="12"/>
+                                            <color key="textColor" red="0.26666666666666666" green="0.26666666666666666" blue="0.26666666666666666" alpha="1" colorSpace="calibratedRGB"/>
+                                            <nil key="highlightedColor"/>
+                                        </label>
+                                        <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="zgo-OJ-VfF" userLabel="Tasted">
+                                            <rect key="frame" x="284" y="11" width="36" height="42"/>
+                                            <constraints>
+                                                <constraint firstAttribute="width" constant="36" id="341-mc-g4j"/>
+                                            </constraints>
+                                            <state key="normal" image="TastedOutline"/>
+                                            <connections>
+                                                <action selector="tastedTapped:" destination="4XI-Gc-08K" eventType="touchUpInside" id="o2H-CQ-oIL"/>
+                                            </connections>
+                                        </button>
+                                    </subviews>
+                                    <constraints>
+                                        <constraint firstItem="slC-kS-XZn" firstAttribute="centerY" secondItem="zgo-OJ-VfF" secondAttribute="centerY" constant="2" id="1Kl-Go-6vo"/>
+                                        <constraint firstItem="b17-Uy-epW" firstAttribute="leading" secondItem="edN-GD-S2n" secondAttribute="leading" constant="8" id="9WE-yW-Fny"/>
+                                        <constraint firstItem="zgo-OJ-VfF" firstAttribute="leading" secondItem="slC-kS-XZn" secondAttribute="trailing" constant="8" id="B63-68-zei"/>
+                                        <constraint firstItem="zgo-OJ-VfF" firstAttribute="top" secondItem="edN-GD-S2n" secondAttribute="top" constant="11" id="FfF-22-PqE"/>
+                                        <constraint firstItem="vVx-i7-lpY" firstAttribute="top" secondItem="edN-GD-S2n" secondAttribute="top" constant="11" id="NpZ-5S-X2w"/>
+                                        <constraint firstItem="1Wn-yd-En7" firstAttribute="leading" secondItem="edN-GD-S2n" secondAttribute="leading" constant="8" id="Q0G-kJ-NmJ"/>
+                                        <constraint firstItem="slC-kS-XZn" firstAttribute="leading" secondItem="edN-GD-S2n" secondAttribute="leading" constant="8" id="QYH-gH-6Aj"/>
+                                        <constraint firstItem="MQj-gA-zyH" firstAttribute="leading" secondItem="1Wn-yd-En7" secondAttribute="trailing" constant="8.5" id="TI7-vI-SbW"/>
+                                        <constraint firstAttribute="bottom" secondItem="vVx-i7-lpY" secondAttribute="bottom" constant="12.5" id="a7l-rf-ORL"/>
+                                        <constraint firstAttribute="bottom" secondItem="zgo-OJ-VfF" secondAttribute="bottom" constant="12.5" id="e4J-Jh-t1Q"/>
+                                        <constraint firstItem="1Wn-yd-En7" firstAttribute="top" secondItem="edN-GD-S2n" secondAttribute="top" constant="3" id="hA4-bg-z2C"/>
+                                        <constraint firstItem="b17-Uy-epW" firstAttribute="top" secondItem="slC-kS-XZn" secondAttribute="bottom" constant="1" id="iuU-F5-BLA"/>
+                                        <constraint firstAttribute="trailing" secondItem="vVx-i7-lpY" secondAttribute="trailing" constant="8" id="nxq-BV-dEh"/>
+                                        <constraint firstItem="slC-kS-XZn" firstAttribute="top" secondItem="1Wn-yd-En7" secondAttribute="bottom" id="o4R-J0-xiV"/>
+                                        <constraint firstItem="zgo-OJ-VfF" firstAttribute="leading" secondItem="MQj-gA-zyH" secondAttribute="trailing" constant="8" id="qFx-Ug-C7x"/>
+                                        <constraint firstItem="vVx-i7-lpY" firstAttribute="leading" secondItem="zgo-OJ-VfF" secondAttribute="trailing" constant="11" id="shE-YL-TF1"/>
+                                        <constraint firstItem="MQj-gA-zyH" firstAttribute="centerY" secondItem="1Wn-yd-En7" secondAttribute="centerY" constant="1.75" id="wYp-bE-S4i"/>
+                                    </constraints>
+                                </tableViewCellContentView>
+                                <color key="backgroundColor" red="0.64313725490196072" green="0.64313725490196072" blue="0.64313725490196072" alpha="0.0" colorSpace="calibratedRGB"/>
+                                <connections>
+                                    <outlet property="breweryLabel" destination="1Wn-yd-En7" id="5HL-09-LLb"/>
+                                    <outlet property="favoriteButton" destination="vVx-i7-lpY" id="hD0-ev-oMt"/>
+                                    <outlet property="locationLabel" destination="MQj-gA-zyH" id="4Kp-e7-dlB"/>
+                                    <outlet property="nameLabel" destination="slC-kS-XZn" id="fFF-vX-t3z"/>
+                                    <outlet property="styleLabel" destination="b17-Uy-epW" id="3YF-P4-GUe"/>
+                                    <outlet property="tastedButton" destination="zgo-OJ-VfF" id="pRr-Y1-vxd"/>
+                                </connections>
+                            </tableViewCell>
+                        </prototypes>
+                        <connections>
+                            <outlet property="dataSource" destination="7z1-Pi-NhV" id="SMh-uy-eXp"/>
+                            <outlet property="delegate" destination="7z1-Pi-NhV" id="BTK-wu-hXa"/>
+                        </connections>
+                    </tableView>
+                    <navigationItem key="navigationItem" title="Beerfest" id="7br-LC-QPF"/>
+                </tableViewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="Rgt-xy-g8a" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="233" y="1489"/>
+        </scene>
+        <!--Tab Bar Controller-->
+        <scene sceneID="uag-rp-kIh">
+            <objects>
+                <tabBarController id="79J-fR-G4b" sceneMemberID="viewController">
+                    <tabBar key="tabBar" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" id="GEU-xt-j9p">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="49"/>
+                        <autoresizingMask key="autoresizingMask"/>
+                        <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
+                    </tabBar>
+                    <connections>
+                        <segue destination="amo-nj-jdP" kind="relationship" relationship="viewControllers" id="sXd-CJ-fiZ"/>
+                        <segue destination="pbN-IG-1EV" kind="relationship" relationship="viewControllers" id="eRj-3L-3qc"/>
+                        <segue destination="chm-Ce-3rs" kind="relationship" relationship="viewControllers" id="trc-fT-cJ5"/>
+                        <segue destination="56M-k0-lG8" kind="relationship" relationship="viewControllers" id="kMj-d1-tCa"/>
+                    </connections>
+                </tabBarController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="sON-21-2wD" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1265" y="-21"/>
+        </scene>
+        <!--Tasted-->
+        <scene sceneID="Z37-yG-JTs">
+            <objects>
+                <tableViewController storyboardIdentifier="TastedListViewId" title="Tasted" useStoryboardIdentifierAsRestorationIdentifier="YES" id="ZcD-jP-qPb" customClass="BeerListViewController" customModule="BeerfestMaster" customModuleProvider="target" sceneMemberID="viewController">
+                    <tableView key="view" clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" id="bYx-Xi-xja">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <color key="backgroundColor" white="1" alpha="0.0" colorSpace="calibratedWhite"/>
+                        <prototypes>
+                            <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" selectionStyle="none" indentationWidth="10" reuseIdentifier="BeerCellId" rowHeight="66" id="dVr-D8-4nZ" customClass="BeerCell" customModule="BeerfestMaster" customModuleProvider="target">
+                                <rect key="frame" x="0.0" y="28" width="375" height="66"/>
+                                <autoresizingMask key="autoresizingMask"/>
+                                <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="dVr-D8-4nZ" id="1sw-vc-jc4">
+                                    <rect key="frame" x="0.0" y="0.0" width="375" height="65.5"/>
+                                    <autoresizingMask key="autoresizingMask"/>
+                                    <subviews>
+                                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" horizontalCompressionResistancePriority="751" verticalCompressionResistancePriority="751" text="Brewery" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="tSX-cw-NzK" customClass="RegularLabel" customModule="BeerfestMaster" customModuleProvider="target">
+                                            <rect key="frame" x="8" y="3" width="59.5" height="20"/>
+                                            <constraints>
+                                                <constraint firstAttribute="height" constant="20" id="5Dm-y7-HoT"/>
+                                            </constraints>
+                                            <fontDescription key="fontDescription" type="system" pointSize="16"/>
+                                            <nil key="textColor"/>
+                                            <nil key="highlightedColor"/>
+                                        </label>
+                                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Beer" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="9OZ-fY-Hbh" customClass="LightLabel" customModule="BeerfestMaster" customModuleProvider="target">
+                                            <rect key="frame" x="8" y="23" width="268" height="22"/>
+                                            <fontDescription key="fontDescription" type="system" pointSize="13"/>
+                                            <color key="textColor" red="0.2666666667" green="0.2666666667" blue="0.2666666667" alpha="1" colorSpace="calibratedRGB"/>
+                                            <nil key="highlightedColor"/>
+                                        </label>
+                                        <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="XpN-hT-2RP" userLabel="Favorite">
+                                            <rect key="frame" x="331" y="11" width="36" height="42"/>
+                                            <constraints>
+                                                <constraint firstAttribute="width" constant="36" id="KfV-KK-aI7"/>
+                                            </constraints>
+                                            <state key="normal" title="Button" image="FavoriteOutline"/>
+                                            <connections>
+                                                <action selector="favoriteTapped:" destination="dVr-D8-4nZ" eventType="touchUpInside" id="fIc-4c-K2L"/>
+                                            </connections>
+                                        </button>
+                                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Style" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="I2y-xz-6DO" customClass="LightLabel" customModule="BeerfestMaster" customModuleProvider="target">
+                                            <rect key="frame" x="8" y="46" width="30.5" height="16"/>
+                                            <fontDescription key="fontDescription" type="system" pointSize="13"/>
+                                            <color key="textColor" red="0.46666666670000001" green="0.46666666670000001" blue="0.46666666670000001" alpha="1" colorSpace="calibratedRGB"/>
+                                            <nil key="highlightedColor"/>
+                                        </label>
+                                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" text="Location" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="zxJ-0Q-wgI" customClass="LightLabel" customModule="BeerfestMaster" customModuleProvider="target">
+                                            <rect key="frame" x="76" y="7.5" width="200" height="14.5"/>
+                                            <constraints>
+                                                <constraint firstAttribute="height" constant="14.5" id="HqE-kI-mm2"/>
+                                            </constraints>
+                                            <fontDescription key="fontDescription" type="system" pointSize="12"/>
+                                            <color key="textColor" red="0.2666666667" green="0.2666666667" blue="0.2666666667" alpha="1" colorSpace="calibratedRGB"/>
+                                            <nil key="highlightedColor"/>
+                                        </label>
+                                        <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="rOI-KZ-Ubp" userLabel="Tasted">
+                                            <rect key="frame" x="284" y="11" width="36" height="42"/>
+                                            <constraints>
+                                                <constraint firstAttribute="width" constant="36" id="g72-0l-dKh"/>
+                                            </constraints>
+                                            <state key="normal" image="TastedOutline"/>
+                                            <connections>
+                                                <action selector="tastedTapped:" destination="dVr-D8-4nZ" eventType="touchUpInside" id="g6v-g1-1cT"/>
+                                            </connections>
+                                        </button>
+                                    </subviews>
+                                    <constraints>
+                                        <constraint firstAttribute="bottom" secondItem="rOI-KZ-Ubp" secondAttribute="bottom" constant="12.5" id="3MV-AD-epT"/>
+                                        <constraint firstItem="rOI-KZ-Ubp" firstAttribute="leading" secondItem="9OZ-fY-Hbh" secondAttribute="trailing" constant="8" id="4uX-Cv-Xja"/>
+                                        <constraint firstItem="rOI-KZ-Ubp" firstAttribute="top" secondItem="1sw-vc-jc4" secondAttribute="top" constant="11" id="E3q-KN-ZDM"/>
+                                        <constraint firstItem="I2y-xz-6DO" firstAttribute="top" secondItem="9OZ-fY-Hbh" secondAttribute="bottom" constant="1" id="J8c-NJ-Oib"/>
+                                        <constraint firstItem="zxJ-0Q-wgI" firstAttribute="leading" secondItem="tSX-cw-NzK" secondAttribute="trailing" constant="8.5" id="KmE-01-f9y"/>
+                                        <constraint firstItem="XpN-hT-2RP" firstAttribute="leading" secondItem="rOI-KZ-Ubp" secondAttribute="trailing" constant="11" id="Mdg-I6-TpS"/>
+                                        <constraint firstItem="XpN-hT-2RP" firstAttribute="top" secondItem="1sw-vc-jc4" secondAttribute="top" constant="11" id="O0w-Wt-jsY"/>
+                                        <constraint firstItem="tSX-cw-NzK" firstAttribute="top" secondItem="1sw-vc-jc4" secondAttribute="top" constant="3" id="SDk-Nu-Vy0"/>
+                                        <constraint firstAttribute="trailing" secondItem="XpN-hT-2RP" secondAttribute="trailing" constant="8" id="Xab-sN-Sf6"/>
+                                        <constraint firstItem="tSX-cw-NzK" firstAttribute="leading" secondItem="1sw-vc-jc4" secondAttribute="leading" constant="8" id="cZd-80-6f3"/>
+                                        <constraint firstAttribute="bottom" secondItem="XpN-hT-2RP" secondAttribute="bottom" constant="12.5" id="hrs-Zq-TAy"/>
+                                        <constraint firstItem="9OZ-fY-Hbh" firstAttribute="centerY" secondItem="rOI-KZ-Ubp" secondAttribute="centerY" constant="2" id="kea-kf-LKn"/>
+                                        <constraint firstItem="I2y-xz-6DO" firstAttribute="leading" secondItem="1sw-vc-jc4" secondAttribute="leading" constant="8" id="lTu-4j-jYp"/>
+                                        <constraint firstItem="9OZ-fY-Hbh" firstAttribute="leading" secondItem="1sw-vc-jc4" secondAttribute="leading" constant="8" id="nno-Ux-o8Q"/>
+                                        <constraint firstItem="rOI-KZ-Ubp" firstAttribute="leading" secondItem="zxJ-0Q-wgI" secondAttribute="trailing" constant="8" id="o8I-sJ-dDJ"/>
+                                        <constraint firstItem="9OZ-fY-Hbh" firstAttribute="top" secondItem="tSX-cw-NzK" secondAttribute="bottom" id="q2K-9a-dZf"/>
+                                        <constraint firstItem="zxJ-0Q-wgI" firstAttribute="centerY" secondItem="tSX-cw-NzK" secondAttribute="centerY" constant="1.75" id="wX1-EM-D9N"/>
+                                    </constraints>
+                                </tableViewCellContentView>
+                                <color key="backgroundColor" red="0.64313725489999995" green="0.64313725489999995" blue="0.64313725489999995" alpha="0.0" colorSpace="calibratedRGB"/>
+                                <connections>
+                                    <outlet property="breweryLabel" destination="tSX-cw-NzK" id="RXV-CV-Ygv"/>
+                                    <outlet property="favoriteButton" destination="XpN-hT-2RP" id="aDz-MH-JmN"/>
+                                    <outlet property="locationLabel" destination="zxJ-0Q-wgI" id="jeD-jE-hzU"/>
+                                    <outlet property="nameLabel" destination="9OZ-fY-Hbh" id="Qra-0r-PZh"/>
+                                    <outlet property="styleLabel" destination="I2y-xz-6DO" id="Njq-u8-g13"/>
+                                    <outlet property="tastedButton" destination="rOI-KZ-Ubp" id="snb-pC-0K1"/>
+                                </connections>
+                            </tableViewCell>
+                        </prototypes>
+                        <connections>
+                            <outlet property="dataSource" destination="ZcD-jP-qPb" id="0eC-LN-xEU"/>
+                            <outlet property="delegate" destination="ZcD-jP-qPb" id="a6U-bU-UWZ"/>
+                        </connections>
+                    </tableView>
+                    <navigationItem key="navigationItem" title="Tasted" id="5wR-1Z-Z3O"/>
+                </tableViewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="xj8-ov-qse" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="918" y="1488"/>
+        </scene>
+        <!--Tasted Nav Scene-->
+        <scene sceneID="p0P-rC-EI0">
+            <objects>
+                <navigationController title="Tasted Nav Scene" id="pbN-IG-1EV" sceneMemberID="viewController">
+                    <tabBarItem key="tabBarItem" title="Tasted" image="TastedTab" id="JQ9-du-1VG"/>
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" id="7v4-5F-zZx">
+                        <rect key="frame" x="0.0" y="20" width="375" height="44"/>
+                        <autoresizingMask key="autoresizingMask"/>
+                    </navigationBar>
+                    <connections>
+                        <segue destination="ZcD-jP-qPb" kind="relationship" relationship="rootViewController" id="u83-5R-58j"/>
+                    </connections>
+                </navigationController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="xaU-uE-Yif" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="918" y="766"/>
+        </scene>
+        <!--Favorites-->
+        <scene sceneID="qQX-U4-adU">
+            <objects>
+                <tableViewController storyboardIdentifier="FavoriteListViewId" title="Favorites" useStoryboardIdentifierAsRestorationIdentifier="YES" id="UP9-mS-Dtv" customClass="BeerListViewController" customModule="BeerfestMaster" customModuleProvider="target" sceneMemberID="viewController">
+                    <tableView key="view" clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" id="Bbw-Ce-gbf">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <color key="backgroundColor" white="1" alpha="0.0" colorSpace="calibratedWhite"/>
+                        <prototypes>
+                            <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" selectionStyle="none" indentationWidth="10" reuseIdentifier="BeerCellId" rowHeight="66" id="yHQ-GQ-0Zv" customClass="BeerCell" customModule="BeerfestMaster" customModuleProvider="target">
+                                <rect key="frame" x="0.0" y="28" width="375" height="66"/>
+                                <autoresizingMask key="autoresizingMask"/>
+                                <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="yHQ-GQ-0Zv" id="78u-pd-E8p">
+                                    <rect key="frame" x="0.0" y="0.0" width="375" height="65.5"/>
+                                    <autoresizingMask key="autoresizingMask"/>
+                                    <subviews>
+                                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" horizontalCompressionResistancePriority="751" verticalCompressionResistancePriority="751" text="Brewery" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Tbw-kL-xBe" customClass="RegularLabel" customModule="BeerfestMaster" customModuleProvider="target">
+                                            <rect key="frame" x="8" y="3" width="59.5" height="20"/>
+                                            <constraints>
+                                                <constraint firstAttribute="height" constant="20" id="HUf-Pp-xVk"/>
+                                            </constraints>
+                                            <fontDescription key="fontDescription" type="system" pointSize="16"/>
+                                            <nil key="textColor"/>
+                                            <nil key="highlightedColor"/>
+                                        </label>
+                                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Beer" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="OEe-bX-eF1" customClass="LightLabel" customModule="BeerfestMaster" customModuleProvider="target">
+                                            <rect key="frame" x="8" y="23" width="268" height="22"/>
+                                            <fontDescription key="fontDescription" type="system" pointSize="13"/>
+                                            <color key="textColor" red="0.2666666667" green="0.2666666667" blue="0.2666666667" alpha="1" colorSpace="calibratedRGB"/>
+                                            <nil key="highlightedColor"/>
+                                        </label>
+                                        <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="KGJ-GC-8lQ" userLabel="Favorite">
+                                            <rect key="frame" x="331" y="11" width="36" height="42"/>
+                                            <constraints>
+                                                <constraint firstAttribute="width" constant="36" id="0XZ-jT-lQr"/>
+                                            </constraints>
+                                            <state key="normal" title="Button" image="FavoriteOutline"/>
+                                            <connections>
+                                                <action selector="favoriteTapped:" destination="yHQ-GQ-0Zv" eventType="touchUpInside" id="4yo-Kh-XL2"/>
+                                            </connections>
+                                        </button>
+                                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Style" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Zx8-CG-V4z" customClass="LightLabel" customModule="BeerfestMaster" customModuleProvider="target">
+                                            <rect key="frame" x="8" y="46" width="30.5" height="16"/>
+                                            <fontDescription key="fontDescription" type="system" pointSize="13"/>
+                                            <color key="textColor" red="0.46666666670000001" green="0.46666666670000001" blue="0.46666666670000001" alpha="1" colorSpace="calibratedRGB"/>
+                                            <nil key="highlightedColor"/>
+                                        </label>
+                                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" text="Location" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="hgF-yG-7OR" customClass="LightLabel" customModule="BeerfestMaster" customModuleProvider="target">
+                                            <rect key="frame" x="76" y="7.5" width="200" height="14.5"/>
+                                            <constraints>
+                                                <constraint firstAttribute="height" constant="14.5" id="fX5-CD-Xqu"/>
+                                            </constraints>
+                                            <fontDescription key="fontDescription" type="system" pointSize="12"/>
+                                            <color key="textColor" red="0.2666666667" green="0.2666666667" blue="0.2666666667" alpha="1" colorSpace="calibratedRGB"/>
+                                            <nil key="highlightedColor"/>
+                                        </label>
+                                        <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="e9j-QP-0BZ" userLabel="Tasted">
+                                            <rect key="frame" x="284" y="11" width="36" height="42"/>
+                                            <constraints>
+                                                <constraint firstAttribute="width" constant="36" id="uau-Rh-Kbb"/>
+                                            </constraints>
+                                            <state key="normal" image="TastedOutline"/>
+                                            <connections>
+                                                <action selector="tastedTapped:" destination="yHQ-GQ-0Zv" eventType="touchUpInside" id="a9s-wU-CVT"/>
+                                            </connections>
+                                        </button>
+                                    </subviews>
+                                    <constraints>
+                                        <constraint firstAttribute="trailing" secondItem="KGJ-GC-8lQ" secondAttribute="trailing" constant="8" id="16d-Bk-JYP"/>
+                                        <constraint firstItem="Zx8-CG-V4z" firstAttribute="top" secondItem="OEe-bX-eF1" secondAttribute="bottom" constant="1" id="8mG-dG-efd"/>
+                                        <constraint firstItem="e9j-QP-0BZ" firstAttribute="top" secondItem="78u-pd-E8p" secondAttribute="top" constant="11" id="AMl-w5-PaJ"/>
+                                        <constraint firstItem="KGJ-GC-8lQ" firstAttribute="leading" secondItem="e9j-QP-0BZ" secondAttribute="trailing" constant="11" id="FPY-Vk-o4N"/>
+                                        <constraint firstAttribute="bottom" secondItem="KGJ-GC-8lQ" secondAttribute="bottom" constant="12.5" id="LG1-cy-dvW"/>
+                                        <constraint firstItem="hgF-yG-7OR" firstAttribute="centerY" secondItem="Tbw-kL-xBe" secondAttribute="centerY" constant="1.75" id="YCl-6K-hJF"/>
+                                        <constraint firstItem="OEe-bX-eF1" firstAttribute="top" secondItem="Tbw-kL-xBe" secondAttribute="bottom" id="ZG9-xQ-FDw"/>
+                                        <constraint firstItem="Tbw-kL-xBe" firstAttribute="top" secondItem="78u-pd-E8p" secondAttribute="top" constant="3" id="cbh-YL-jyY"/>
+                                        <constraint firstAttribute="bottom" secondItem="e9j-QP-0BZ" secondAttribute="bottom" constant="12.5" id="fvB-4p-0Mc"/>
+                                        <constraint firstItem="OEe-bX-eF1" firstAttribute="centerY" secondItem="e9j-QP-0BZ" secondAttribute="centerY" constant="2" id="h76-XJ-e5U"/>
+                                        <constraint firstItem="e9j-QP-0BZ" firstAttribute="leading" secondItem="OEe-bX-eF1" secondAttribute="trailing" constant="8" id="jft-BZ-Tnd"/>
+                                        <constraint firstItem="e9j-QP-0BZ" firstAttribute="leading" secondItem="hgF-yG-7OR" secondAttribute="trailing" constant="8" id="l5V-SK-kG1"/>
+                                        <constraint firstItem="KGJ-GC-8lQ" firstAttribute="top" secondItem="78u-pd-E8p" secondAttribute="top" constant="11" id="q3K-wM-jcN"/>
+                                        <constraint firstItem="OEe-bX-eF1" firstAttribute="leading" secondItem="78u-pd-E8p" secondAttribute="leading" constant="8" id="qAq-Id-s2x"/>
+                                        <constraint firstItem="hgF-yG-7OR" firstAttribute="leading" secondItem="Tbw-kL-xBe" secondAttribute="trailing" constant="8.5" id="urg-uO-pMx"/>
+                                        <constraint firstItem="Tbw-kL-xBe" firstAttribute="leading" secondItem="78u-pd-E8p" secondAttribute="leading" constant="8" id="w7Z-LC-vOS"/>
+                                        <constraint firstItem="Zx8-CG-V4z" firstAttribute="leading" secondItem="78u-pd-E8p" secondAttribute="leading" constant="8" id="zb6-7o-s4i"/>
+                                    </constraints>
+                                </tableViewCellContentView>
+                                <color key="backgroundColor" red="0.64313725489999995" green="0.64313725489999995" blue="0.64313725489999995" alpha="0.0" colorSpace="calibratedRGB"/>
+                                <connections>
+                                    <outlet property="breweryLabel" destination="Tbw-kL-xBe" id="s6p-SZ-rAz"/>
+                                    <outlet property="favoriteButton" destination="KGJ-GC-8lQ" id="3va-1g-lrD"/>
+                                    <outlet property="locationLabel" destination="hgF-yG-7OR" id="zD1-Xq-zXN"/>
+                                    <outlet property="nameLabel" destination="OEe-bX-eF1" id="jns-fB-N00"/>
+                                    <outlet property="styleLabel" destination="Zx8-CG-V4z" id="xS6-hR-dRA"/>
+                                    <outlet property="tastedButton" destination="e9j-QP-0BZ" id="P41-St-qhb"/>
+                                </connections>
+                            </tableViewCell>
+                        </prototypes>
+                        <connections>
+                            <outlet property="dataSource" destination="UP9-mS-Dtv" id="bPV-5U-4Sc"/>
+                            <outlet property="delegate" destination="UP9-mS-Dtv" id="gAL-Eo-RDL"/>
+                        </connections>
+                    </tableView>
+                    <navigationItem key="navigationItem" title="Favorites" id="OK9-1W-FIq"/>
+                </tableViewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="PV1-nc-92D" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1617" y="1487"/>
+        </scene>
+        <!--Map-->
+        <scene sceneID="z1o-5v-a1V">
+            <objects>
+                <viewController title="Map" id="WKG-Wd-17L" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="U3v-vH-PsB">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <viewLayoutGuide key="safeArea" id="tx3-zk-FEh"/>
+                    </view>
+                    <navigationItem key="navigationItem" title="Map" id="Mno-Nb-1c6"/>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="vQZ-15-kTH" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="2313" y="1487"/>
+        </scene>
+        <!--Favorite Nav Scene-->
+        <scene sceneID="Yjj-cO-g3V">
+            <objects>
+                <navigationController title="Favorite Nav Scene" id="chm-Ce-3rs" sceneMemberID="viewController">
+                    <tabBarItem key="tabBarItem" title="Favorites" image="FavoriteTab" id="82z-7f-Tr8"/>
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" id="1EH-8Z-eSN">
+                        <rect key="frame" x="0.0" y="20" width="375" height="44"/>
+                        <autoresizingMask key="autoresizingMask"/>
+                    </navigationBar>
+                    <connections>
+                        <segue destination="UP9-mS-Dtv" kind="relationship" relationship="rootViewController" id="yMx-5p-e3g"/>
+                    </connections>
+                </navigationController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="kAl-ed-FvU" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1617" y="766"/>
+        </scene>
+        <!--Map-->
+        <scene sceneID="aHZ-xe-aHb">
+            <objects>
+                <navigationController title="Map" id="56M-k0-lG8" sceneMemberID="viewController">
+                    <tabBarItem key="tabBarItem" title="Map" image="MapTab" id="0N5-lo-Aiv"/>
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" id="oAW-X3-0ZH">
+                        <rect key="frame" x="0.0" y="20" width="375" height="44"/>
+                        <autoresizingMask key="autoresizingMask"/>
+                    </navigationBar>
+                    <connections>
+                        <segue destination="WKG-Wd-17L" kind="relationship" relationship="rootViewController" id="ycA-aA-9M0"/>
+                    </connections>
+                </navigationController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="Exn-fC-zBj" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="2314" y="766"/>
+        </scene>
+    </scenes>
+    <resources>
+        <image name="BeerTab" width="16" height="20"/>
+        <image name="FavoriteOutline" width="21" height="20"/>
+        <image name="FavoriteTab" width="21" height="20"/>
+        <image name="MapTab" width="21" height="20"/>
+        <image name="TastedOutline" width="17" height="20"/>
+        <image name="TastedTab" width="17" height="20"/>
+    </resources>
+</document>
