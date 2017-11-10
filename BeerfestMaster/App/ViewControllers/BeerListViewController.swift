@@ -78,7 +78,9 @@ class BeerListViewController: BaseTableViewController {
   // MARK: Actions
   
   @IBAction func filterTapped(_ sender: AnyObject) {
-    print("filter tapped")
+    let filtersVC = FiltersViewController.createController()
+    let navController = BaseNavigationController(rootViewController: filtersVC)
+    self.present(navController, animated: true, completion: nil)
   }
  
   // MARK: UITableViewDataSource

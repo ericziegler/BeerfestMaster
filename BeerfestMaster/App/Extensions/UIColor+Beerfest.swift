@@ -73,4 +73,16 @@ extension UIColor {
     return UIColor(hex: 0xccdaf5)
   }
   
+  class var connoissurBold: UIColor {
+    return UIColor(hex: 0xcf7272)
+  }
+  
+  class var earlyAdmissionBold: UIColor {
+    return UIColor(hex: 0xf8d25d)
+  }
+  
+  class var quickPourBold: UIColor {
+    return UIColor(hex: 0x88a9e8)
+  }
+  
 }

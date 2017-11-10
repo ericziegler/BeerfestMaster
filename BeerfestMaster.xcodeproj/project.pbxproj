@@ -7,8 +7,6 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
-		072013BE1FB4F1AB00A61BE8 /* SearchViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 072013BD1FB4F1AB00A61BE8 /* SearchViewController.swift */; };
-		072013C01FB4F24600A61BE8 /* SearchCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 072013BF1FB4F24600A61BE8 /* SearchCell.swift */; };
 		072013C21FB4F2EC00A61BE8 /* UIImage+Beerfest.swift in Sources */ = {isa = PBXBuildFile; fileRef = 072013C11FB4F2EC00A61BE8 /* UIImage+Beerfest.swift */; };
 		072013C41FB4F5BF00A61BE8 /* BaseTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 072013C31FB4F5BF00A61BE8 /* BaseTableViewController.swift */; };
 		072013C71FB4FEBF00A61BE8 /* BeerViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 072013C61FB4FEBF00A61BE8 /* BeerViewController.swift */; };
@@ -19,6 +17,10 @@
 		072013D11FB557B000A61BE8 /* Utility.swift in Sources */ = {isa = PBXBuildFile; fileRef = 072013D01FB557B000A61BE8 /* Utility.swift */; };
 		072013D31FB5BBFD00A61BE8 /* CurrentFest.swift in Sources */ = {isa = PBXBuildFile; fileRef = 072013D21FB5BBFD00A61BE8 /* CurrentFest.swift */; };
 		072013D51FB5C22100A61BE8 /* BaseNavigationController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 072013D41FB5C22100A61BE8 /* BaseNavigationController.swift */; };
+		072013D71FB5C73B00A61BE8 /* MapViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 072013D61FB5C73B00A61BE8 /* MapViewController.swift */; };
+		072013D91FB5CFDF00A61BE8 /* GTZoomableImageView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 072013D81FB5CFDF00A61BE8 /* GTZoomableImageView.swift */; };
+		072013DB1FB5D22E00A61BE8 /* FiltersViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 072013DA1FB5D22E00A61BE8 /* FiltersViewController.swift */; };
+		072013DD1FB5D7D900A61BE8 /* SearchViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 072013DC1FB5D7D900A61BE8 /* SearchViewController.swift */; };
 		073FD31D1FB480E300DEE774 /* BeerListViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 073FD31C1FB480E300DEE774 /* BeerListViewController.swift */; };
 		073FD31F1FB483E200DEE774 /* BaseViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 073FD31E1FB483E200DEE774 /* BaseViewController.swift */; };
 		07F3BFBE1FB3E41000AAA0AB /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 07F3BFBD1FB3E41000AAA0AB /* AppDelegate.swift */; };
@@ -38,8 +40,6 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
-		072013BD1FB4F1AB00A61BE8 /* SearchViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SearchViewController.swift; sourceTree = "<group>"; };
-		072013BF1FB4F24600A61BE8 /* SearchCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SearchCell.swift; sourceTree = "<group>"; };
 		072013C11FB4F2EC00A61BE8 /* UIImage+Beerfest.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIImage+Beerfest.swift"; sourceTree = "<group>"; };
 		072013C31FB4F5BF00A61BE8 /* BaseTableViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BaseTableViewController.swift; sourceTree = "<group>"; };
 		072013C61FB4FEBF00A61BE8 /* BeerViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BeerViewController.swift; sourceTree = "<group>"; };
@@ -48,6 +48,10 @@
 		072013D01FB557B000A61BE8 /* Utility.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Utility.swift; sourceTree = "<group>"; };
 		072013D21FB5BBFD00A61BE8 /* CurrentFest.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CurrentFest.swift; sourceTree = "<group>"; };
 		072013D41FB5C22100A61BE8 /* BaseNavigationController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BaseNavigationController.swift; sourceTree = "<group>"; };
+		072013D61FB5C73B00A61BE8 /* MapViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MapViewController.swift; sourceTree = "<group>"; };
+		072013D81FB5CFDF00A61BE8 /* GTZoomableImageView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GTZoomableImageView.swift; sourceTree = "<group>"; };
+		072013DA1FB5D22E00A61BE8 /* FiltersViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FiltersViewController.swift; sourceTree = "<group>"; };
+		072013DC1FB5D7D900A61BE8 /* SearchViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SearchViewController.swift; sourceTree = "<group>"; };
 		073FD31C1FB480E300DEE774 /* BeerListViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BeerListViewController.swift; sourceTree = "<group>"; };
 		073FD31E1FB483E200DEE774 /* BaseViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BaseViewController.swift; sourceTree = "<group>"; };
 		07F3BFBA1FB3E41000AAA0AB /* BeerfestMaster.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = BeerfestMaster.app; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -132,6 +136,7 @@
 		07F3BFD01FB3E42000AAA0AB /* ThirdParty */ = {
 			isa = PBXGroup;
 			children = (
+				072013D81FB5CFDF00A61BE8 /* GTZoomableImageView.swift */,
 			);
 			path = ThirdParty;
 			sourceTree = "<group>";
@@ -168,7 +173,6 @@
 			isa = PBXGroup;
 			children = (
 				072013C81FB51ACE00A61BE8 /* BeerCell.swift */,
-				072013BF1FB4F24600A61BE8 /* SearchCell.swift */,
 			);
 			path = Views;
 			sourceTree = "<group>";
@@ -179,7 +183,9 @@
 				072013C51FB4F60600A61BE8 /* BaseViewControllers */,
 				073FD31C1FB480E300DEE774 /* BeerListViewController.swift */,
 				072013C61FB4FEBF00A61BE8 /* BeerViewController.swift */,
-				072013BD1FB4F1AB00A61BE8 /* SearchViewController.swift */,
+				072013D61FB5C73B00A61BE8 /* MapViewController.swift */,
+				072013DA1FB5D22E00A61BE8 /* FiltersViewController.swift */,
+				072013DC1FB5D7D900A61BE8 /* SearchViewController.swift */,
 				07F3BFC11FB3E41000AAA0AB /* Main.storyboard */,
 			);
 			path = ViewControllers;
@@ -281,11 +287,10 @@
 			files = (
 				072013D51FB5C22100A61BE8 /* BaseNavigationController.swift in Sources */,
 				072013C41FB4F5BF00A61BE8 /* BaseTableViewController.swift in Sources */,
-				072013BE1FB4F1AB00A61BE8 /* SearchViewController.swift in Sources */,
-				072013C01FB4F24600A61BE8 /* SearchCell.swift in Sources */,
 				07F3BFEC1FB3EA6400AAA0AB /* BeerfestUI.swift in Sources */,
 				072013C71FB4FEBF00A61BE8 /* BeerViewController.swift in Sources */,
 				072013D31FB5BBFD00A61BE8 /* CurrentFest.swift in Sources */,
+				072013D71FB5C73B00A61BE8 /* MapViewController.swift in Sources */,
 				073FD31D1FB480E300DEE774 /* BeerListViewController.swift in Sources */,
 				07F3BFE61FB3E6D100AAA0AB /* Filters.swift in Sources */,
 				07F3BFDE1FB3E69E00AAA0AB /* Beer.swift in Sources */,
@@ -295,9 +300,12 @@
 				07F3BFDC1FB3E69800AAA0AB /* BeerList.swift in Sources */,
 				07F3BFEE1FB3EB1500AAA0AB /* UIFont+Beerfest.swift in Sources */,
 				07F3BFDA1FB3E67000AAA0AB /* NSRange+Beerfest.swift in Sources */,
+				072013DD1FB5D7D900A61BE8 /* SearchViewController.swift in Sources */,
 				072013D11FB557B000A61BE8 /* Utility.swift in Sources */,
 				07F3BFE81FB3E6D900AAA0AB /* SearchManager.swift in Sources */,
 				072013C91FB51ACE00A61BE8 /* BeerCell.swift in Sources */,
+				072013DB1FB5D22E00A61BE8 /* FiltersViewController.swift in Sources */,
+				072013D91FB5CFDF00A61BE8 /* GTZoomableImageView.swift in Sources */,
 				07F3BFE41FB3E6BF00AAA0AB /* TastedBeerList.swift in Sources */,
 				07F3BFBE1FB3E41000AAA0AB /* AppDelegate.swift in Sources */,
 				072013C21FB4F2EC00A61BE8 /* UIImage+Beerfest.swift in Sources */,

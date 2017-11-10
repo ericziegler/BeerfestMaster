@@ -82,6 +82,21 @@ enum FestCity: String {
     }
   }
   
+  var map: UIImage? {
+    switch self {
+    case .cleveland:
+      return UIImage(named: "Map-Cleveland")
+    case .cincinnati:
+      return UIImage(named: "Map-Cincinnati")
+    case .columbus:
+      return UIImage(named: "Map-Columbus")
+    case .philadelphia:
+      return UIImage(named: "Map-Philadelphia")
+    case .pittsburgh:
+      return UIImage(named: "Map-Pittsburgh")
+    }
+  }
+  
 }
 
 let CurrentFest = FestCity.cincinnati
