@@ -22,7 +22,7 @@ class SearchManager {
   func performSearch(for text: String) {
     self.clearData()
     
-    if (text.characters.count > 2) {
+    if (text.count > 2) {
       let lowercaseText = text.lowercased()
       let list = BeerList.shared.beers
       

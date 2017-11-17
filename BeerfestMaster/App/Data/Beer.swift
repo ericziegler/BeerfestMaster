@@ -57,7 +57,7 @@ class Beer: NSObject, NSCoding {
   }
   
   func load(_ beerString: String) {
-    if beerString.characters.count > 0 {
+    if beerString.count > 0 {
       let props = beerString.components(separatedBy: ",")
       self.brewery = props[0].capitalized
       self.name = props[1].capitalized
