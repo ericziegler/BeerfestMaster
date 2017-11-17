@@ -46,6 +46,21 @@ enum FestCity: String {
     }
   }
   
+  var lightAccentColor: UIColor {
+    switch self {
+    case .cleveland:
+      return UIColor(hex: 0xe47e49)
+    case .cincinnati:
+      return UIColor(hex: 0xff474a)
+    case .columbus:
+      return UIColor(hex: 0xff474a)
+    case .philadelphia:
+      return UIColor(hex: 0x64d946)
+    case .pittsburgh:
+      return UIColor(hex: 0xffcc00)
+    }
+  }
+  
   var navBarColor: UIColor {
     return UIColor(hex: 0x242424)
   }

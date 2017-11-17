@@ -21,6 +21,9 @@
                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="e9V-7N-v22" userLabel="Navbar">
                                 <rect key="frame" x="0.0" y="0.0" width="375" height="65"/>
                                 <color key="backgroundColor" red="0.14117647058823529" green="0.14117647058823529" blue="0.14117647058823529" alpha="1" colorSpace="calibratedRGB"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="65" id="HAF-PK-zHO"/>
+                                </constraints>
                             </view>
                             <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="btK-ze-pmK">
                                 <rect key="frame" x="0.0" y="65" width="375" height="557"/>
@@ -29,22 +32,23 @@
                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="zhT-OO-ywE" userLabel="Tabbar">
                                 <rect key="frame" x="0.0" y="622" width="375" height="45"/>
                                 <color key="backgroundColor" red="0.14117647058823529" green="0.14117647058823529" blue="0.14117647058823529" alpha="1" colorSpace="calibratedRGB"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="45" id="DYC-ti-Ptc"/>
+                                </constraints>
                             </view>
                         </subviews>
-                        <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                        <color key="backgroundColor" red="0.14117647058823529" green="0.14117647058823529" blue="0.14117647058823529" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                         <constraints>
-                            <constraint firstItem="e9V-7N-v22" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" id="4iS-L5-tfj"/>
-                            <constraint firstItem="zhT-OO-ywE" firstAttribute="top" secondItem="btK-ze-pmK" secondAttribute="bottom" id="H5Y-K9-zx9"/>
-                            <constraint firstItem="btK-ze-pmK" firstAttribute="top" secondItem="e9V-7N-v22" secondAttribute="bottom" id="LI3-hc-4Uq"/>
-                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="top" secondItem="e9V-7N-v22" secondAttribute="top" constant="20" id="Qkb-Va-gUf"/>
-                            <constraint firstItem="zhT-OO-ywE" firstAttribute="trailing" secondItem="6Tk-OE-BBY" secondAttribute="trailing" id="RAz-Hi-NGc"/>
-                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="top" secondItem="e9V-7N-v22" secondAttribute="bottom" constant="-45" id="SEs-R7-uO9"/>
-                            <constraint firstItem="btK-ze-pmK" firstAttribute="trailing" secondItem="6Tk-OE-BBY" secondAttribute="trailing" id="T0X-9U-cQ5"/>
-                            <constraint firstItem="btK-ze-pmK" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" id="a8u-CR-B3F"/>
-                            <constraint firstItem="zhT-OO-ywE" firstAttribute="top" secondItem="6Tk-OE-BBY" secondAttribute="bottom" constant="-45" id="fX2-qa-ofB"/>
-                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="bottom" secondItem="zhT-OO-ywE" secondAttribute="bottom" id="p1q-fD-udt"/>
-                            <constraint firstItem="zhT-OO-ywE" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" id="tHH-Dt-Ou8"/>
-                            <constraint firstItem="e9V-7N-v22" firstAttribute="trailing" secondItem="6Tk-OE-BBY" secondAttribute="trailing" id="uX1-RN-TTC"/>
+                            <constraint firstItem="btK-ze-pmK" firstAttribute="top" secondItem="e9V-7N-v22" secondAttribute="bottom" id="7RJ-PN-RdU"/>
+                            <constraint firstItem="zhT-OO-ywE" firstAttribute="top" secondItem="6Tk-OE-BBY" secondAttribute="bottom" constant="-45" id="JCH-7X-2Fb"/>
+                            <constraint firstItem="zhT-OO-ywE" firstAttribute="trailing" secondItem="6Tk-OE-BBY" secondAttribute="trailing" id="M8l-1c-Wdl"/>
+                            <constraint firstItem="btK-ze-pmK" firstAttribute="trailing" secondItem="6Tk-OE-BBY" secondAttribute="trailing" id="MK7-gq-tFS"/>
+                            <constraint firstItem="btK-ze-pmK" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" id="ML7-pQ-pxb"/>
+                            <constraint firstItem="zhT-OO-ywE" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" id="PiZ-lQ-tg5"/>
+                            <constraint firstItem="e9V-7N-v22" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" id="bHo-JQ-OgD"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="top" secondItem="e9V-7N-v22" secondAttribute="top" constant="20" id="diS-C4-SIg"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="e9V-7N-v22" secondAttribute="trailing" id="hmw-BU-yqA"/>
+                            <constraint firstItem="zhT-OO-ywE" firstAttribute="top" secondItem="btK-ze-pmK" secondAttribute="bottom" id="rqZ-4C-Bzt"/>
                         </constraints>
                         <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
                     </view>
