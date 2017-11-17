@@ -23,6 +23,7 @@
 		072013DD1FB5D7D900A61BE8 /* SearchViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 072013DC1FB5D7D900A61BE8 /* SearchViewController.swift */; };
 		073FD31D1FB480E300DEE774 /* BeerListViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 073FD31C1FB480E300DEE774 /* BeerListViewController.swift */; };
 		073FD31F1FB483E200DEE774 /* BaseViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 073FD31E1FB483E200DEE774 /* BaseViewController.swift */; };
+		07955DCC1FBF1819000A14A9 /* CitySetup.txt in Resources */ = {isa = PBXBuildFile; fileRef = 07955DCB1FBF1819000A14A9 /* CitySetup.txt */; };
 		07F3BFBE1FB3E41000AAA0AB /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 07F3BFBD1FB3E41000AAA0AB /* AppDelegate.swift */; };
 		07F3BFC31FB3E41000AAA0AB /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 07F3BFC11FB3E41000AAA0AB /* Main.storyboard */; };
 		07F3BFC81FB3E41000AAA0AB /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 07F3BFC61FB3E41000AAA0AB /* LaunchScreen.storyboard */; };
@@ -54,6 +55,7 @@
 		072013DC1FB5D7D900A61BE8 /* SearchViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SearchViewController.swift; sourceTree = "<group>"; };
 		073FD31C1FB480E300DEE774 /* BeerListViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BeerListViewController.swift; sourceTree = "<group>"; };
 		073FD31E1FB483E200DEE774 /* BaseViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BaseViewController.swift; sourceTree = "<group>"; };
+		07955DCB1FBF1819000A14A9 /* CitySetup.txt */ = {isa = PBXFileReference; lastKnownFileType = text; path = CitySetup.txt; sourceTree = "<group>"; };
 		07F3BFBA1FB3E41000AAA0AB /* BeerfestMaster.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = BeerfestMaster.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		07F3BFBD1FB3E41000AAA0AB /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		07F3BFC21FB3E41000AAA0AB /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
@@ -207,6 +209,7 @@
 				072013CC1FB54D2800A61BE8 /* Assets.xcassets */,
 				07F3BFE91FB3E7F400AAA0AB /* beerlist.csv */,
 				07F3BFEA1FB3E7F400AAA0AB /* specialbeerlist.csv */,
+				07955DCB1FBF1819000A14A9 /* CitySetup.txt */,
 			);
 			path = Resources;
 			sourceTree = "<group>";
@@ -275,6 +278,7 @@
 				07F3BFC81FB3E41000AAA0AB /* LaunchScreen.storyboard in Resources */,
 				07F3BFC31FB3E41000AAA0AB /* Main.storyboard in Resources */,
 				072013CD1FB54F3200A61BE8 /* Assets.xcassets in Resources */,
+				07955DCC1FBF1819000A14A9 /* CitySetup.txt in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

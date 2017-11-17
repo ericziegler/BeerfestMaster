@@ -96,7 +96,7 @@ class BeerList {
       for beerItem in beerArray {
         let beer = Beer()
         beer.load(beerItem)
-        if (beer.name.characters.count > 0) {
+        if (beer.name.count > 0) {
           self.beers.append(beer)
         }
       }

@@ -37,6 +37,10 @@ extension UIColor {
     return CurrentFest.accentColor
   }
   
+  class var lightAccent: UIColor {
+    return CurrentFest.lightAccentColor
+  }
+  
   class var navBarTitle: UIColor {
     return CurrentFest.navBarTitleColor
   }

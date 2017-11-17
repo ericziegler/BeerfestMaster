@@ -12,12 +12,12 @@ import UIKit
 
 func applyApplicationAppearanceProperties() {
   UIBarButtonItem.appearance().setTitleTextAttributes([NSAttributedStringKey.font : UIFont.applicationFontOfSize(17)], for: UIControlState())
-  UINavigationBar.appearance().tintColor = UIColor.accent
+  UINavigationBar.appearance().tintColor = UIColor.lightAccent
   UINavigationBar.appearance().barTintColor = UIColor.navBar
-  UITabBar.appearance().tintColor = UIColor.accent
+  UITabBar.appearance().tintColor = UIColor.lightAccent
   UITabBar.appearance().barTintColor = UIColor.tabBar
-  UITabBarItem.appearance().setTitleTextAttributes([NSAttributedStringKey.font : UIFont.applicationFontOfSize(13.0), NSAttributedStringKey.foregroundColor : UIColor.tabBarNormal], for: .normal)
-  UITabBarItem.appearance().setTitleTextAttributes([NSAttributedStringKey.font : UIFont.applicationFontOfSize(13.0), NSAttributedStringKey.foregroundColor : UIColor.accent], for: .selected)
+  UITabBarItem.appearance().setTitleTextAttributes([NSAttributedStringKey.font : UIFont.applicationFontOfSize(14.0), NSAttributedStringKey.foregroundColor : UIColor.tabBarNormal], for: .normal)
+  UITabBarItem.appearance().setTitleTextAttributes([NSAttributedStringKey.font : UIFont.applicationFontOfSize(14.0), NSAttributedStringKey.foregroundColor : UIColor.lightAccent], for: .selected)
 }
 
 func navTitleTextAttributes() -> [NSAttributedStringKey : Any] {

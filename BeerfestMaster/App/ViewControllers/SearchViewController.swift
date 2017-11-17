@@ -35,12 +35,31 @@ class SearchViewController: BaseViewController {
     super.viewDidLoad()
     self.searchIcon.image = self.searchIcon.image?.maskedImageWithColor(UIColor(hex: 0xc7c7cd))
     self.searchTextField.becomeFirstResponder()
+    self.setupNavBar()
     NotificationCenter.default.addObserver(self, selector: #selector(handleKeyboardWillShowNotification(_:)), name: NSNotification.Name.UIKeyboardWillShow, object: nil)
     NotificationCenter.default.addObserver(self, selector: #selector(handleKeyboardWillHideNotification(_:)), name: NSNotification.Name.UIKeyboardWillHide, object: nil)
   }
   
+  private func setupNavBar() {
+    if let closeImage = UIImage(named: "Close")?.maskedImageWithColor(UIColor.accent) {
+      let closeButton = UIButton(type: .custom)
+      closeButton.addTarget(self, action: #selector(closeTapped(_:)), for: .touchUpInside)
+      closeButton.setImage(closeImage, for: .normal)
+      closeButton.frame = CGRect(x: 0, y: 0, width: closeImage.size.width, height: closeImage.size.height)
+      let closeItem = UIBarButtonItem(customView: closeButton)
+      
+      self.navigationItem.rightBarButtonItems = [closeItem]
+    }
+  }
+  
   deinit {
     NotificationCenter.default.removeObserver(self)
+  }
+  
+  // MARK: Actions
+  
+  @IBAction func closeTapped(_ sender: AnyObject) {
+    self.view.endEditing(true)
   }
   
   // MARK: Notifications

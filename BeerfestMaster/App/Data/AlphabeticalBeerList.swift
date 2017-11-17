@@ -36,7 +36,7 @@ class AlphabeticalBeerList {
     self.beers["#"] = [Beer]()
     
     for curBeer in unsortedBeers {
-      if let firstChar = curBeer.brewery.characters.first {
+      if let firstChar = curBeer.brewery.first {
         let charString = String(firstChar)
         if (self.beers.keys.contains(charString)) {
           self.beers[charString]?.append(curBeer)
