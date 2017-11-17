@@ -62,7 +62,7 @@ class BeerListViewController: BaseTableViewController {
   
   private func setupNavBar() {
     if self.listType == .fullList {
-      self.navigationItem.title = "\(CurrentFest.displayString) Beerfest"
+      self.navigationItem.title = "\(CurrentFest.displayString) Beerfest".uppercased()
       if let filterImage = UIImage(named: "Filter")?.maskedImageWithColor(UIColor.accent) {
         let filterButton = UIButton(type: .custom)
         filterButton.addTarget(self, action: #selector(filterTapped(_:)), for: .touchUpInside)

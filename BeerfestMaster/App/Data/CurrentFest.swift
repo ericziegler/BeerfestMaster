@@ -25,7 +25,7 @@ enum FestCity: String {
     case .columbus:
       return "Columbus"
     case .philadelphia:
-      return "Philly"
+      return "Big Philly"
     case .pittsburgh:
       return "Pittsburgh"
     }
@@ -40,46 +40,26 @@ enum FestCity: String {
     case .columbus:
       return UIColor(hex: 0xd63c39)
     case .philadelphia:
-      return UIColor(hex: 0x3a7d49)
+      return UIColor(hex: 0x4ba435)
     case .pittsburgh:
       return UIColor(hex: 0xffcc00)
     }
   }
   
   var navBarColor: UIColor {
-    switch self {
-    case .pittsburgh:
-      return UIColor(hex: 0x222222)
-    default:
-      return UIColor(hex: 0xf2f2f2)
-    }
+    return UIColor(hex: 0x242424)
   }
   
   var navBarTitleColor: UIColor {
-    switch self {
-    case .pittsburgh:
-      return UIColor(hex: 0xffffff)
-    default:
-      return UIColor(hex: 0x111111)
-    }
+    return UIColor(hex: 0xffffff)
   }
   
   var tabBarNormalColor: UIColor {
-    switch self {
-    case .pittsburgh:
-      return UIColor(hex: 0xffffff)
-    default:
-      return UIColor(hex: 0x777777)
-    }
+    return UIColor(hex: 0xffffff)
   }
   
   var preferredStatusBarStyle: UIStatusBarStyle {
-    switch self {
-    case .pittsburgh:
-      return .lightContent
-    default:
-      return .default
-    }
+    return .lightContent
   }
   
   var map: UIImage? {
