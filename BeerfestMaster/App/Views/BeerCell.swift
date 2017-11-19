@@ -56,11 +56,7 @@ class BeerCell: UITableViewCell {
     self.breweryLabel.text = beer.brewery
     self.nameLabel.text = beer.name
     
-    var formattedABV = "N/A"
-    if (beer.abv != 0) {
-      formattedABV = String(format: "%.01f%%", beer.abv)
-    }
-    self.styleLabel.text = String(format: "%@ • %@", beer.style, formattedABV).replacingOccurrences(of: "NA", with: "N/A")
+    self.styleLabel.text = String(format: "%@ • %@", beer.style, beer.abv)
     self.locationLabel.text = beer.formattedLocation
     
     if (beer.isFavorited) {

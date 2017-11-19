@@ -77,11 +77,8 @@ class BeerList {
   private func loadBeersFromCSV() {
     self.beers = []
     
-    if let beerPath = Bundle.main.path(forResource: "beerlist", ofType: "csv") {
+    if let beerPath = Bundle.main.path(forResource: CurrentFest.listFile, ofType: "csv") {
       self.loadBeersFromFile(beerPath)
-    }
-    if let specialBeerPath = Bundle.main.path(forResource: "specialbeerlist", ofType: "csv") {
-      self.loadBeersFromFile(specialBeerPath)
     }
     
     self.beers.sort {

@@ -92,6 +92,21 @@ enum FestCity: String {
     }
   }
   
+  var listFile: String {
+    switch self {
+    case .cleveland:
+      return "cleveland"
+    case .cincinnati:
+      return "cincinnati"
+    case .columbus:
+      return "columbus"
+    case .philadelphia:
+      return "philadelphia"
+    case .pittsburgh:
+      return "pittsburgh"
+    }
+  }
+  
 }
 
 let CurrentFest = FestCity.cincinnati

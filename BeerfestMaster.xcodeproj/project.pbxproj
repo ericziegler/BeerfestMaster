@@ -11,8 +11,6 @@
 		072013C41FB4F5BF00A61BE8 /* BaseTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 072013C31FB4F5BF00A61BE8 /* BaseTableViewController.swift */; };
 		072013C71FB4FEBF00A61BE8 /* BeerViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 072013C61FB4FEBF00A61BE8 /* BeerViewController.swift */; };
 		072013C91FB51ACE00A61BE8 /* BeerCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 072013C81FB51ACE00A61BE8 /* BeerCell.swift */; };
-		072013CA1FB5226300A61BE8 /* beerlist.csv in Resources */ = {isa = PBXBuildFile; fileRef = 07F3BFE91FB3E7F400AAA0AB /* beerlist.csv */; };
-		072013CB1FB5226300A61BE8 /* specialbeerlist.csv in Resources */ = {isa = PBXBuildFile; fileRef = 07F3BFEA1FB3E7F400AAA0AB /* specialbeerlist.csv */; };
 		072013CD1FB54F3200A61BE8 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 072013CC1FB54D2800A61BE8 /* Assets.xcassets */; };
 		072013D11FB557B000A61BE8 /* Utility.swift in Sources */ = {isa = PBXBuildFile; fileRef = 072013D01FB557B000A61BE8 /* Utility.swift */; };
 		072013D31FB5BBFD00A61BE8 /* CurrentFest.swift in Sources */ = {isa = PBXBuildFile; fileRef = 072013D21FB5BBFD00A61BE8 /* CurrentFest.swift */; };
@@ -24,6 +22,11 @@
 		073FD31D1FB480E300DEE774 /* BeerListViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 073FD31C1FB480E300DEE774 /* BeerListViewController.swift */; };
 		073FD31F1FB483E200DEE774 /* BaseViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 073FD31E1FB483E200DEE774 /* BaseViewController.swift */; };
 		07955DCC1FBF1819000A14A9 /* CitySetup.txt in Resources */ = {isa = PBXBuildFile; fileRef = 07955DCB1FBF1819000A14A9 /* CitySetup.txt */; };
+		07955DFC1FC1DAF3000A14A9 /* pittsburgh.csv in Resources */ = {isa = PBXBuildFile; fileRef = 07955DF71FC1DAF2000A14A9 /* pittsburgh.csv */; };
+		07955DFD1FC1DAF3000A14A9 /* cleveland.csv in Resources */ = {isa = PBXBuildFile; fileRef = 07955DF81FC1DAF3000A14A9 /* cleveland.csv */; };
+		07955DFE1FC1DAF3000A14A9 /* columbus.csv in Resources */ = {isa = PBXBuildFile; fileRef = 07955DF91FC1DAF3000A14A9 /* columbus.csv */; };
+		07955DFF1FC1DAF3000A14A9 /* cincinnati.csv in Resources */ = {isa = PBXBuildFile; fileRef = 07955DFA1FC1DAF3000A14A9 /* cincinnati.csv */; };
+		07955E001FC1DAF3000A14A9 /* philadelphia.csv in Resources */ = {isa = PBXBuildFile; fileRef = 07955DFB1FC1DAF3000A14A9 /* philadelphia.csv */; };
 		07F3BFBE1FB3E41000AAA0AB /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 07F3BFBD1FB3E41000AAA0AB /* AppDelegate.swift */; };
 		07F3BFC31FB3E41000AAA0AB /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 07F3BFC11FB3E41000AAA0AB /* Main.storyboard */; };
 		07F3BFC81FB3E41000AAA0AB /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 07F3BFC61FB3E41000AAA0AB /* LaunchScreen.storyboard */; };
@@ -56,6 +59,11 @@
 		073FD31C1FB480E300DEE774 /* BeerListViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BeerListViewController.swift; sourceTree = "<group>"; };
 		073FD31E1FB483E200DEE774 /* BaseViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BaseViewController.swift; sourceTree = "<group>"; };
 		07955DCB1FBF1819000A14A9 /* CitySetup.txt */ = {isa = PBXFileReference; lastKnownFileType = text; path = CitySetup.txt; sourceTree = "<group>"; };
+		07955DF71FC1DAF2000A14A9 /* pittsburgh.csv */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; name = pittsburgh.csv; path = ../pittsburgh.csv; sourceTree = "<group>"; };
+		07955DF81FC1DAF3000A14A9 /* cleveland.csv */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; name = cleveland.csv; path = ../cleveland.csv; sourceTree = "<group>"; };
+		07955DF91FC1DAF3000A14A9 /* columbus.csv */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; name = columbus.csv; path = ../columbus.csv; sourceTree = "<group>"; };
+		07955DFA1FC1DAF3000A14A9 /* cincinnati.csv */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; name = cincinnati.csv; path = ../cincinnati.csv; sourceTree = "<group>"; };
+		07955DFB1FC1DAF3000A14A9 /* philadelphia.csv */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; name = philadelphia.csv; path = ../philadelphia.csv; sourceTree = "<group>"; };
 		07F3BFBA1FB3E41000AAA0AB /* BeerfestMaster.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = BeerfestMaster.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		07F3BFBD1FB3E41000AAA0AB /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		07F3BFC21FB3E41000AAA0AB /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
@@ -70,8 +78,6 @@
 		07F3BFE31FB3E6BF00AAA0AB /* TastedBeerList.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TastedBeerList.swift; sourceTree = "<group>"; };
 		07F3BFE51FB3E6D100AAA0AB /* Filters.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Filters.swift; sourceTree = "<group>"; };
 		07F3BFE71FB3E6D900AAA0AB /* SearchManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SearchManager.swift; sourceTree = "<group>"; };
-		07F3BFE91FB3E7F400AAA0AB /* beerlist.csv */ = {isa = PBXFileReference; lastKnownFileType = text; path = beerlist.csv; sourceTree = "<group>"; };
-		07F3BFEA1FB3E7F400AAA0AB /* specialbeerlist.csv */ = {isa = PBXFileReference; lastKnownFileType = text; path = specialbeerlist.csv; sourceTree = "<group>"; };
 		07F3BFEB1FB3EA6400AAA0AB /* BeerfestUI.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BeerfestUI.swift; sourceTree = "<group>"; };
 		07F3BFED1FB3EB1500AAA0AB /* UIFont+Beerfest.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIFont+Beerfest.swift"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
@@ -207,8 +213,11 @@
 				07F3BFC61FB3E41000AAA0AB /* LaunchScreen.storyboard */,
 				07F3BFC91FB3E41000AAA0AB /* Info.plist */,
 				072013CC1FB54D2800A61BE8 /* Assets.xcassets */,
-				07F3BFE91FB3E7F400AAA0AB /* beerlist.csv */,
-				07F3BFEA1FB3E7F400AAA0AB /* specialbeerlist.csv */,
+				07955DFA1FC1DAF3000A14A9 /* cincinnati.csv */,
+				07955DF81FC1DAF3000A14A9 /* cleveland.csv */,
+				07955DF91FC1DAF3000A14A9 /* columbus.csv */,
+				07955DFB1FC1DAF3000A14A9 /* philadelphia.csv */,
+				07955DF71FC1DAF2000A14A9 /* pittsburgh.csv */,
 				07955DCB1FBF1819000A14A9 /* CitySetup.txt */,
 			);
 			path = Resources;
@@ -273,11 +282,14 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				072013CB1FB5226300A61BE8 /* specialbeerlist.csv in Resources */,
-				072013CA1FB5226300A61BE8 /* beerlist.csv in Resources */,
 				07F3BFC81FB3E41000AAA0AB /* LaunchScreen.storyboard in Resources */,
 				07F3BFC31FB3E41000AAA0AB /* Main.storyboard in Resources */,
+				07955DFE1FC1DAF3000A14A9 /* columbus.csv in Resources */,
 				072013CD1FB54F3200A61BE8 /* Assets.xcassets in Resources */,
+				07955DFD1FC1DAF3000A14A9 /* cleveland.csv in Resources */,
+				07955DFC1FC1DAF3000A14A9 /* pittsburgh.csv in Resources */,
+				07955DFF1FC1DAF3000A14A9 /* cincinnati.csv in Resources */,
+				07955E001FC1DAF3000A14A9 /* philadelphia.csv in Resources */,
 				07955DCC1FBF1819000A14A9 /* CitySetup.txt in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

@@ -45,12 +45,8 @@ class BeerViewController: BaseViewController {
   private func setupForBeer() {
     self.nameLabel.text = self.beer.name
     self.breweryLabel.text = self.beer.brewery
-    var formattedABV = "N/A"
-    if (beer.abv != 0) {
-      formattedABV = String(format: "%.01f%%", beer.abv)
-    }
-    self.abvLabel.text = formattedABV
-    self.styleLabel.text = beer.style.replacingOccurrences(of: "NA", with: "N/A")
+    self.abvLabel.text = beer.abv
+    self.styleLabel.text = beer.style
     self.cityLabel.text = beer.formattedLocation
     
     self.mapView.image = CurrentFest.map

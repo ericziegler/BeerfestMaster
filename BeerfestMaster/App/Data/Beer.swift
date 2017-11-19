@@ -29,7 +29,7 @@ class Beer: NSObject, NSCoding {
   var brewery: String = ""
   var name: String = ""
   var style: String = ""
-  var abv: Double = 0.0
+  var abv: String = ""
   var city: String = ""
   var state: String = ""
   var isConnoisseur: Bool = false
@@ -62,10 +62,7 @@ class Beer: NSObject, NSCoding {
       self.brewery = props[0].capitalized
       self.name = props[1].capitalized
       self.style = props[2]
-      let abvString = props[3]
-      if let abvValue = Double(abvString) {
-        self.abv = abvValue
-      }
+      self.abv = props[3]
       self.city = props[4]
       self.state = props[5]
       let isConnoisseurString = props[6]
@@ -95,8 +92,8 @@ class Beer: NSObject, NSCoding {
     if let style = decoder.decodeObject(forKey: BeerStyleCacheKey) as? String {
       self.style = style
     }
-    if let abv = decoder.decodeObject(forKey: ABVCacheKey) as? NSNumber {
-      self.abv = abv.doubleValue
+    if let abv = decoder.decodeObject(forKey: ABVCacheKey) as? String {
+      self.abv = abv
     }
     if let city = decoder.decodeObject(forKey: CityCacheKey) as? String {
       self.city = city
@@ -125,8 +122,7 @@ class Beer: NSObject, NSCoding {
     coder.encode(self.brewery, forKey: BreweryCacheKey)
     coder.encode(self.name, forKey: BeerNameCacheKey)
     coder.encode(self.style, forKey: BeerStyleCacheKey)
-    let abvNumber = NSNumber(value: self.abv)
-    coder.encode(abvNumber, forKey: ABVCacheKey)
+    coder.encode(self.abv, forKey: ABVCacheKey)
     coder.encode(self.city, forKey: CityCacheKey)
     coder.encode(self.state, forKey: StateCacheKey)
     let isConnoisseurNumber = NSNumber(booleanLiteral: self.isConnoisseur)
