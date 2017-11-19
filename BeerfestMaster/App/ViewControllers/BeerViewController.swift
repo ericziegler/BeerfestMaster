@@ -76,13 +76,13 @@ class BeerViewController: BaseViewController {
   // MARK: Actions
   
   @IBAction func favoriteTapped(_ sender: AnyObject) {
-    beer.isFavorited = !beer.isFavorited
+    beer.toggleFavorited()
     BeerList.shared.saveBeersToCache()
     self.updateButtons()
   }
   
   @IBAction func tastedTapped(_ sender: AnyObject) {
-    beer.hasTasted = !beer.hasTasted
+    beer.toggleTasted()
     BeerList.shared.saveBeersToCache()
     self.updateButtons()
   }

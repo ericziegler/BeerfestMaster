@@ -27,6 +27,11 @@
 		07955DFE1FC1DAF3000A14A9 /* columbus.csv in Resources */ = {isa = PBXBuildFile; fileRef = 07955DF91FC1DAF3000A14A9 /* columbus.csv */; };
 		07955DFF1FC1DAF3000A14A9 /* cincinnati.csv in Resources */ = {isa = PBXBuildFile; fileRef = 07955DFA1FC1DAF3000A14A9 /* cincinnati.csv */; };
 		07955E001FC1DAF3000A14A9 /* philadelphia.csv in Resources */ = {isa = PBXBuildFile; fileRef = 07955DFB1FC1DAF3000A14A9 /* philadelphia.csv */; };
+		07955E401FC1DF8F000A14A9 /* FlurryEmpty.m in Sources */ = {isa = PBXBuildFile; fileRef = 07955E261FC1DF8F000A14A9 /* FlurryEmpty.m */; };
+		07955E411FC1DF8F000A14A9 /* FlurryWatchEmpty.m in Sources */ = {isa = PBXBuildFile; fileRef = 07955E291FC1DF8F000A14A9 /* FlurryWatchEmpty.m */; };
+		07955E421FC1DF8F000A14A9 /* libFlurry_8.3.1.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 07955E2A1FC1DF8F000A14A9 /* libFlurry_8.3.1.a */; };
+		07955E4D1FC1E329000A14A9 /* SystemConfiguration.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 07955E4B1FC1E044000A14A9 /* SystemConfiguration.framework */; };
+		07955E4E1FC1E32C000A14A9 /* Security.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 07955E4A1FC1E038000A14A9 /* Security.framework */; };
 		07F3BFBE1FB3E41000AAA0AB /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 07F3BFBD1FB3E41000AAA0AB /* AppDelegate.swift */; };
 		07F3BFC31FB3E41000AAA0AB /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 07F3BFC11FB3E41000AAA0AB /* Main.storyboard */; };
 		07F3BFC81FB3E41000AAA0AB /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 07F3BFC61FB3E41000AAA0AB /* LaunchScreen.storyboard */; };
@@ -64,6 +69,17 @@
 		07955DF91FC1DAF3000A14A9 /* columbus.csv */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; name = columbus.csv; path = ../columbus.csv; sourceTree = "<group>"; };
 		07955DFA1FC1DAF3000A14A9 /* cincinnati.csv */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; name = cincinnati.csv; path = ../cincinnati.csv; sourceTree = "<group>"; };
 		07955DFB1FC1DAF3000A14A9 /* philadelphia.csv */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; name = philadelphia.csv; path = ../philadelphia.csv; sourceTree = "<group>"; };
+		07955E251FC1DF8F000A14A9 /* Flurry.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Flurry.h; sourceTree = "<group>"; };
+		07955E261FC1DF8F000A14A9 /* FlurryEmpty.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = FlurryEmpty.m; sourceTree = "<group>"; };
+		07955E271FC1DF8F000A14A9 /* FlurrySessionBuilder.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = FlurrySessionBuilder.h; sourceTree = "<group>"; };
+		07955E281FC1DF8F000A14A9 /* FlurryWatch.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = FlurryWatch.h; sourceTree = "<group>"; };
+		07955E291FC1DF8F000A14A9 /* FlurryWatchEmpty.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = FlurryWatchEmpty.m; sourceTree = "<group>"; };
+		07955E2A1FC1DF8F000A14A9 /* libFlurry_8.3.1.a */ = {isa = PBXFileReference; lastKnownFileType = archive.ar; path = libFlurry_8.3.1.a; sourceTree = "<group>"; };
+		07955E2B1FC1DF8F000A14A9 /* libFlurryTVOS_8.3.1.a */ = {isa = PBXFileReference; lastKnownFileType = archive.ar; path = libFlurryTVOS_8.3.1.a; sourceTree = "<group>"; };
+		07955E2C1FC1DF8F000A14A9 /* libFlurryWatch_8.3.1.a */ = {isa = PBXFileReference; lastKnownFileType = archive.ar; path = libFlurryWatch_8.3.1.a; sourceTree = "<group>"; };
+		07955E4A1FC1E038000A14A9 /* Security.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Security.framework; path = System/Library/Frameworks/Security.framework; sourceTree = SDKROOT; };
+		07955E4B1FC1E044000A14A9 /* SystemConfiguration.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = SystemConfiguration.framework; path = System/Library/Frameworks/SystemConfiguration.framework; sourceTree = SDKROOT; };
+		07955E4C1FC1E0BE000A14A9 /* BeerfestMaster-Bridging-Header.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "BeerfestMaster-Bridging-Header.h"; sourceTree = "<group>"; };
 		07F3BFBA1FB3E41000AAA0AB /* BeerfestMaster.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = BeerfestMaster.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		07F3BFBD1FB3E41000AAA0AB /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		07F3BFC21FB3E41000AAA0AB /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
@@ -87,6 +103,9 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				07955E421FC1DF8F000A14A9 /* libFlurry_8.3.1.a in Frameworks */,
+				07955E4D1FC1E329000A14A9 /* SystemConfiguration.framework in Frameworks */,
+				07955E4E1FC1E32C000A14A9 /* Security.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -103,11 +122,44 @@
 			path = BaseViewControllers;
 			sourceTree = "<group>";
 		};
+		07955E241FC1DF8F000A14A9 /* Flurry */ = {
+			isa = PBXGroup;
+			children = (
+				07955E251FC1DF8F000A14A9 /* Flurry.h */,
+				07955E261FC1DF8F000A14A9 /* FlurryEmpty.m */,
+				07955E271FC1DF8F000A14A9 /* FlurrySessionBuilder.h */,
+				07955E281FC1DF8F000A14A9 /* FlurryWatch.h */,
+				07955E291FC1DF8F000A14A9 /* FlurryWatchEmpty.m */,
+				07955E2A1FC1DF8F000A14A9 /* libFlurry_8.3.1.a */,
+				07955E2B1FC1DF8F000A14A9 /* libFlurryTVOS_8.3.1.a */,
+				07955E2C1FC1DF8F000A14A9 /* libFlurryWatch_8.3.1.a */,
+			);
+			path = Flurry;
+			sourceTree = "<group>";
+		};
+		07955E481FC1DFAC000A14A9 /* Analytics */ = {
+			isa = PBXGroup;
+			children = (
+				07955E241FC1DF8F000A14A9 /* Flurry */,
+			);
+			name = Analytics;
+			sourceTree = "<group>";
+		};
+		07955E491FC1E038000A14A9 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				07955E4B1FC1E044000A14A9 /* SystemConfiguration.framework */,
+				07955E4A1FC1E038000A14A9 /* Security.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
 		07F3BFB11FB3E41000AAA0AB = {
 			isa = PBXGroup;
 			children = (
 				07F3BFBC1FB3E41000AAA0AB /* BeerfestMaster */,
 				07F3BFBB1FB3E41000AAA0AB /* Products */,
+				07955E491FC1E038000A14A9 /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
@@ -124,6 +176,8 @@
 			children = (
 				07F3BFCF1FB3E41B00AAA0AB /* App */,
 				07F3BFD61FB3E44A00AAA0AB /* Resources */,
+				07955E481FC1DFAC000A14A9 /* Analytics */,
+				07955E4C1FC1E0BE000A14A9 /* BeerfestMaster-Bridging-Header.h */,
 			);
 			path = BeerfestMaster;
 			sourceTree = "<group>";
@@ -322,8 +376,10 @@
 				072013C91FB51ACE00A61BE8 /* BeerCell.swift in Sources */,
 				072013DB1FB5D22E00A61BE8 /* FiltersViewController.swift in Sources */,
 				072013D91FB5CFDF00A61BE8 /* GTZoomableImageView.swift in Sources */,
+				07955E401FC1DF8F000A14A9 /* FlurryEmpty.m in Sources */,
 				07F3BFE41FB3E6BF00AAA0AB /* TastedBeerList.swift in Sources */,
 				07F3BFBE1FB3E41000AAA0AB /* AppDelegate.swift in Sources */,
+				07955E411FC1DF8F000A14A9 /* FlurryWatchEmpty.m in Sources */,
 				072013C21FB4F2EC00A61BE8 /* UIImage+Beerfest.swift in Sources */,
 				07F3BFE01FB3E6A800AAA0AB /* AlphabeticalBeerList.swift in Sources */,
 			);
@@ -467,8 +523,14 @@
 				INFOPLIST_FILE = "$(SRCROOT)/BeerfestMaster/Resources/Info.plist";
 				IPHONEOS_DEPLOYMENT_TARGET = 10.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
+				LIBRARY_SEARCH_PATHS = (
+					"$(inherited)",
+					"$(PROJECT_DIR)/BeerfestMaster/Flurry",
+					"$(PROJECT_DIR)/BeerfestMaster/FlurryAds",
+				);
 				PRODUCT_BUNDLE_IDENTIFIER = com.zigabytes.BeerfestMaster;
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_OBJC_BRIDGING_HEADER = "BeerfestMaster/BeerfestMaster-Bridging-Header.h";
 				SWIFT_VERSION = 4.0;
 				TARGETED_DEVICE_FAMILY = 1;
 			};
@@ -483,8 +545,14 @@
 				INFOPLIST_FILE = "$(SRCROOT)/BeerfestMaster/Resources/Info.plist";
 				IPHONEOS_DEPLOYMENT_TARGET = 10.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
+				LIBRARY_SEARCH_PATHS = (
+					"$(inherited)",
+					"$(PROJECT_DIR)/BeerfestMaster/Flurry",
+					"$(PROJECT_DIR)/BeerfestMaster/FlurryAds",
+				);
 				PRODUCT_BUNDLE_IDENTIFIER = com.zigabytes.BeerfestMaster;
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_OBJC_BRIDGING_HEADER = "BeerfestMaster/BeerfestMaster-Bridging-Header.h";
 				SWIFT_VERSION = 4.0;
 				TARGETED_DEVICE_FAMILY = 1;
 			};

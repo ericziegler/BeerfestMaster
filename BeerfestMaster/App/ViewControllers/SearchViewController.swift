@@ -211,14 +211,12 @@ extension SearchViewController: UITableViewDataSource, UITableViewDelegate {
 extension SearchViewController: BeerCellDelegate {
   
   func beerTastedWasToggled(_ beer: Beer, tasted: Bool, forCell: BeerCell) {
-    beer.hasTasted = tasted
-    BeerList.shared.saveBeersToCache()
+    beer.toggleTasted()
     self.searchTable.reloadData()
   }
   
   func beerFavoriteWasToggled(_ beer: Beer, favorited: Bool, forCell: BeerCell) {
-    beer.isFavorited = favorited
-    BeerList.shared.saveBeersToCache()
+    beer.toggleFavorited()
     self.searchTable.reloadData()
   }
   

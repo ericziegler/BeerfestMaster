@@ -164,14 +164,12 @@ class BeerListViewController: BaseTableViewController {
 extension BeerListViewController: BeerCellDelegate {
   
   func beerTastedWasToggled(_ beer: Beer, tasted: Bool, forCell: BeerCell) {
-    beer.hasTasted = tasted
-    BeerList.shared.saveBeersToCache()
+    beer.toggleTasted()
     self.tableView.reloadData()
   }
   
   func beerFavoriteWasToggled(_ beer: Beer, favorited: Bool, forCell: BeerCell) {
-    beer.isFavorited = favorited
-    BeerList.shared.saveBeersToCache()
+    beer.toggleFavorited()
     self.tableView.reloadData()
   }
   

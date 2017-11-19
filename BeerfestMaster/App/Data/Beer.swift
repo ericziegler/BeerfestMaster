@@ -35,8 +35,14 @@ class Beer: NSObject, NSCoding {
   var isConnoisseur: Bool = false
   var isEarlyAdmission: Bool = false
   var isQuickPour: Bool = false
-  var isFavorited: Bool = false
-  var hasTasted: Bool = false
+  private var privateIsFavorited = false
+  var isFavorited: Bool {
+    return self.privateIsFavorited
+  }
+  private var privateHasTasted = false
+  var hasTasted: Bool {
+    return self.privateHasTasted
+  }
   
   var formattedLocation: String {
     let formattedCity = self.city.capitalized
@@ -47,6 +53,23 @@ class Beer: NSObject, NSCoding {
       formattedState = formattedState.uppercased()
     }
     return "\(formattedCity), \(formattedState)"
+  }
+  
+  private var analyticDictionary: [AnyHashable : Any] {
+    var result = [AnyHashable : Any]()
+    
+    result["Brewery"] = self.brewery
+    result["Beer"] = self.name
+    result["Style"] = self.style
+    result["ABV"] = self.abv
+    result["City"] = self.city
+    result["State"] = self.state
+    result["Connoisseur"] = self.isConnoisseur ? "Yes" : "No"
+    result["EarlyAdmission"] = self.isEarlyAdmission ? "Yes" : "No"
+    result["QuickPour"] = self.isQuickPour ? "Yes" : "No"
+    result["FestLocation"] = CurrentFest.displayString
+    
+    return result
   }
   
   // MARK: Init
@@ -77,6 +100,24 @@ class Beer: NSObject, NSCoding {
       if isQuickPourString == "1" {
         self.isQuickPour = true
       }
+    }
+  }
+  
+  // MARK: Analytics
+  
+  func toggleTasted() {
+    self.privateHasTasted = !self.privateHasTasted
+    BeerList.shared.saveBeersToCache()
+    if self.hasTasted {
+      Flurry.logEvent("Tasted", withParameters: self.analyticDictionary)
+    }
+  }
+  
+  func toggleFavorited() {
+    self.privateIsFavorited = !self.isFavorited
+    BeerList.shared.saveBeersToCache()
+    if self.isFavorited {
+      Flurry.logEvent("Favorited", withParameters: self.analyticDictionary)
     }
   }
   
@@ -111,10 +152,10 @@ class Beer: NSObject, NSCoding {
       self.isQuickPour = isQuickPour.boolValue
     }
     if let isFavorited = decoder.decodeObject(forKey: IsFavoritedCacheKey) as? NSNumber {
-      self.isFavorited = isFavorited.boolValue
+      self.privateIsFavorited = isFavorited.boolValue
     }
     if let hasTasted = decoder.decodeObject(forKey: HasTastedCacheKey) as? NSNumber {
-      self.hasTasted = hasTasted.boolValue
+      self.privateHasTasted = hasTasted.boolValue
     }
   }
   
