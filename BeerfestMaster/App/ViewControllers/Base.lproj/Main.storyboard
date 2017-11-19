@@ -279,14 +279,14 @@
                                             <color key="textColor" red="0.26666666666666666" green="0.26666666666666666" blue="0.26666666666666666" alpha="1" colorSpace="calibratedRGB"/>
                                             <nil key="highlightedColor"/>
                                         </label>
-                                        <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="vVx-i7-lpY" userLabel="Favorite">
+                                        <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="vVx-i7-lpY" userLabel="Tasted">
                                             <rect key="frame" x="331" y="11" width="36" height="42"/>
                                             <constraints>
                                                 <constraint firstAttribute="width" constant="36" id="AMd-Pw-h5N"/>
                                             </constraints>
-                                            <state key="normal" image="FavoriteOutline"/>
+                                            <state key="normal" image="TastedOutline"/>
                                             <connections>
-                                                <action selector="favoriteTapped:" destination="4XI-Gc-08K" eventType="touchUpInside" id="cS6-gO-omJ"/>
+                                                <action selector="tastedTapped:" destination="4XI-Gc-08K" eventType="touchUpInside" id="Bzj-tm-gj5"/>
                                             </connections>
                                         </button>
                                         <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Style" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="b17-Uy-epW" customClass="LightLabel" customModule="BeerfestMaster" customModuleProvider="target">
@@ -304,14 +304,14 @@
                                             <color key="textColor" red="0.26666666666666666" green="0.26666666666666666" blue="0.26666666666666666" alpha="1" colorSpace="calibratedRGB"/>
                                             <nil key="highlightedColor"/>
                                         </label>
-                                        <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="zgo-OJ-VfF" userLabel="Tasted">
+                                        <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="zgo-OJ-VfF" userLabel="Favorite">
                                             <rect key="frame" x="284" y="11" width="36" height="42"/>
                                             <constraints>
                                                 <constraint firstAttribute="width" constant="36" id="341-mc-g4j"/>
                                             </constraints>
-                                            <state key="normal" image="TastedOutline"/>
+                                            <state key="normal" image="FavoriteOutline"/>
                                             <connections>
-                                                <action selector="tastedTapped:" destination="4XI-Gc-08K" eventType="touchUpInside" id="o2H-CQ-oIL"/>
+                                                <action selector="favoriteTapped:" destination="4XI-Gc-08K" eventType="touchUpInside" id="COy-h4-j4J"/>
                                             </connections>
                                         </button>
                                     </subviews>
@@ -338,11 +338,11 @@
                                 <color key="backgroundColor" red="0.64313725490196072" green="0.64313725490196072" blue="0.64313725490196072" alpha="0.0" colorSpace="calibratedRGB"/>
                                 <connections>
                                     <outlet property="breweryLabel" destination="1Wn-yd-En7" id="5HL-09-LLb"/>
-                                    <outlet property="favoriteButton" destination="vVx-i7-lpY" id="hD0-ev-oMt"/>
+                                    <outlet property="favoriteButton" destination="zgo-OJ-VfF" id="tJo-Q1-3A2"/>
                                     <outlet property="locationLabel" destination="MQj-gA-zyH" id="4Kp-e7-dlB"/>
                                     <outlet property="nameLabel" destination="slC-kS-XZn" id="fFF-vX-t3z"/>
                                     <outlet property="styleLabel" destination="b17-Uy-epW" id="3YF-P4-GUe"/>
-                                    <outlet property="tastedButton" destination="zgo-OJ-VfF" id="pRr-Y1-vxd"/>
+                                    <outlet property="tastedButton" destination="vVx-i7-lpY" id="hal-IT-lES"/>
                                 </connections>
                             </tableViewCell>
                         </prototypes>
@@ -409,14 +409,14 @@
                                             <color key="textColor" red="0.2666666667" green="0.2666666667" blue="0.2666666667" alpha="1" colorSpace="calibratedRGB"/>
                                             <nil key="highlightedColor"/>
                                         </label>
-                                        <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="XpN-hT-2RP" userLabel="Favorite">
+                                        <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="XpN-hT-2RP" userLabel="Tasted">
                                             <rect key="frame" x="331" y="11" width="36" height="42"/>
                                             <constraints>
                                                 <constraint firstAttribute="width" constant="36" id="KfV-KK-aI7"/>
                                             </constraints>
-                                            <state key="normal" image="FavoriteOutline"/>
+                                            <state key="normal" image="TastedOutline"/>
                                             <connections>
-                                                <action selector="favoriteTapped:" destination="dVr-D8-4nZ" eventType="touchUpInside" id="fIc-4c-K2L"/>
+                                                <action selector="tastedTapped:" destination="dVr-D8-4nZ" eventType="touchUpInside" id="C3S-ia-dIV"/>
                                             </connections>
                                         </button>
                                         <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Style" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="I2y-xz-6DO" customClass="LightLabel" customModule="BeerfestMaster" customModuleProvider="target">
@@ -434,14 +434,14 @@
                                             <color key="textColor" red="0.2666666667" green="0.2666666667" blue="0.2666666667" alpha="1" colorSpace="calibratedRGB"/>
                                             <nil key="highlightedColor"/>
                                         </label>
-                                        <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="rOI-KZ-Ubp" userLabel="Tasted">
+                                        <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="rOI-KZ-Ubp" userLabel="Favorite">
                                             <rect key="frame" x="284" y="11" width="36" height="42"/>
                                             <constraints>
                                                 <constraint firstAttribute="width" constant="36" id="g72-0l-dKh"/>
                                             </constraints>
-                                            <state key="normal" image="TastedOutline"/>
+                                            <state key="normal" image="FavoriteOutline"/>
                                             <connections>
-                                                <action selector="tastedTapped:" destination="dVr-D8-4nZ" eventType="touchUpInside" id="g6v-g1-1cT"/>
+                                                <action selector="favoriteTapped:" destination="dVr-D8-4nZ" eventType="touchUpInside" id="Qdo-YM-CYR"/>
                                             </connections>
                                         </button>
                                     </subviews>
@@ -468,11 +468,11 @@
                                 <color key="backgroundColor" red="0.64313725489999995" green="0.64313725489999995" blue="0.64313725489999995" alpha="0.0" colorSpace="calibratedRGB"/>
                                 <connections>
                                     <outlet property="breweryLabel" destination="tSX-cw-NzK" id="RXV-CV-Ygv"/>
-                                    <outlet property="favoriteButton" destination="XpN-hT-2RP" id="aDz-MH-JmN"/>
+                                    <outlet property="favoriteButton" destination="rOI-KZ-Ubp" id="iu3-lp-qtg"/>
                                     <outlet property="locationLabel" destination="zxJ-0Q-wgI" id="jeD-jE-hzU"/>
                                     <outlet property="nameLabel" destination="9OZ-fY-Hbh" id="Qra-0r-PZh"/>
                                     <outlet property="styleLabel" destination="I2y-xz-6DO" id="Njq-u8-g13"/>
-                                    <outlet property="tastedButton" destination="rOI-KZ-Ubp" id="snb-pC-0K1"/>
+                                    <outlet property="tastedButton" destination="XpN-hT-2RP" id="iKs-z9-5pY"/>
                                 </connections>
                             </tableViewCell>
                         </prototypes>
@@ -535,14 +535,14 @@
                                             <color key="textColor" red="0.2666666667" green="0.2666666667" blue="0.2666666667" alpha="1" colorSpace="calibratedRGB"/>
                                             <nil key="highlightedColor"/>
                                         </label>
-                                        <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="KGJ-GC-8lQ" userLabel="Favorite">
+                                        <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="KGJ-GC-8lQ" userLabel="Tasted">
                                             <rect key="frame" x="331" y="11" width="36" height="42"/>
                                             <constraints>
                                                 <constraint firstAttribute="width" constant="36" id="0XZ-jT-lQr"/>
                                             </constraints>
-                                            <state key="normal" image="FavoriteOutline"/>
+                                            <state key="normal" image="TastedOutline"/>
                                             <connections>
-                                                <action selector="favoriteTapped:" destination="yHQ-GQ-0Zv" eventType="touchUpInside" id="4yo-Kh-XL2"/>
+                                                <action selector="tastedTapped:" destination="yHQ-GQ-0Zv" eventType="touchUpInside" id="KTm-Oc-gp9"/>
                                             </connections>
                                         </button>
                                         <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Style" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Zx8-CG-V4z" customClass="LightLabel" customModule="BeerfestMaster" customModuleProvider="target">
@@ -560,14 +560,14 @@
                                             <color key="textColor" red="0.2666666667" green="0.2666666667" blue="0.2666666667" alpha="1" colorSpace="calibratedRGB"/>
                                             <nil key="highlightedColor"/>
                                         </label>
-                                        <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="e9j-QP-0BZ" userLabel="Tasted">
+                                        <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="e9j-QP-0BZ" userLabel="Favorite">
                                             <rect key="frame" x="284" y="11" width="36" height="42"/>
                                             <constraints>
                                                 <constraint firstAttribute="width" constant="36" id="uau-Rh-Kbb"/>
                                             </constraints>
-                                            <state key="normal" image="TastedOutline"/>
+                                            <state key="normal" image="FavoriteOutline"/>
                                             <connections>
-                                                <action selector="tastedTapped:" destination="yHQ-GQ-0Zv" eventType="touchUpInside" id="a9s-wU-CVT"/>
+                                                <action selector="favoriteTapped:" destination="yHQ-GQ-0Zv" eventType="touchUpInside" id="9Iq-2r-fU2"/>
                                             </connections>
                                         </button>
                                     </subviews>
@@ -594,11 +594,11 @@
                                 <color key="backgroundColor" red="0.64313725489999995" green="0.64313725489999995" blue="0.64313725489999995" alpha="0.0" colorSpace="calibratedRGB"/>
                                 <connections>
                                     <outlet property="breweryLabel" destination="Tbw-kL-xBe" id="s6p-SZ-rAz"/>
-                                    <outlet property="favoriteButton" destination="KGJ-GC-8lQ" id="3va-1g-lrD"/>
+                                    <outlet property="favoriteButton" destination="e9j-QP-0BZ" id="eeX-Vr-FeF"/>
                                     <outlet property="locationLabel" destination="hgF-yG-7OR" id="zD1-Xq-zXN"/>
                                     <outlet property="nameLabel" destination="OEe-bX-eF1" id="jns-fB-N00"/>
                                     <outlet property="styleLabel" destination="Zx8-CG-V4z" id="xS6-hR-dRA"/>
-                                    <outlet property="tastedButton" destination="e9j-QP-0BZ" id="P41-St-qhb"/>
+                                    <outlet property="tastedButton" destination="KGJ-GC-8lQ" id="eEH-ky-gYd"/>
                                 </connections>
                             </tableViewCell>
                         </prototypes>
@@ -786,14 +786,14 @@
                                                     <color key="textColor" red="0.2666666667" green="0.2666666667" blue="0.2666666667" alpha="1" colorSpace="calibratedRGB"/>
                                                     <nil key="highlightedColor"/>
                                                 </label>
-                                                <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="o9t-RB-Lzw" userLabel="Favorite">
+                                                <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="o9t-RB-Lzw" userLabel="Tasted">
                                                     <rect key="frame" x="331" y="11" width="36" height="42"/>
                                                     <constraints>
                                                         <constraint firstAttribute="width" constant="36" id="7bj-MY-yt9"/>
                                                     </constraints>
-                                                    <state key="normal" image="FavoriteOutline"/>
+                                                    <state key="normal" image="TastedOutline"/>
                                                     <connections>
-                                                        <action selector="favoriteTapped:" destination="Cx8-de-lQh" eventType="touchUpInside" id="LQe-xJ-wgd"/>
+                                                        <action selector="tastedTapped:" destination="Cx8-de-lQh" eventType="touchUpInside" id="Zvy-VN-NwH"/>
                                                     </connections>
                                                 </button>
                                                 <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Style" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="sV0-AH-hMf" customClass="LightLabel" customModule="BeerfestMaster" customModuleProvider="target">
@@ -811,14 +811,14 @@
                                                     <color key="textColor" red="0.2666666667" green="0.2666666667" blue="0.2666666667" alpha="1" colorSpace="calibratedRGB"/>
                                                     <nil key="highlightedColor"/>
                                                 </label>
-                                                <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="wDC-0Z-J1P" userLabel="Tasted">
+                                                <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="wDC-0Z-J1P" userLabel="Favorite">
                                                     <rect key="frame" x="284" y="11" width="36" height="42"/>
                                                     <constraints>
                                                         <constraint firstAttribute="width" constant="36" id="LKh-UB-hs7"/>
                                                     </constraints>
-                                                    <state key="normal" image="TastedOutline"/>
+                                                    <state key="normal" image="FavoriteOutline"/>
                                                     <connections>
-                                                        <action selector="tastedTapped:" destination="Cx8-de-lQh" eventType="touchUpInside" id="6y8-gr-dgF"/>
+                                                        <action selector="favoriteTapped:" destination="Cx8-de-lQh" eventType="touchUpInside" id="Lzf-FH-yFZ"/>
                                                     </connections>
                                                 </button>
                                             </subviews>
@@ -845,11 +845,11 @@
                                         <color key="backgroundColor" red="0.64313725489999995" green="0.64313725489999995" blue="0.64313725489999995" alpha="0.0" colorSpace="calibratedRGB"/>
                                         <connections>
                                             <outlet property="breweryLabel" destination="51r-gM-TIm" id="g7W-qe-1Ew"/>
-                                            <outlet property="favoriteButton" destination="o9t-RB-Lzw" id="UZG-6F-9nN"/>
+                                            <outlet property="favoriteButton" destination="wDC-0Z-J1P" id="Owd-jo-t7Z"/>
                                             <outlet property="locationLabel" destination="WXB-wv-aTL" id="z6A-pp-loK"/>
                                             <outlet property="nameLabel" destination="2lK-ZB-FxU" id="zYf-rb-9gF"/>
                                             <outlet property="styleLabel" destination="sV0-AH-hMf" id="aPO-bx-oHI"/>
-                                            <outlet property="tastedButton" destination="wDC-0Z-J1P" id="YZi-1R-Dco"/>
+                                            <outlet property="tastedButton" destination="o9t-RB-Lzw" id="b6G-o1-wAi"/>
                                         </connections>
                                     </tableViewCell>
                                 </prototypes>
