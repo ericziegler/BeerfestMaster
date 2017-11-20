@@ -19,6 +19,9 @@ let StateCacheKey = "StateCacheKey"
 let IsConnoissuerCacheKey = "IsConnoissuerCacheKey"
 let IsEarlyAdmissionCacheKey = "IsEarlyAdmissionCacheKey"
 let IsQuickPourCacheKey = "IsQuickPourCacheKey"
+let MapLocationCacheKey = "MapLocationCacheKey"
+let ThirdPartyStyleCacheKey = "ThirdPartyStyleCacheKey"
+let ThirdPartyABVCacheKey = "ThirdPartyABVCacheKey"
 let IsFavoritedCacheKey = "IsFavoritedCacheKey"
 let HasTastedCacheKey = "HasTastedCacheKey"
 
@@ -28,8 +31,22 @@ class Beer: NSObject, NSCoding {
   
   var brewery: String = ""
   var name: String = ""
-  var style: String = ""
-  var abv: String = ""
+  private var thirdPartyStyle: String = ""
+  private var privateStyle: String = ""
+  var style: String {
+    if !self.thirdPartyStyle.isEmpty {
+      return self.thirdPartyStyle
+    }
+    return self.privateStyle
+  }
+  private var thirdPartyABV: String = ""
+  private var privateABV: String = ""
+  var abv: String {
+    if !self.thirdPartyABV.isEmpty {
+      return self.thirdPartyABV
+    }
+    return self.privateABV
+  }
   var city: String = ""
   var state: String = ""
   var isConnoisseur: Bool = false
@@ -43,6 +60,7 @@ class Beer: NSObject, NSCoding {
   var hasTasted: Bool {
     return self.privateHasTasted
   }
+  var mapLocation: String = ""
   
   var formattedLocation: String {
     let formattedCity = self.city.capitalized
@@ -84,8 +102,8 @@ class Beer: NSObject, NSCoding {
       let props = beerString.components(separatedBy: ",")
       self.brewery = props[0].capitalized
       self.name = props[1].capitalized
-      self.style = props[2]
-      self.abv = props[3]
+      self.privateStyle = props[2]
+      self.privateABV = props[3]
       self.city = props[4]
       self.state = props[5]
       let isConnoisseurString = props[6]
@@ -100,6 +118,9 @@ class Beer: NSObject, NSCoding {
       if isQuickPourString == "1" {
         self.isQuickPour = true
       }
+      self.mapLocation = props[9]
+      self.thirdPartyStyle = props[10]
+      self.thirdPartyABV = props[11]
     }
   }
   
@@ -130,11 +151,17 @@ class Beer: NSObject, NSCoding {
     if let name = decoder.decodeObject(forKey: BeerNameCacheKey) as? String {
       self.name = name
     }
+    if let thirdPartyStyle = decoder.decodeObject(forKey: ThirdPartyStyleCacheKey) as? String {
+      self.thirdPartyStyle = thirdPartyStyle
+    }
     if let style = decoder.decodeObject(forKey: BeerStyleCacheKey) as? String {
-      self.style = style
+      self.privateStyle = style
+    }
+    if let thirdPartyABV = decoder.decodeObject(forKey: ThirdPartyABVCacheKey) as? String {
+      self.thirdPartyABV = thirdPartyABV
     }
     if let abv = decoder.decodeObject(forKey: ABVCacheKey) as? String {
-      self.abv = abv
+      self.privateABV = abv
     }
     if let city = decoder.decodeObject(forKey: CityCacheKey) as? String {
       self.city = city
@@ -162,8 +189,10 @@ class Beer: NSObject, NSCoding {
   public func encode(with coder: NSCoder) {
     coder.encode(self.brewery, forKey: BreweryCacheKey)
     coder.encode(self.name, forKey: BeerNameCacheKey)
-    coder.encode(self.style, forKey: BeerStyleCacheKey)
-    coder.encode(self.abv, forKey: ABVCacheKey)
+    coder.encode(self.thirdPartyStyle, forKey: ThirdPartyStyleCacheKey)
+    coder.encode(self.privateStyle, forKey: BeerStyleCacheKey)
+    coder.encode(self.thirdPartyABV, forKey: ThirdPartyABVCacheKey)
+    coder.encode(self.privateABV, forKey: ABVCacheKey)
     coder.encode(self.city, forKey: CityCacheKey)
     coder.encode(self.state, forKey: StateCacheKey)
     let isConnoisseurNumber = NSNumber(booleanLiteral: self.isConnoisseur)
