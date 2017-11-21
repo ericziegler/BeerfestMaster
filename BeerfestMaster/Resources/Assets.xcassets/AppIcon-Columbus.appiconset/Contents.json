@@ -3,55 +3,55 @@
     {
       "size" : "20x20",
       "idiom" : "iphone",
-      "filename" : "CincyIcon40.png",
+      "filename" : "AppIcon-Columbus40.png",
       "scale" : "2x"
     },
     {
       "size" : "20x20",
       "idiom" : "iphone",
-      "filename" : "CincyIcon60.png",
+      "filename" : "AppIcon-Columbus80.png",
       "scale" : "3x"
     },
     {
       "size" : "29x29",
       "idiom" : "iphone",
-      "filename" : "CincyIcon58.png",
+      "filename" : "AppIcon-Columbus58.png",
       "scale" : "2x"
     },
     {
       "size" : "29x29",
       "idiom" : "iphone",
-      "filename" : "CincyIcon87.png",
+      "filename" : "AppIcon-Columbus87.png",
       "scale" : "3x"
     },
     {
       "size" : "40x40",
       "idiom" : "iphone",
-      "filename" : "CincyIcon80-1.png",
+      "filename" : "AppIcon-Columbus80-1.png",
       "scale" : "2x"
     },
     {
       "size" : "40x40",
       "idiom" : "iphone",
-      "filename" : "CincyIcon120.png",
+      "filename" : "AppIcon-Columbus120-1.png",
       "scale" : "3x"
     },
     {
       "size" : "60x60",
       "idiom" : "iphone",
-      "filename" : "CincyIcon120-1.png",
+      "filename" : "AppIcon-Columbus120.png",
       "scale" : "2x"
     },
     {
       "size" : "60x60",
       "idiom" : "iphone",
-      "filename" : "CincyIcon180.png",
+      "filename" : "AppIcon-Columbus180.png",
       "scale" : "3x"
     },
     {
       "size" : "1024x1024",
       "idiom" : "ios-marketing",
-      "filename" : "CincyIcon1024.png",
+      "filename" : "AppIcon-Columbus1024.png",
       "scale" : "1x"
     }
   ],
