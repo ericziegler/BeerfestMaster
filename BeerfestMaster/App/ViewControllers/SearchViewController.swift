@@ -41,15 +41,16 @@ class SearchViewController: BaseViewController {
   }
   
   private func setupNavBar() {
-    if let closeImage = UIImage(named: "Close")?.maskedImageWithColor(UIColor.accent) {
-      let closeButton = UIButton(type: .custom)
-      closeButton.addTarget(self, action: #selector(closeTapped(_:)), for: .touchUpInside)
-      closeButton.setImage(closeImage, for: .normal)
-      closeButton.frame = CGRect(x: 0, y: 0, width: closeImage.size.width, height: closeImage.size.height)
-      let closeItem = UIBarButtonItem(customView: closeButton)
-      
-      self.navigationItem.rightBarButtonItems = [closeItem]
-    }
+    // TODO: Future - Rethink how to implement the close button
+//    if let closeImage = UIImage(named: "Close")?.maskedImageWithColor(UIColor.accent) {
+//      let closeButton = UIButton(type: .custom)
+//      closeButton.addTarget(self, action: #selector(closeTapped(_:)), for: .touchUpInside)
+//      closeButton.setImage(closeImage, for: .normal)
+//      closeButton.frame = CGRect(x: 0, y: 0, width: closeImage.size.width, height: closeImage.size.height)
+//      let closeItem = UIBarButtonItem(customView: closeButton)
+//
+//      self.navigationItem.rightBarButtonItems = [closeItem]
+//    }
   }
   
   deinit {
@@ -74,7 +75,7 @@ class SearchViewController: BaseViewController {
       if let calculatedTabHeight = self.tabBarController?.tabBar.bounds.size.height {
         tabBarHeight = calculatedTabHeight
       }
-      self.searchTableBottomConstraint.constant = kbSize.height + tabBarHeight
+      self.searchTableBottomConstraint.constant = kbSize.height - tabBarHeight
       self.view.layoutIfNeeded()
     })
   }
