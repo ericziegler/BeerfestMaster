@@ -226,10 +226,10 @@ Sierra Navada,BFD,Blond,4.9%,Chico,CA,0,0,0,,,
 Sierra Navada,Celebration,IPA,6.8%,Chico,CA,0,0,0,,,
 Sierra Navada,Kellerweisse,Hefeweizen,4.8%,Chico,CA,0,0,0,,,
 Sierra Navada,Pale Ale,Pale Ale,"5%,6",Chico,1,0,1,,,
-Sly Fox,360 IPA,IPA,6.2%,Phoenixville,PA,0,0,0,,,
-Sly Fox,Helles,Helles,4.9%,Phoenixville,PA,0,0,0,,Lager - Helles,4.9
-Sly Fox,Phoenix Pale Ale,Pale Ale,5.1%,Phoenixville,PA,0,0,0,,Pale Ale - American,5.1
-Sly Fox,TBD,,N/A,Phoenixville,PA,0,0,0,,,
+Sly Fox,360 IPA,IPA,6.2%,Phoenixville,PA,0,0,0,5,,
+Sly Fox,Helles,Helles,4.9%,Phoenixville,PA,0,0,0,5,Lager - Helles,4.9
+Sly Fox,Phoenix Pale Ale,Pale Ale,5.1%,Phoenixville,PA,0,0,0,5,Pale Ale - American,5.1
+Sly Fox,TBD,,N/A,Phoenixville,PA,0,0,0,5,,
 Southern Tier,2x,DIPA,8.2%,Lakewood,NY,0,0,0,,IPA - Imperial / Double,8.199999999999999
 Southern Tier,Nu Skool,IPA,6%,Lakewood,NY,0,0,0,,IPA - American,6
 Southern Tier,Raspberry White,Witbier,4.8%,Lakewood,NY,0,0,0,,,

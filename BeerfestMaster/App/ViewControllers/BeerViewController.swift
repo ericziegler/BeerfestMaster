@@ -21,11 +21,13 @@ class BeerViewController: BaseViewController {
   @IBOutlet var abvLabel: LightLabel!
   @IBOutlet var breweryLabel: RegularLabel!
   @IBOutlet var cityLabel: LightLabel!
-  @IBOutlet var mapView: GTZoomableImageView!
+  @IBOutlet var mapView: UIScrollView!
   @IBOutlet var favoriteButton: UIButton!
   @IBOutlet var tastedButton: UIButton!
+  @IBOutlet var mapTapGestureRecognizer: UITapGestureRecognizer!
   
   var beer: Beer!
+  var mapImageView: UIImageView!
   
   // MARK: Init
   
@@ -42,6 +44,11 @@ class BeerViewController: BaseViewController {
     self.styleMap()
   }
   
+  override func viewDidAppear(_ animated: Bool) {
+    super.viewDidAppear(animated)
+    self.scrollToLocation()
+  }
+  
   private func setupForBeer() {
     self.nameLabel.text = self.beer.name
     self.breweryLabel.text = self.beer.brewery
@@ -49,14 +56,67 @@ class BeerViewController: BaseViewController {
     self.styleLabel.text = beer.style
     self.cityLabel.text = beer.formattedLocation
     
-    self.mapView.image = CurrentFest.map
-    
     self.updateButtons()
+  }
+  
+  private func scrollToLocation() {
+    var point = CGPoint.zero
+    
+    if self.beer.mapLocation == "0" {
+      point = CGPoint(x: 0, y: 0)
+    }
+    else if self.beer.mapLocation == "1" {
+      point = CGPoint(x: 0, y: 425)
+    }
+    else if self.beer.mapLocation == "2" {
+      point = CGPoint(x: 140, y: 0)
+    }
+    else if self.beer.mapLocation == "3" {
+      point = CGPoint(x: 140, y: 425)
+    }
+    else if self.beer.mapLocation == "4" {
+      point = CGPoint(x: 415, y: 0)
+    }
+    else if self.beer.mapLocation == "5" {
+      point = CGPoint(x: 415, y: 400)
+    }
+    else if self.beer.mapLocation == "6" {
+      point = CGPoint(x: 540, y: 0)
+    } else {
+      point = CGPoint(x: 540, y: 425)
+    }
+    let rect = CGRect(x: point.x - 100, y: point.y - 100, width: point.x + 200, height: point.y + 200)
+    self.mapView.zoom(to: rect, animated: false)
   }
   
   private func styleMap() {
     self.mapView.layer.borderColor = UIColor.mediumText.cgColor
     self.mapView.layer.borderWidth = 0.5
+    
+    self.mapImageView = UIImageView(image: CurrentFest.map)
+    self.mapView.addSubview(self.mapImageView)
+    self.mapView.contentSize = self.mapImageView.bounds.size
+    self.mapView.clipsToBounds = true
+    self.mapView.maximumZoomScale = 2.5
+    
+    self.mapTapGestureRecognizer.numberOfTapsRequired = 2
+  }
+  
+  @IBAction func mapTapped(_ sender: UITapGestureRecognizer) {
+    let point = sender.location(in: self.mapImageView)
+    self.zoomToPoint(point: point)
+  }
+  
+  private func zoomToPoint(point: CGPoint) {
+    let scale = min(self.mapView.zoomScale * 2, self.mapView.maximumZoomScale)
+      if scale != self.mapView.zoomScale {
+      let scrollSize = self.mapView.frame.size
+      let size = CGSize(width: scrollSize.width / scale,
+                        height: scrollSize.height / scale)
+      let origin = CGPoint(x: point.x - size.width / 2,
+                           y: point.y - size.height / 2)
+      self.mapView.zoom(to:CGRect(origin: origin, size: size), animated: true)
+    }
   }
   
   private func updateButtons() {
@@ -85,6 +145,14 @@ class BeerViewController: BaseViewController {
     beer.toggleTasted()
     BeerList.shared.saveBeersToCache()
     self.updateButtons()
+  }
+  
+}
+
+extension BeerViewController: UIScrollViewDelegate {
+
+  func viewForZooming(in scrollView: UIScrollView) -> UIView? {
+    return self.mapImageView
   }
   
 }

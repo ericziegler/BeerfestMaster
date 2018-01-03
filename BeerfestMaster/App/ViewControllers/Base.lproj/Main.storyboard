@@ -117,7 +117,7 @@
             </objects>
             <point key="canvasLocation" x="3134" y="1486"/>
         </scene>
-        <!--Beer Details-->
+        <!--Delegate-->
         <scene sceneID="jpy-zU-Xbb">
             <objects>
                 <viewController storyboardIdentifier="BeerViewId" title="Beer Details" id="Cgf-x4-j3b" customClass="BeerViewController" customModule="BeerfestMaster" customModuleProvider="target" sceneMemberID="viewController">
@@ -187,9 +187,14 @@
                                 <nil key="textColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
-                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="O5H-vN-cUf" customClass="GTZoomableImageView" customModule="BeerfestMaster" customModuleProvider="target">
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="O5H-vN-cUf" customClass="UIScrollView">
                                 <rect key="frame" x="16" y="187" width="343" height="460"/>
                                 <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                <gestureRecognizers/>
+                                <connections>
+                                    <outlet property="delegate" destination="Cgf-x4-j3b" id="3PM-GC-BED"/>
+                                    <outletCollection property="gestureRecognizers" destination="At9-lK-U5Z" appends="YES" id="xwH-5m-VGT"/>
+                                </connections>
                             </view>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="City, ST" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="hUe-lA-CM6" customClass="LightLabel" customModule="BeerfestMaster" customModuleProvider="target">
                                 <rect key="frame" x="16" y="156" width="343" height="21"/>
@@ -238,6 +243,7 @@
                         <outlet property="breweryLabel" destination="8u9-Zs-miO" id="jPD-ns-HFZ"/>
                         <outlet property="cityLabel" destination="hUe-lA-CM6" id="91D-1z-IF4"/>
                         <outlet property="favoriteButton" destination="TaT-3T-iF9" id="I2x-Pg-yiX"/>
+                        <outlet property="mapTapGestureRecognizer" destination="At9-lK-U5Z" id="uQn-GE-uW5"/>
                         <outlet property="mapView" destination="O5H-vN-cUf" id="Kkn-9L-1R3"/>
                         <outlet property="nameLabel" destination="loh-cn-Ham" id="Ngb-dH-zVL"/>
                         <outlet property="styleLabel" destination="ASS-Bk-CbW" id="ju6-WQ-aHc"/>
@@ -245,6 +251,11 @@
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="ZcV-JP-NhM" userLabel="First Responder" sceneMemberID="firstResponder"/>
+                <tapGestureRecognizer id="At9-lK-U5Z">
+                    <connections>
+                        <action selector="mapTapped:" destination="Cgf-x4-j3b" id="1mQ-BA-2wi"/>
+                    </connections>
+                </tapGestureRecognizer>
             </objects>
             <point key="canvasLocation" x="1264.8" y="2194.4527736131936"/>
         </scene>
