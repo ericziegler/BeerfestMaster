@@ -44,8 +44,8 @@ class BeerViewController: BaseViewController {
     self.styleMap()
   }
   
-  override func viewDidAppear(_ animated: Bool) {
-    super.viewDidAppear(animated)
+  override func viewWillAppear(_ animated: Bool) {
+    super.viewWillAppear(animated)
     self.scrollToLocation()
   }
   
@@ -62,31 +62,34 @@ class BeerViewController: BaseViewController {
   private func scrollToLocation() {
     var point = CGPoint.zero
     
-    if self.beer.mapLocation == "0" {
-      point = CGPoint(x: 0, y: 0)
+    if let location = self.beer.mapLocation {
+      if location == "0" {
+        point = CGPoint(x: 0, y: 0)
+      }
+      else if location == "1" {
+        point = CGPoint(x: 0, y: 425)
+      }
+      else if location == "2" {
+        point = CGPoint(x: 140, y: 0)
+      }
+      else if location == "3" {
+        point = CGPoint(x: 140, y: 425)
+      }
+      else if location == "4" {
+        point = CGPoint(x: 415, y: 0)
+      }
+      else if location == "5" {
+        point = CGPoint(x: 415, y: 400)
+      }
+      else if location == "6" {
+        point = CGPoint(x: 540, y: 0)
+      }
+      else if location == "7" {
+        point = CGPoint(x: 540, y: 425)
+      }
+      let rect = CGRect(x: point.x - 100, y: point.y - 100, width: point.x + 200, height: point.y + 200)
+      self.mapView.zoom(to: rect, animated: false)
     }
-    else if self.beer.mapLocation == "1" {
-      point = CGPoint(x: 0, y: 425)
-    }
-    else if self.beer.mapLocation == "2" {
-      point = CGPoint(x: 140, y: 0)
-    }
-    else if self.beer.mapLocation == "3" {
-      point = CGPoint(x: 140, y: 425)
-    }
-    else if self.beer.mapLocation == "4" {
-      point = CGPoint(x: 415, y: 0)
-    }
-    else if self.beer.mapLocation == "5" {
-      point = CGPoint(x: 415, y: 400)
-    }
-    else if self.beer.mapLocation == "6" {
-      point = CGPoint(x: 540, y: 0)
-    } else {
-      point = CGPoint(x: 540, y: 425)
-    }
-    let rect = CGRect(x: point.x - 100, y: point.y - 100, width: point.x + 200, height: point.y + 200)
-    self.mapView.zoom(to: rect, animated: false)
   }
   
   private func styleMap() {

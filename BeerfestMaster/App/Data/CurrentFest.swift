@@ -107,6 +107,21 @@ enum FestCity: String {
     }
   }
   
+  var mapLocation: String {
+    switch self {
+    case .cleveland:
+      return "cleveland-map"
+    case .cincinnati:
+      return "cincinnati-map"
+    case .columbus:
+      return "columbus-map"
+    case .philadelphia:
+      return "philadelphia-map"
+    case .pittsburgh:
+      return "pittsburgh-map"
+    }
+  }
+  
 }
 
 let CurrentFest = FestCity.philadelphia

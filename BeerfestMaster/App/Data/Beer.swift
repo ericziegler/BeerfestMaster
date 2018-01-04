@@ -60,7 +60,11 @@ class Beer: NSObject, NSCoding {
   var hasTasted: Bool {
     return self.privateHasTasted
   }
-  var mapLocation: String = ""
+  var mapLocation: String? {
+    get {
+      return MapLocationManager.shared.locationFor(brewery: self.brewery)
+    }
+  }
   
   var formattedLocation: String {
     let formattedCity = self.city.capitalized
@@ -117,8 +121,7 @@ class Beer: NSObject, NSCoding {
       let isQuickPourString = props[8]
       if isQuickPourString == "1" {
         self.isQuickPour = true
-      }
-      self.mapLocation = props[9]
+      } 
       self.thirdPartyStyle = props[10]
       self.thirdPartyABV = props[11]
     }
