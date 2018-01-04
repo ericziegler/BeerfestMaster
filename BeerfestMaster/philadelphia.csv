@@ -144,10 +144,10 @@ Great Lakes,Nosferatu,Red Ale,8%,Cleveland,OH,0,0,0,,Red Ale - Imperial / Double
 Green Flash,GFB,Am. Pale Wheat Ale,5.5%,San Diego,CA,0,0,0,,,
 Green Flash,Passion Fruit Kicker,Am. Pale Wheat Ale,5.5%,San Diego,CA,0,0,0,,Fruit Beer,5.5
 Green Flash,Remix IPA,IPA,6.2%,San Diego,CA,0,0,0,,,
-Guinness,TBD,,N/A,Dublin ,IRE,0,0,0,,,
-Guinness,TBD,,N/A,Dublin ,IRE,0,0,0,,,
-Guinness,TBD,,N/A,Dublin ,IRE,0,0,0,,,
-Guinness,TBD,,N/A,Dublin ,IRE,0,0,0,,,
+Guinness,Guinness Draught,Stout,4.2%,Dublin,Ireland,0,0,0,,Stout - Irish Dry,4.2
+Guinness,Blonde American Lager,American Lager,5%,Dublin,Ireland,0,0,0,,Lager - Pale,5
+Guinness,Extra Stout,Stout,7.5%,Dublin,Ireland,0,0,0,,Stout - Foreign / Export,7.5
+Guinness,200th Anniversary,Stout,6%,Dublin,Ireland,0,0,0,,Stout - Foreign / Export,6
 Half Acre,Daisy Cutter,Pale Ale,5.2%,Chicago,IL,0,1,0,,Pale Ale - American,5.2
 Half Acre,Deep Space DIPA,DIPA,10%,Chicago,IL,0,0,0,,,
 Hardywood,Christmas Morning,Milk stout,N/A,Richmond,VA,1,0,0,,,
@@ -155,11 +155,11 @@ Hardywood,Pils,Pilsner,5.2%,Richmond,VA,0,0,0,,Pilsner - German,5.2
 Hardywood,Raspberry Stout,Imperial Stout,9.2%,Richmond,VA,0,1,0,,Stout - Imperial / Double,9.300000000000001
 Hardywood,Single,Blonde,6.2%,Richmond,VA,0,0,0,,,
 Hardywood,VIPA,IPA,5.2%,Richmond,VA,0,0,0,,IPA - American,5.2
-Heavy Seas,Firkin?,,N/A,Baltimore,MD,0,0,0,,,
 Heavy Seas,Loose Cannon,IPA,7.25%,Baltimore,MD,0,0,0,,IPA - American,7.25
 Heavy Seas,Winter Storm,ESB,7.5%,Baltimore,MD,0,0,0,,Extra Special / Strong Bitter,7.5
 Highway Manor,Mr Strawberry,Am. Wild Ale,5.2%,Camp Hill,PA,0,0,0,,,
 Highway Manor,Say John,Farmhouse/ Saison,6.7%,Camp Hill,PA,0,0,0,,Sour - Ale,6.7
+Highway Manor,Funky Prowler,Stout,5.2%,Camp Hill,PA,0,0,0,,Stout - Irish Dry,5.2
 Hydra,Morning Star ,Berliner Weiss,3.6%,Sioux Falls,ND,0,0,0,,,
 Ithaca,Flower Power,IPA,7.2%,Ithaca,NY,0,0,1,,IPA - American,7.5
 Jacks Abby,Cranberry Berliner ,Berliner Weiss,3.5%,Framingham,MA,0,0,0,,,
@@ -186,6 +186,10 @@ Lost Abbey,Red Barn Saison,Farnhouse/ Saison,6.7%,San Marcos,CA,0,0,0,,,
 Magic Hat,Art Hop Ale,Imperial Blonde w/ Blood Orage & Sage,8.2%,South Burlington,VT,0,1,0,,,
 Magic Hat,Circus Boy,Grapefruit IPA,6%,South Burlington,VT,0,0,0,,Pale Wheat Ale - American,4.5
 Magic Hat,TFG,Stout w/ Vanilla,5.8%,South Burlington,VT,0,0,0,,,
+Manayunk,Crunch,Porter,6%,Manayunk,PA,0,0,0,,,
+Manayunk,Simcoalition,IPA,7.1%,Manayunk,PA,0,0,0,,,
+Manayunk,Cuvee,Sour,5%,Manayunk,PA,0,0,0,,,
+Manayunk,Dr Drei,Brett IPA,5.8%,Manayunk,PA,0,0,0,,,
 Melvin,Citradamus,DIPA,9.5%,Jackson Hole ,WY,0,0,0,,IPA - Imperial / Double,9.5
 Melvin,Your IPA,IPA,7.1%,Jackson Hole ,WY,0,0,0,,IPA - American,8.300000000000001
 Moylans,TBD,,N/A,Novato ,CA,0,0,0,,,
@@ -226,16 +230,18 @@ Sierra Navada,BFD,Blond,4.9%,Chico,CA,0,0,0,,,
 Sierra Navada,Celebration,IPA,6.8%,Chico,CA,0,0,0,,,
 Sierra Navada,Kellerweisse,Hefeweizen,4.8%,Chico,CA,0,0,0,,,
 Sierra Navada,Pale Ale,Pale Ale,"5%,6",Chico,1,0,1,,,
-Sly Fox,360 IPA,IPA,6.2%,Phoenixville,PA,0,0,0,5,,
-Sly Fox,Helles,Helles,4.9%,Phoenixville,PA,0,0,0,5,Lager - Helles,4.9
-Sly Fox,Phoenix Pale Ale,Pale Ale,5.1%,Phoenixville,PA,0,0,0,5,Pale Ale - American,5.1
-Sly Fox,TBD,,N/A,Phoenixville,PA,0,0,0,5,,
+Sly Fox,360 IPA,IPA,6.2%,Phoenixville,PA,0,0,0,,,
+Sly Fox,Helles,Helles,4.9%,Phoenixville,PA,0,0,0,,Lager - Helles,4.9
+Sly Fox,Phoenix Pale Ale,Pale Ale,5.1%,Phoenixville,PA,0,0,0,,Pale Ale - American,5.1
 Southern Tier,2x,DIPA,8.2%,Lakewood,NY,0,0,0,,IPA - Imperial / Double,8.199999999999999
 Southern Tier,Nu Skool,IPA,6%,Lakewood,NY,0,0,0,,IPA - American,6
 Southern Tier,Raspberry White,Witbier,4.8%,Lakewood,NY,0,0,0,,,
 Southern Tier,Thick Mint,Imperial Stout,10%,Lakewood,NY,0,0,0,,,
 Spring House,7 Gates,Pale Ale,5.6%,Lancaster,PA,0,0,0,,,
 Spring House,Big Gruesome,Imperial Stout,8.5%,Lancaster,PA,0,0,0,,Stout - American Imperial / Double,8.5
+St. Benjamin,Heart in Hand,Rauch bier,6.2%,Philadelphia ,PA,0,0,0,,,
+St. Benjamin,Parkway Centennial,Pale Ale,5.2%,Philadelphia ,PA,0,0,0,,,
+St. Benjamin,Prosim,Pilsner,4.2%,Philadelphia ,PA,0,0,0,,,
 St. Boniface,3LB IPA,IPA,6%,Ephrata,PA,0,0,0,,IPA - American,6
 St. Boniface,Paideia Pale Ale,Pale Ale,5%,Ephrata,PA,0,0,0,,Pale Ale - American,5
 Starrhill,2 Tone Vanilla Porter,Porter,7%,Crozet,VA,0,0,0,,,
@@ -260,16 +266,17 @@ SweetWater,Sinners Son,Imperial Stout,12.4%,Atlanta,GA,1,0,0,,,
 Terrapin,Hi 5,IPA,5.9%,Athens,GA,0,0,0,,,
 Terrapin,Hopsecutioner ,IPA,7.3%,Athens,GA,0,0,0,,,
 Terrapin ,Liquid bliss,Porter,6.1%,Athens,GA,0,0,0,,Porter - American,6.1
-Troegs,Blizzard of Hops,IPA,6.4%,Hershey,PA,0,0,0,,,
-Troegs,Mad Elf,Bel. Strong Dark,11%,Hershey,PA,0,1,0,,,
-Troegs,Perpetual,IPA,7.5%,Hershey,PA,0,0,0,,,
-Troegs,Scratch,,N/A,Hershey,PA,0,0,0,,,
+Tröegs,Blizzard of Hops,IPA,6.4%,Hershey,PA,0,0,0,,IPA - American,6.4
+Tröegs,Mad Elf,Bel. Strong Dark,11%,Hershey,PA,0,1,0,,Belgian Strong Dark Ale,11
+Tröegs,Perpetual,IPA,7.5%,Hershey,PA,0,0,0,,IPA - American,7.5
+Tröegs,Scratch,,N/A,Hershey,PA,0,0,0,,Stout - Milk / Sweet,7.1
 Twin Lakes Brewing,Blue Water Pils,Pilsner,6%,Newport ,DE,0,1,0,,,
 Twin Lakes Brewing,Greenville Pale Ale,Pale Ale,5.5%,Newport ,DE,0,0,1,,Pale Ale - American,5.5
-Twin Lakes Brewing,TBD,,N/A,Newport ,DE,1,0,0,,,
-Twin Lakes Brewing,TBD,,N/A,Newport ,DE,0,0,0,,,
-Twin Lakes Brewing,TBD,,N/A,Newport ,DE,0,0,0,,,
-Twin Lakes Brewing,TBD,,N/A,Newport ,DE,0,0,0,,,
+Twin Lakes Brewing,Tweeds Tavern Stout Cask Conditioned Firkin,Stout,5%,Newport ,DE,1,0,0,,,
+Twin Lakes Brewing,Blue Water,Pilsner,6%,Newport ,DE,0,0,0,,Pilsner - German,6
+Twin Lakes Brewing,Caesar Rodney ,Golden Ale,5.5%,Newport ,DE,0,0,0,,Blonde Ale,5.5
+Twin Lakes Brewing,Tweeds Tavern,Stout,5%,Newport ,DE,0,0,0,,Stout - Other,5
+Twin Lakes Brewing,Winterthur Wheat,Am. Wheat,6%,Newport ,DE,0,0,0,,Pale Wheat Ale - American,6
 Two Roads Brewing,Brothers in Farm CONN,Farmhouse/ Saison,6.5%,Stratford,CT,1,0,0,,,
 Two Roads Brewing,Honeyspot Road,IPA,6%,Stratford,CT,0,1,0,,IPA - American,6
 Two Roads Brewing,Road 2 Ruin ,DIPA,8%,Stratford,CT,0,0,0,,IPA - Imperial / Double,8
@@ -280,11 +287,10 @@ Urban Family,Of Both Worlds,Farmhouse/ Saison,6.4%,Seattle ,WA,0,1,0,,,
 Urban Village,TBD,,N/A,Philadelphia,PA,0,0,0,,,
 Urban Village,TBD,,N/A,Philadelphia,PA,0,0,0,,,
 Victory,Black Forest Cake Stout,Stout,7.5%,Downingtown,PA,0,0,0,,,
-Victory,Home Grown,IPA,6.1%,Downingtown,PA,0,0,1,,,
+Victory,Home Grown,IPA,6.1%,Downingtown,PA,0,0,0,,,
 Victory,Mighty Things,DIPA,8.3%,Downingtown,PA,0,1,0,,,
 Victory,Prima,Pilsner,5.3%,Downingtown,PA,0,0,0,,,
 Victory,Sour Monkey,Am. Wild Ale,9.5%,Downingtown,PA,0,0,0,,,
-Victory,TBD,Lager,5%,Downingtown,PA,0,0,0,,,
 Von Trapp,Bohemian Pilsner,Pilsner,5.4%,Stowe ,VT,0,0,0,,,
 Von Trapp,Dunkel Lager,Dunkel,5.7%,Stowe ,VT,0,0,0,,,
 Weyerbacher,Dallas Sucks,Pale Ale,4.5%,Easton,PA,0,0,0,,,
