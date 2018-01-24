@@ -21,6 +21,7 @@
 		072013DD1FB5D7D900A61BE8 /* SearchViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 072013DC1FB5D7D900A61BE8 /* SearchViewController.swift */; };
 		073FD31D1FB480E300DEE774 /* BeerListViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 073FD31C1FB480E300DEE774 /* BeerListViewController.swift */; };
 		073FD31F1FB483E200DEE774 /* BaseViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 073FD31E1FB483E200DEE774 /* BaseViewController.swift */; };
+		07482A67200FA8DD00432EE8 /* columbus-map.csv in Resources */ = {isa = PBXBuildFile; fileRef = 07482A66200FA8DD00432EE8 /* columbus-map.csv */; };
 		0784F09C1FFDAD3E006686D0 /* philadelphia-map.csv in Resources */ = {isa = PBXBuildFile; fileRef = 0784F09B1FFDAD3E006686D0 /* philadelphia-map.csv */; };
 		0784F09E1FFDB2E5006686D0 /* MapLocationManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0784F09D1FFDB2E5006686D0 /* MapLocationManager.swift */; };
 		07955DCC1FBF1819000A14A9 /* CitySetup.txt in Resources */ = {isa = PBXBuildFile; fileRef = 07955DCB1FBF1819000A14A9 /* CitySetup.txt */; };
@@ -65,6 +66,7 @@
 		072013DC1FB5D7D900A61BE8 /* SearchViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SearchViewController.swift; sourceTree = "<group>"; };
 		073FD31C1FB480E300DEE774 /* BeerListViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BeerListViewController.swift; sourceTree = "<group>"; };
 		073FD31E1FB483E200DEE774 /* BaseViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BaseViewController.swift; sourceTree = "<group>"; };
+		07482A66200FA8DD00432EE8 /* columbus-map.csv */ = {isa = PBXFileReference; lastKnownFileType = text; path = "columbus-map.csv"; sourceTree = "<group>"; };
 		0784F09B1FFDAD3E006686D0 /* philadelphia-map.csv */ = {isa = PBXFileReference; lastKnownFileType = text; path = "philadelphia-map.csv"; sourceTree = "<group>"; };
 		0784F09D1FFDB2E5006686D0 /* MapLocationManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MapLocationManager.swift; sourceTree = "<group>"; };
 		07955DCB1FBF1819000A14A9 /* CitySetup.txt */ = {isa = PBXFileReference; lastKnownFileType = text; path = CitySetup.txt; sourceTree = "<group>"; };
@@ -279,6 +281,7 @@
 				07955DF71FC1DAF2000A14A9 /* pittsburgh.csv */,
 				07955DCB1FBF1819000A14A9 /* CitySetup.txt */,
 				0784F09B1FFDAD3E006686D0 /* philadelphia-map.csv */,
+				07482A66200FA8DD00432EE8 /* columbus-map.csv */,
 			);
 			path = Resources;
 			sourceTree = "<group>";
@@ -348,6 +351,7 @@
 				07955DFE1FC1DAF3000A14A9 /* columbus.csv in Resources */,
 				072013CD1FB54F3200A61BE8 /* Assets.xcassets in Resources */,
 				07955DFD1FC1DAF3000A14A9 /* cleveland.csv in Resources */,
+				07482A67200FA8DD00432EE8 /* columbus-map.csv in Resources */,
 				07955DFC1FC1DAF3000A14A9 /* pittsburgh.csv in Resources */,
 				07955DFF1FC1DAF3000A14A9 /* cincinnati.csv in Resources */,
 				07955E001FC1DAF3000A14A9 /* philadelphia.csv in Resources */,
@@ -525,7 +529,7 @@
 		07F3BFCD1FB3E41000AAA0AB /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
-				ASSETCATALOG_COMPILER_APPICON_NAME = "AppIcon-Philadelphia";
+				ASSETCATALOG_COMPILER_APPICON_NAME = "AppIcon-Columbus";
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = MJA8334VZT;
 				INFOPLIST_FILE = "$(SRCROOT)/BeerfestMaster/Resources/Info.plist";
@@ -536,7 +540,7 @@
 					"$(PROJECT_DIR)/BeerfestMaster/Flurry",
 					"$(PROJECT_DIR)/BeerfestMaster/FlurryAds",
 				);
-				PRODUCT_BUNDLE_IDENTIFIER = com.zigabytes.PhiladelphiaBeerfest;
+				PRODUCT_BUNDLE_IDENTIFIER = com.zigabytes.ColumbusBeerfest;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_OBJC_BRIDGING_HEADER = "BeerfestMaster/BeerfestMaster-Bridging-Header.h";
 				SWIFT_VERSION = 4.0;
@@ -547,7 +551,7 @@
 		07F3BFCE1FB3E41000AAA0AB /* Release */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
-				ASSETCATALOG_COMPILER_APPICON_NAME = "AppIcon-Philadelphia";
+				ASSETCATALOG_COMPILER_APPICON_NAME = "AppIcon-Columbus";
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = MJA8334VZT;
 				INFOPLIST_FILE = "$(SRCROOT)/BeerfestMaster/Resources/Info.plist";
@@ -558,7 +562,7 @@
 					"$(PROJECT_DIR)/BeerfestMaster/Flurry",
 					"$(PROJECT_DIR)/BeerfestMaster/FlurryAds",
 				);
-				PRODUCT_BUNDLE_IDENTIFIER = com.zigabytes.PhiladelphiaBeerfest;
+				PRODUCT_BUNDLE_IDENTIFIER = com.zigabytes.ColumbusBeerfest;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_OBJC_BRIDGING_HEADER = "BeerfestMaster/BeerfestMaster-Bridging-Header.h";
 				SWIFT_VERSION = 4.0;

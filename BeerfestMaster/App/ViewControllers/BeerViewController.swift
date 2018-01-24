@@ -62,33 +62,57 @@ class BeerViewController: BaseViewController {
   private func scrollToLocation() {
     var point = CGPoint.zero
     
-    if let location = self.beer.mapLocation {
-      if location == "0" {
-        point = CGPoint(x: 0, y: 0)
+    if var location = self.beer.mapLocation {
+      if CurrentFest == .philadelphia {
+        if location == "0" {
+          point = CGPoint(x: 0, y: 0)
+        }
+        else if location == "1" {
+          point = CGPoint(x: 0, y: 425)
+        }
+        else if location == "2" {
+          point = CGPoint(x: 140, y: 0)
+        }
+        else if location == "3" {
+          point = CGPoint(x: 140, y: 425)
+        }
+        else if location == "4" {
+          point = CGPoint(x: 415, y: 0)
+        }
+        else if location == "5" {
+          point = CGPoint(x: 415, y: 400)
+        }
+        else if location == "6" {
+          point = CGPoint(x: 540, y: 0)
+        }
+        else if location == "7" {
+          point = CGPoint(x: 540, y: 425)
+        }
+        let rect = CGRect(x: point.x - 100, y: point.y - 100, width: point.x + 200, height: point.y + 200)
+        self.mapView.zoom(to: rect, animated: false)
       }
-      else if location == "1" {
-        point = CGPoint(x: 0, y: 425)
+      else if CurrentFest == .columbus {
+        if location == "0" {
+          point = CGPoint(x: 182, y: 14)
+        }
+        else if location == "1" {
+          point = CGPoint(x: 151, y: 494)
+        }
+        else if location == "2" {
+          point = CGPoint(x: 69, y: 863)
+        }
+        else if location == "3" {
+          point = CGPoint(x: 491, y: 147)
+        }
+        else if location == "4" {
+          point = CGPoint(x: 570, y: 601)
+        }
+        else if location == "5" {
+          point = CGPoint(x: 587, y: 901)
+        }
+        let rect = CGRect(x: point.x, y: point.y, width: 350, height: 350)
+        self.mapView.zoom(to: rect, animated: false)
       }
-      else if location == "2" {
-        point = CGPoint(x: 140, y: 0)
-      }
-      else if location == "3" {
-        point = CGPoint(x: 140, y: 425)
-      }
-      else if location == "4" {
-        point = CGPoint(x: 415, y: 0)
-      }
-      else if location == "5" {
-        point = CGPoint(x: 415, y: 400)
-      }
-      else if location == "6" {
-        point = CGPoint(x: 540, y: 0)
-      }
-      else if location == "7" {
-        point = CGPoint(x: 540, y: 425)
-      }
-      let rect = CGRect(x: point.x - 100, y: point.y - 100, width: point.x + 200, height: point.y + 200)
-      self.mapView.zoom(to: rect, animated: false)
     }
   }
   
@@ -156,6 +180,11 @@ extension BeerViewController: UIScrollViewDelegate {
 
   func viewForZooming(in scrollView: UIScrollView) -> UIView? {
     return self.mapImageView
+  }
+  
+  func scrollViewDidScroll(_ scrollView: UIScrollView) {
+    print(scrollView.contentOffset)
+    print(scrollView.contentSize)
   }
   
 }
