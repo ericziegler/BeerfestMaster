@@ -62,7 +62,7 @@ class BeerViewController: BaseViewController {
   private func scrollToLocation() {
     var point = CGPoint.zero
     
-    if var location = self.beer.mapLocation {
+    if let location = self.beer.mapLocation {
       if CurrentFest == .philadelphia {
         if location == "0" {
           point = CGPoint(x: 0, y: 0)
@@ -144,6 +144,49 @@ class BeerViewController: BaseViewController {
         let rect = CGRect(x: point.x, y: point.y, width: 470, height: 470)
         self.mapView.zoom(to: rect, animated: false)
       }
+      else if CurrentFest == .cincinnati {
+        if location == "0" {
+          point = CGPoint(x: 400, y: 285)
+        }
+        else if location == "1" {
+          point = CGPoint(x: 432, y: 627)
+        }
+        else if location == "2" {
+          point = CGPoint(x: 465, y: 982)
+        }
+        else if location == "3" {
+          point = CGPoint(x: 453, y: 1419)
+        }
+        else if location == "4" {
+          point = CGPoint(x: 398, y: 1786)
+        }
+        else if location == "5" {
+          point = CGPoint(x: 737, y: 190)
+        }
+        else if location == "6" {
+          point = CGPoint(x: 763, y: 553)
+        }
+        else if location == "7" {
+          point = CGPoint(x: 765, y: 924)
+        }
+        else if location == "8" {
+          point = CGPoint(x: 723, y: 1407)
+        }
+        else if location == "9" {
+          point = CGPoint(x: 790, y: 1673)
+        }
+        else if location == "10" {
+          point = CGPoint(x: 896, y: 1655)
+        }
+        else if location == "11" {
+          point = CGPoint(x: 912, y: 1916)
+        }
+        else if location == "12" {
+          point = CGPoint(x: 488, y: 1408)
+        }
+        let rect = CGRect(x: point.x, y: point.y, width: 470, height: 470)
+        self.mapView.zoom(to: rect, animated: false)
+      }
     }
   }
   
@@ -215,7 +258,6 @@ extension BeerViewController: UIScrollViewDelegate {
   
   func scrollViewDidScroll(_ scrollView: UIScrollView) {
     print(scrollView.contentOffset)
-    print(scrollView.contentSize)
   }
   
 }

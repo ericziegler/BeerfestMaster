@@ -124,4 +124,4 @@ enum FestCity: String {
   
 }
 
-let CurrentFest = FestCity.cleveland
+let CurrentFest = FestCity.cincinnati
