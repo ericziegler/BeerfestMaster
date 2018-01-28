@@ -113,6 +113,37 @@ class BeerViewController: BaseViewController {
         let rect = CGRect(x: point.x, y: point.y, width: 350, height: 350)
         self.mapView.zoom(to: rect, animated: false)
       }
+      else if CurrentFest == .cleveland {
+        if location == "0" {
+          point = CGPoint(x: 58, y: 57)
+        }
+        else if location == "1" {
+          point = CGPoint(x: 145, y: 504)
+        }
+        else if location == "2" {
+          point = CGPoint(x: 153, y: 937)
+        }
+        else if location == "3" {
+          point = CGPoint(x: 484, y: 136)
+        }
+        else if location == "4" {
+          point = CGPoint(x: 522, y: 569)
+        }
+        else if location == "5" {
+          point = CGPoint(x: 522, y: 957)
+        }
+        else if location == "6" {
+          point = CGPoint(x: 686, y: 43)
+        }
+        else if location == "7" {
+          point = CGPoint(x: 686, y: 527)
+        }
+        else if location == "8" {
+          point = CGPoint(x: 686, y: 952)
+        }
+        let rect = CGRect(x: point.x, y: point.y, width: 470, height: 470)
+        self.mapView.zoom(to: rect, animated: false)
+      }
     }
   }
   
