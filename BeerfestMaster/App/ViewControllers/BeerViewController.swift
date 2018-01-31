@@ -146,45 +146,33 @@ class BeerViewController: BaseViewController {
       }
       else if CurrentFest == .cincinnati {
         if location == "0" {
-          point = CGPoint(x: 400, y: 285)
+          point = CGPoint(x: 33, y: 35)
         }
         else if location == "1" {
-          point = CGPoint(x: 432, y: 627)
+          point = CGPoint(x: 22, y: 374)
         }
         else if location == "2" {
-          point = CGPoint(x: 465, y: 982)
+          point = CGPoint(x: 24, y: 843)
         }
         else if location == "3" {
-          point = CGPoint(x: 453, y: 1419)
+          point = CGPoint(x: 12, y: 1203)
         }
         else if location == "4" {
-          point = CGPoint(x: 398, y: 1786)
+          point = CGPoint(x: 318, y: 21)
         }
         else if location == "5" {
-          point = CGPoint(x: 737, y: 190)
+          point = CGPoint(x: 324, y: 418)
         }
         else if location == "6" {
-          point = CGPoint(x: 763, y: 553)
+          point = CGPoint(x: 326, y: 800)
         }
         else if location == "7" {
-          point = CGPoint(x: 765, y: 924)
+          point = CGPoint(x: 350, y: 1178)
         }
         else if location == "8" {
-          point = CGPoint(x: 723, y: 1407)
+          point = CGPoint(x: 380, y: 1245)
         }
-        else if location == "9" {
-          point = CGPoint(x: 790, y: 1673)
-        }
-        else if location == "10" {
-          point = CGPoint(x: 896, y: 1655)
-        }
-        else if location == "11" {
-          point = CGPoint(x: 912, y: 1916)
-        }
-        else if location == "12" {
-          point = CGPoint(x: 488, y: 1408)
-        }
-        let rect = CGRect(x: point.x, y: point.y, width: 470, height: 470)
+        let rect = CGRect(x: point.x, y: point.y, width: 275, height: 275)
         self.mapView.zoom(to: rect, animated: false)
       }
     }

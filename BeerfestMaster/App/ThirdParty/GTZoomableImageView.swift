@@ -34,7 +34,7 @@ public final class GTZoomableImageView: UIView {
   }
   
   @IBInspectable public var minimumZoomScale: CGFloat = 1.0
-  @IBInspectable public var maximumZoomScale: CGFloat = 4.5
+  @IBInspectable public var maximumZoomScale: CGFloat = 3.0
   
   internal let imageView = UIImageView()
   private let scrollImg = UIScrollView()
