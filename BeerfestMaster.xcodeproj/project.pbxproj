@@ -51,6 +51,7 @@
 		07F3BFE81FB3E6D900AAA0AB /* SearchManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 07F3BFE71FB3E6D900AAA0AB /* SearchManager.swift */; };
 		07F3BFEC1FB3EA6400AAA0AB /* BeerfestUI.swift in Sources */ = {isa = PBXBuildFile; fileRef = 07F3BFEB1FB3EA6400AAA0AB /* BeerfestUI.swift */; };
 		07F3BFEE1FB3EB1500AAA0AB /* UIFont+Beerfest.swift in Sources */ = {isa = PBXBuildFile; fileRef = 07F3BFED1FB3EB1500AAA0AB /* UIFont+Beerfest.swift */; };
+		07F7CDAE2028E21100624437 /* pittsburgh-map.csv in Resources */ = {isa = PBXBuildFile; fileRef = 07F7CDAD2028E21100624437 /* pittsburgh-map.csv */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -106,6 +107,7 @@
 		07F3BFE71FB3E6D900AAA0AB /* SearchManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SearchManager.swift; sourceTree = "<group>"; };
 		07F3BFEB1FB3EA6400AAA0AB /* BeerfestUI.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BeerfestUI.swift; sourceTree = "<group>"; };
 		07F3BFED1FB3EB1500AAA0AB /* UIFont+Beerfest.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIFont+Beerfest.swift"; sourceTree = "<group>"; };
+		07F7CDAD2028E21100624437 /* pittsburgh-map.csv */ = {isa = PBXFileReference; lastKnownFileType = text; path = "pittsburgh-map.csv"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -288,6 +290,7 @@
 				07482A66200FA8DD00432EE8 /* columbus-map.csv */,
 				07CE5BF9201956D900081211 /* cleveland-map.csv */,
 				075B4AE2201E0483004D0405 /* cincinnati-map.csv */,
+				07F7CDAD2028E21100624437 /* pittsburgh-map.csv */,
 			);
 			path = Resources;
 			sourceTree = "<group>";
@@ -360,6 +363,7 @@
 				07955DFD1FC1DAF3000A14A9 /* cleveland.csv in Resources */,
 				07482A67200FA8DD00432EE8 /* columbus-map.csv in Resources */,
 				07955DFC1FC1DAF3000A14A9 /* pittsburgh.csv in Resources */,
+				07F7CDAE2028E21100624437 /* pittsburgh-map.csv in Resources */,
 				07955DFF1FC1DAF3000A14A9 /* cincinnati.csv in Resources */,
 				075B4AE3201E0483004D0405 /* cincinnati-map.csv in Resources */,
 				07955E001FC1DAF3000A14A9 /* philadelphia.csv in Resources */,
@@ -541,7 +545,7 @@
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = MJA8334VZT;
 				INFOPLIST_FILE = "$(SRCROOT)/BeerfestMaster/Resources/Info.plist";
-				IPHONEOS_DEPLOYMENT_TARGET = 10.0;
+				IPHONEOS_DEPLOYMENT_TARGET = 9.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				LIBRARY_SEARCH_PATHS = (
 					"$(inherited)",
@@ -563,7 +567,7 @@
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = MJA8334VZT;
 				INFOPLIST_FILE = "$(SRCROOT)/BeerfestMaster/Resources/Info.plist";
-				IPHONEOS_DEPLOYMENT_TARGET = 10.0;
+				IPHONEOS_DEPLOYMENT_TARGET = 9.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				LIBRARY_SEARCH_PATHS = (
 					"$(inherited)",
