@@ -24,6 +24,8 @@ let ThirdPartyStyleCacheKey = "ThirdPartyStyleCacheKey"
 let ThirdPartyABVCacheKey = "ThirdPartyABVCacheKey"
 let IsFavoritedCacheKey = "IsFavoritedCacheKey"
 let HasTastedCacheKey = "HasTastedCacheKey"
+let NoteCacheKey = "NoteCacheKey"
+let RatingCacheKey = "RatingCacheKey"
 
 class Beer: NSObject, NSCoding {
   
@@ -52,6 +54,8 @@ class Beer: NSObject, NSCoding {
   var isConnoisseur: Bool = false
   var isEarlyAdmission: Bool = false
   var isQuickPour: Bool = false
+  var rating: Int = -1
+  var note: String = ""
   private var privateIsFavorited = false
   var isFavorited: Bool {
     return self.privateIsFavorited
@@ -145,6 +149,16 @@ class Beer: NSObject, NSCoding {
     }
   }
   
+  func addRating(rating: Int) {
+    self.rating = rating
+    BeerList.shared.saveBeersToCache()
+  }
+  
+  func addNote(note: String) {
+    self.note = note
+    BeerList.shared.saveBeersToCache()
+  }
+  
   // MARK: NSCoding
   
   required init?(coder decoder: NSCoder) {
@@ -187,6 +201,12 @@ class Beer: NSObject, NSCoding {
     if let hasTasted = decoder.decodeObject(forKey: HasTastedCacheKey) as? NSNumber {
       self.privateHasTasted = hasTasted.boolValue
     }
+    if let rating = decoder.decodeObject(forKey: RatingCacheKey) as? NSNumber {
+      self.rating = rating.intValue
+    }
+    if let note = decoder.decodeObject(forKey: NoteCacheKey) as? String {
+      self.note = note
+    }
   }
   
   public func encode(with coder: NSCoder) {
@@ -208,6 +228,9 @@ class Beer: NSObject, NSCoding {
     coder.encode(isFavoritedNumber, forKey: IsFavoritedCacheKey)
     let hasTastedNumber = NSNumber(booleanLiteral: self.hasTasted)
     coder.encode(hasTastedNumber, forKey: HasTastedCacheKey)
+    let ratingNumber = NSNumber(integerLiteral: self.rating)
+    coder.encode(ratingNumber, forKey: RatingCacheKey)
+    coder.encode(self.note, forKey: NoteCacheKey)
   }
   
 }

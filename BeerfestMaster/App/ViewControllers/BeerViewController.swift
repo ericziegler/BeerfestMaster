@@ -25,6 +25,8 @@ class BeerViewController: BaseViewController {
   @IBOutlet var favoriteButton: UIButton!
   @IBOutlet var tastedButton: UIButton!
   @IBOutlet var mapTapGestureRecognizer: UITapGestureRecognizer!
+  @IBOutlet var commentView: UIView!
+  @IBOutlet var commentLabel: UILabel!
   
   var beer: Beer!
   var mapImageView: UIImageView!
@@ -42,6 +44,7 @@ class BeerViewController: BaseViewController {
     super.viewDidLoad()
     self.setupForBeer()
     self.styleMap()
+    self.styleCommentBar()
   }
   
   override func viewWillAppear(_ animated: Bool) {
@@ -57,6 +60,18 @@ class BeerViewController: BaseViewController {
     self.cityLabel.text = beer.formattedLocation
     
     self.updateButtons()
+  }
+  
+  private func styleCommentBar() {
+    self.commentView.layer.borderColor = UIColor.mediumText.cgColor
+    self.commentView.layer.borderWidth = 0.5
+    self.commentView.layer.cornerRadius = 6.0
+    
+    if beer.rating > -1 || !beer.note.isEmpty {
+      self.commentLabel.text = "Update your note about this beer."
+    } else {
+      self.commentLabel.text = "Make a note about this beer."
+    }
   }
   
   private func scrollToLocation() {
@@ -234,6 +249,11 @@ class BeerViewController: BaseViewController {
     beer.toggleTasted()
     BeerList.shared.saveBeersToCache()
     self.updateButtons()
+  }
+  
+  @IBAction func commentTapped(_ sender: AnyObject) {
+    let commentViewController = CommentViewController.createControllerFor(beer: beer)
+    self.navigationController?.pushViewController(commentViewController, animated: true)
   }
   
 }

@@ -52,6 +52,7 @@
 		07F3BFEC1FB3EA6400AAA0AB /* BeerfestUI.swift in Sources */ = {isa = PBXBuildFile; fileRef = 07F3BFEB1FB3EA6400AAA0AB /* BeerfestUI.swift */; };
 		07F3BFEE1FB3EB1500AAA0AB /* UIFont+Beerfest.swift in Sources */ = {isa = PBXBuildFile; fileRef = 07F3BFED1FB3EB1500AAA0AB /* UIFont+Beerfest.swift */; };
 		07F7CDAE2028E21100624437 /* pittsburgh-map.csv in Resources */ = {isa = PBXBuildFile; fileRef = 07F7CDAD2028E21100624437 /* pittsburgh-map.csv */; };
+		07F7CDB22028EAFF00624437 /* CommentViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 07F7CDB12028EAFF00624437 /* CommentViewController.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -108,6 +109,7 @@
 		07F3BFEB1FB3EA6400AAA0AB /* BeerfestUI.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BeerfestUI.swift; sourceTree = "<group>"; };
 		07F3BFED1FB3EB1500AAA0AB /* UIFont+Beerfest.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIFont+Beerfest.swift"; sourceTree = "<group>"; };
 		07F7CDAD2028E21100624437 /* pittsburgh-map.csv */ = {isa = PBXFileReference; lastKnownFileType = text; path = "pittsburgh-map.csv"; sourceTree = "<group>"; };
+		07F7CDB12028EAFF00624437 /* CommentViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CommentViewController.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -258,6 +260,7 @@
 				072013C51FB4F60600A61BE8 /* BaseViewControllers */,
 				073FD31C1FB480E300DEE774 /* BeerListViewController.swift */,
 				072013C61FB4FEBF00A61BE8 /* BeerViewController.swift */,
+				07F7CDB12028EAFF00624437 /* CommentViewController.swift */,
 				072013D61FB5C73B00A61BE8 /* MapViewController.swift */,
 				072013DA1FB5D22E00A61BE8 /* FiltersViewController.swift */,
 				072013DC1FB5D7D900A61BE8 /* SearchViewController.swift */,
@@ -401,6 +404,7 @@
 				072013DB1FB5D22E00A61BE8 /* FiltersViewController.swift in Sources */,
 				072013D91FB5CFDF00A61BE8 /* GTZoomableImageView.swift in Sources */,
 				07955E401FC1DF8F000A14A9 /* FlurryEmpty.m in Sources */,
+				07F7CDB22028EAFF00624437 /* CommentViewController.swift in Sources */,
 				07F3BFE41FB3E6BF00AAA0AB /* TastedBeerList.swift in Sources */,
 				07F3BFBE1FB3E41000AAA0AB /* AppDelegate.swift in Sources */,
 				07955E411FC1DF8F000A14A9 /* FlurryWatchEmpty.m in Sources */,
