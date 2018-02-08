@@ -14,6 +14,7 @@ let CommentViewId = "CommentViewId"
 
 class CommentViewController: BaseViewController {
 
+  @IBOutlet var beerLabel: UILabel!
   @IBOutlet var starOne: UIButton!
   @IBOutlet var starTwo: UIButton!
   @IBOutlet var starThree: UIButton!
@@ -36,6 +37,7 @@ class CommentViewController: BaseViewController {
   
   override func viewDidLoad() {
     super.viewDidLoad()
+    beerLabel.text = beer.name
     registerForNotifications()
     styleTextView()
     setupNavBar()
