@@ -545,7 +545,7 @@
 		07F3BFCD1FB3E41000AAA0AB /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
-				ASSETCATALOG_COMPILER_APPICON_NAME = "AppIcon-Cincinnati";
+				ASSETCATALOG_COMPILER_APPICON_NAME = "AppIcon-Pittsburgh";
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = MJA8334VZT;
 				INFOPLIST_FILE = "$(SRCROOT)/BeerfestMaster/Resources/Info.plist";
@@ -556,7 +556,7 @@
 					"$(PROJECT_DIR)/BeerfestMaster/Flurry",
 					"$(PROJECT_DIR)/BeerfestMaster/FlurryAds",
 				);
-				PRODUCT_BUNDLE_IDENTIFIER = com.zigabytes.CincinnatiBeerfest;
+				PRODUCT_BUNDLE_IDENTIFIER = com.zigabytes.PittsburghBeerfest;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_OBJC_BRIDGING_HEADER = "BeerfestMaster/BeerfestMaster-Bridging-Header.h";
 				SWIFT_VERSION = 4.0;
@@ -567,7 +567,7 @@
 		07F3BFCE1FB3E41000AAA0AB /* Release */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
-				ASSETCATALOG_COMPILER_APPICON_NAME = "AppIcon-Cincinnati";
+				ASSETCATALOG_COMPILER_APPICON_NAME = "AppIcon-Pittsburgh";
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = MJA8334VZT;
 				INFOPLIST_FILE = "$(SRCROOT)/BeerfestMaster/Resources/Info.plist";
@@ -578,7 +578,7 @@
 					"$(PROJECT_DIR)/BeerfestMaster/Flurry",
 					"$(PROJECT_DIR)/BeerfestMaster/FlurryAds",
 				);
-				PRODUCT_BUNDLE_IDENTIFIER = com.zigabytes.CincinnatiBeerfest;
+				PRODUCT_BUNDLE_IDENTIFIER = com.zigabytes.PittsburghBeerfest;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_OBJC_BRIDGING_HEADER = "BeerfestMaster/BeerfestMaster-Bridging-Header.h";
 				SWIFT_VERSION = 4.0;
