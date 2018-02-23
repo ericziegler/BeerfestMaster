@@ -47,8 +47,8 @@ class BeerViewController: BaseViewController {
     self.styleCommentBar()
   }
   
-  override func viewWillAppear(_ animated: Bool) {
-    super.viewWillAppear(animated)
+  override func viewDidAppear(_ animated: Bool) {
+    super.viewDidAppear(animated)
     self.scrollToLocation()
   }
   
@@ -192,27 +192,33 @@ class BeerViewController: BaseViewController {
       }
       else if CurrentFest == .pittsburgh {
         if location == "0" {
-          point = CGPoint(x: 210, y: 8)
+          point = CGPoint(x: 47, y: 107)
         }
         else if location == "1" {
-          point = CGPoint(x: 196, y: 380)
+          point = CGPoint(x: 45, y: 416)
         }
         else if location == "2" {
-          point = CGPoint(x: 210, y: 819)
+          point = CGPoint(x: 102, y: 771)
         }
         else if location == "3" {
-          point = CGPoint(x: 283, y: 84)
+          point = CGPoint(x: 111, y: 1001)
         }
         else if location == "4" {
-          point = CGPoint(x: 307, y: 461)
+          point = CGPoint(x: 340, y: 76)
         }
         else if location == "5" {
-          point = CGPoint(x: 307, y: 855)
+          point = CGPoint(x: 281, y: 350)
         }
         else if location == "6" {
-          point = CGPoint(x: 299, y: 981)
+          point = CGPoint(x: 272, y: 656)
         }
-        let rect = CGRect(x: point.x, y: point.y, width: 275, height: 275)
+        else if location == "7" {
+          point = CGPoint(x: 338, y: 974)
+        }
+        else if location == "8" {
+          point = CGPoint(x: 217, y: 1180)
+        }
+        let rect = CGRect(x: point.x, y: point.y, width: 345, height: 345)
         self.mapView.zoom(to: rect, animated: false)
       }
     }
