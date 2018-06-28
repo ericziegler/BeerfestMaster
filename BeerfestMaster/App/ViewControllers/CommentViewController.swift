@@ -44,6 +44,11 @@ class CommentViewController: BaseViewController {
     updateNote()
   }
   
+  override func viewWillDisappear(_ animated: Bool) {
+    super.viewWillDisappear(true)
+    self.addNote()
+  }
+    
   deinit {
     NotificationCenter.default.removeObserver(self)
   }
@@ -61,16 +66,29 @@ class CommentViewController: BaseViewController {
   
   private func setupNavBar() {
     let commentButton = UIButton(type: .custom)
-    commentButton.addTarget(self, action: #selector(addCommentTapped(_:)), for: .touchUpInside)
-    if !beer.note.isEmpty || beer.rating > -1 {
-      commentButton.setTitle("Update Note", for: .normal)
-    } else {
-      commentButton.setTitle("Add Note", for: .normal)
-    }
-    commentButton.setTitleColor(CurrentFest.accentColor, for: .normal)
+    commentButton.addTarget(self, action: #selector(saveTapped(_:)), for: .touchUpInside)
+    commentButton.setTitle("Save", for: .normal)
+    commentButton.setTitleColor(CurrentFest.lightAccentColor, for: .normal)
     let commentItem = UIBarButtonItem(customView: commentButton)
 
     self.navigationItem.rightBarButtonItems = [commentItem]
+  }
+  
+  private func addNote() {
+    let stars = [starOne, starTwo, starThree, starFour, starFive]
+    var count = 0
+    for curStar in stars {
+      if curStar?.image(for: .normal) == UIImage(named: "StarFilled") {
+        count += 1
+      }
+    }
+    if count > 0 {
+      beer.addRating(rating: count)
+    }
+    
+    if !noteField.text.isEmpty {
+      beer.addNote(note: noteField.text)
+    }
   }
   
   private func updateNote() {
@@ -101,21 +119,8 @@ class CommentViewController: BaseViewController {
     }
   }
   
-  @IBAction func addCommentTapped(_ sender: AnyObject) {
-    let stars = [starOne, starTwo, starThree, starFour, starFive]
-    var count = 0
-    for curStar in stars {
-      if curStar?.image(for: .normal) == UIImage(named: "StarFilled") {
-        count += 1
-      }
-    }
-    if count > 0 {
-      beer.addRating(rating: count)
-    }
-    
-    if !noteField.text.isEmpty {
-      beer.addNote(note: noteField.text)
-    }
+  @IBAction func saveTapped(_ sender: AnyObject) {
+    addNote()
     self.navigationController?.popViewController(animated: true)
   }
   

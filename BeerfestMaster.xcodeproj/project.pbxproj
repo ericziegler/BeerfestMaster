@@ -36,6 +36,7 @@
 		07955E421FC1DF8F000A14A9 /* libFlurry_8.3.1.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 07955E2A1FC1DF8F000A14A9 /* libFlurry_8.3.1.a */; };
 		07955E4D1FC1E329000A14A9 /* SystemConfiguration.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 07955E4B1FC1E044000A14A9 /* SystemConfiguration.framework */; };
 		07955E4E1FC1E32C000A14A9 /* Security.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 07955E4A1FC1E038000A14A9 /* Security.framework */; };
+		0796ED5C20E50223007383BD /* UIScreen+Beerfest.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0796ED5B20E50223007383BD /* UIScreen+Beerfest.swift */; };
 		07CE5BFA201956D900081211 /* cleveland-map.csv in Resources */ = {isa = PBXBuildFile; fileRef = 07CE5BF9201956D900081211 /* cleveland-map.csv */; };
 		07F3BFBE1FB3E41000AAA0AB /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 07F3BFBD1FB3E41000AAA0AB /* AppDelegate.swift */; };
 		07F3BFC31FB3E41000AAA0AB /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 07F3BFC11FB3E41000AAA0AB /* Main.storyboard */; };
@@ -91,6 +92,7 @@
 		07955E4A1FC1E038000A14A9 /* Security.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Security.framework; path = System/Library/Frameworks/Security.framework; sourceTree = SDKROOT; };
 		07955E4B1FC1E044000A14A9 /* SystemConfiguration.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = SystemConfiguration.framework; path = System/Library/Frameworks/SystemConfiguration.framework; sourceTree = SDKROOT; };
 		07955E4C1FC1E0BE000A14A9 /* BeerfestMaster-Bridging-Header.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "BeerfestMaster-Bridging-Header.h"; sourceTree = "<group>"; };
+		0796ED5B20E50223007383BD /* UIScreen+Beerfest.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIScreen+Beerfest.swift"; sourceTree = "<group>"; };
 		07CE5BF9201956D900081211 /* cleveland-map.csv */ = {isa = PBXFileReference; lastKnownFileType = text; path = "cleveland-map.csv"; sourceTree = "<group>"; };
 		07F3BFBA1FB3E41000AAA0AB /* BeerfestMaster.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = BeerfestMaster.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		07F3BFBD1FB3E41000AAA0AB /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
@@ -225,6 +227,7 @@
 				07F3BFD71FB3E58800AAA0AB /* UIColor+Beerfest.swift */,
 				07F3BFED1FB3EB1500AAA0AB /* UIFont+Beerfest.swift */,
 				072013C11FB4F2EC00A61BE8 /* UIImage+Beerfest.swift */,
+				0796ED5B20E50223007383BD /* UIScreen+Beerfest.swift */,
 			);
 			path = Extensions;
 			sourceTree = "<group>";
@@ -408,6 +411,7 @@
 				07F3BFE41FB3E6BF00AAA0AB /* TastedBeerList.swift in Sources */,
 				07F3BFBE1FB3E41000AAA0AB /* AppDelegate.swift in Sources */,
 				07955E411FC1DF8F000A14A9 /* FlurryWatchEmpty.m in Sources */,
+				0796ED5C20E50223007383BD /* UIScreen+Beerfest.swift in Sources */,
 				072013C21FB4F2EC00A61BE8 /* UIImage+Beerfest.swift in Sources */,
 				07F3BFE01FB3E6A800AAA0AB /* AlphabeticalBeerList.swift in Sources */,
 			);
