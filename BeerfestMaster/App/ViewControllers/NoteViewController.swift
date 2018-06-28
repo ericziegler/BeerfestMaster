@@ -1,5 +1,5 @@
 //
-//  CommentViewController.swift
+//  NoteViewController.swift
 //  BeerfestMaster
 //
 //  Created by Eric Ziegler on 2/5/18.
@@ -10,9 +10,9 @@ import UIKit
 
 // MARK: Constants
 
-let CommentViewId = "CommentViewId"
+let NoteViewId = "NoteViewId"
 
-class CommentViewController: BaseViewController {
+class NoteViewController: BaseViewController {
 
   @IBOutlet var beerLabel: UILabel!
   @IBOutlet var starOne: UIButton!
@@ -28,9 +28,9 @@ class CommentViewController: BaseViewController {
   
   // MARK: Init
   
-  class func createControllerFor(beer: Beer) -> CommentViewController {
+  class func createControllerFor(beer: Beer) -> NoteViewController {
     let storyboard: UIStoryboard = UIStoryboard(name: "Main", bundle: nil)
-    let viewController: CommentViewController = storyboard.instantiateViewController(withIdentifier: CommentViewId) as! CommentViewController
+    let viewController: NoteViewController = storyboard.instantiateViewController(withIdentifier: NoteViewId) as! NoteViewController
     viewController.beer = beer
     return viewController
   }
@@ -65,13 +65,13 @@ class CommentViewController: BaseViewController {
   }
   
   private func setupNavBar() {
-    let commentButton = UIButton(type: .custom)
-    commentButton.addTarget(self, action: #selector(saveTapped(_:)), for: .touchUpInside)
-    commentButton.setTitle("Save", for: .normal)
-    commentButton.setTitleColor(CurrentFest.lightAccentColor, for: .normal)
-    let commentItem = UIBarButtonItem(customView: commentButton)
+    let noteButton = UIButton(type: .custom)
+    noteButton.addTarget(self, action: #selector(saveTapped(_:)), for: .touchUpInside)
+    noteButton.setTitle("Save", for: .normal)
+    noteButton.setTitleColor(CurrentFest.lightAccentColor, for: .normal)
+    let noteItem = UIBarButtonItem(customView: noteButton)
 
-    self.navigationItem.rightBarButtonItems = [commentItem]
+    self.navigationItem.rightBarButtonItems = [noteItem]
   }
   
   private func addNote() {

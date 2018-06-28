@@ -283,8 +283,8 @@ class BeerViewController: BaseViewController {
   }
   
   @IBAction func commentTapped(_ sender: AnyObject) {
-    let commentViewController = CommentViewController.createControllerFor(beer: beer)
-    self.navigationController?.pushViewController(commentViewController, animated: true)
+    let noteViewController = NoteViewController.createControllerFor(beer: beer)
+    self.navigationController?.pushViewController(noteViewController, animated: true)
   }
   
 }
