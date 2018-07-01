@@ -16,6 +16,7 @@ let BeerStyleCacheKey = "BeerStyleCacheKey"
 let ABVCacheKey = "ABVCacheKey"
 let CityCacheKey = "CityCacheKey"
 let StateCacheKey = "StateCacheKey"
+let BoothNumberCacheKey = "BoothNumberCacheKey"
 let IsConnoissuerCacheKey = "IsConnoissuerCacheKey"
 let IsEarlyAdmissionCacheKey = "IsEarlyAdmissionCacheKey"
 let IsQuickPourCacheKey = "IsQuickPourCacheKey"
@@ -51,6 +52,7 @@ class Beer: NSObject, NSCoding {
   }
   var city: String = ""
   var state: String = ""
+  var boothNumber: String = ""
   var isConnoisseur: Bool = false
   var isEarlyAdmission: Bool = false
   var isQuickPour: Bool = false
@@ -66,7 +68,7 @@ class Beer: NSObject, NSCoding {
   }
   var mapLocation: String? {
     get {
-      return MapLocationManager.shared.locationFor(brewery: self.brewery)
+      return MapLocationManager.shared.locationFor(boothNumber: self.boothNumber)
     }
   }
   
@@ -125,7 +127,8 @@ class Beer: NSObject, NSCoding {
       let isQuickPourString = props[8]
       if isQuickPourString == "1" {
         self.isQuickPour = true
-      } 
+      }
+      self.boothNumber = props[9]
       self.thirdPartyStyle = props[10]
       self.thirdPartyABV = props[11]
     }
@@ -193,6 +196,9 @@ class Beer: NSObject, NSCoding {
     if let state = decoder.decodeObject(forKey: StateCacheKey) as? String {
       self.state = state
     }
+    if let boothNumber = decoder.decodeObject(forKey: BoothNumberCacheKey) as? String {
+      self.boothNumber = boothNumber
+    }
     if let isConnoisseur = decoder.decodeObject(forKey: IsConnoissuerCacheKey) as? NSNumber {
       self.isConnoisseur = isConnoisseur.boolValue
     }
@@ -225,6 +231,7 @@ class Beer: NSObject, NSCoding {
     coder.encode(self.privateABV, forKey: ABVCacheKey)
     coder.encode(self.city, forKey: CityCacheKey)
     coder.encode(self.state, forKey: StateCacheKey)
+    coder.encode(self.boothNumber, forKey: BoothNumberCacheKey)
     let isConnoisseurNumber = NSNumber(booleanLiteral: self.isConnoisseur)
     coder.encode(isConnoisseurNumber, forKey: IsConnoissuerCacheKey)
     let isEarlyAdmissionNumber = NSNumber(booleanLiteral: self.isEarlyAdmission)

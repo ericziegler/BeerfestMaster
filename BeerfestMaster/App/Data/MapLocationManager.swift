@@ -6,7 +6,7 @@
 //  Copyright © 2018 zigabytes. All rights reserved.
 //
 
-import Foundation
+import UIKit
 
 class MapLocationManager {
 
@@ -25,11 +25,25 @@ class MapLocationManager {
         let locationArray = locationCSV.components(separatedBy: "\n")
         for locationItem in locationArray {
           if !locationItem.isEmpty {
-            let items = locationItem.components(separatedBy: ",")
-            self.locations[items[0].replacingOccurrences(of: "'", with: "").replacingOccurrences(of: " ", with: "").lowercased()] = items[1]
+            let items = locationItem.components(separatedBy: "|")
+            //let brewery = items[0].replacingOccurrences(of: "'", with: "").replacingOccurrences(of: " ", with: "").lowercased()
+            let boothNumber = items[0]
+            if UIScreen.uiKitScreenSize == iPhone678Size {
+              self.locations[boothNumber] = items[1]
+            }
+            else if UIScreen.uiKitScreenSize == iPhone678PlusSize {
+              self.locations[boothNumber] = items[2]
+            }
+            else if UIScreen.uiKitScreenSize == iPhoneXSize {
+              self.locations[boothNumber] = items[3]
+            }
+            else {
+              // iPhone 5 / iPadSize
+              self.locations[boothNumber] = items[4]
+            }
           }
         }
-        
+
       } catch{
         debugPrint(error)
       }
@@ -40,6 +54,15 @@ class MapLocationManager {
     let formattedBrewery = brewery.replacingOccurrences(of: "'", with: "").replacingOccurrences(of: " ", with: "").lowercased()
     for curItem in Array(self.locations.keys) {
       if curItem.contains(formattedBrewery) {
+        return self.locations[curItem]
+      }
+    }
+    return nil
+  }
+  
+  func locationFor(boothNumber: String) -> String? {
+    for curItem in Array(self.locations.keys) {
+      if curItem == boothNumber {
         return self.locations[curItem]
       }
     }

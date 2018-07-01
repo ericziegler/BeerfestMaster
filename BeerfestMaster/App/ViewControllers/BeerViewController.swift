@@ -54,7 +54,11 @@ class BeerViewController: BaseViewController {
   
   private func setupForBeer() {
     self.nameLabel.text = self.beer.name
-    self.breweryLabel.text = self.beer.brewery
+    if beer.boothNumber.isEmpty {
+      self.breweryLabel.text = self.beer.brewery
+    } else {
+      self.breweryLabel.text = "\(self.beer.brewery) (Booth \(self.beer.boothNumber))"
+    }
     self.abvLabel.text = beer.abv
     self.styleLabel.text = beer.style
     self.cityLabel.text = beer.formattedLocation
@@ -75,151 +79,18 @@ class BeerViewController: BaseViewController {
   }
   
   private func scrollToLocation() {
-    var point = CGPoint.zero
-    
-    if let location = self.beer.mapLocation {
-      if CurrentFest == .philadelphia {
-        if location == "0" {
-          point = CGPoint(x: 0, y: 0)
+    var rect = CGRect.zero
+    if let location = MapLocationManager.shared.locationFor(boothNumber: self.beer.boothNumber) {
+      let coords = location.components(separatedBy: ",")
+      if coords.count > 3 {
+        let numberFormatter = NumberFormatter()
+        if let xCoord = numberFormatter.number(from: coords[0]), let yCoord = numberFormatter.number(from: coords[1]),
+          let width = numberFormatter.number(from: coords[2]), let height = numberFormatter.number(from: coords[3]) {          
+          rect = CGRect(x: CGFloat(truncating: xCoord), y: CGFloat(truncating: yCoord), width: CGFloat(truncating: width), height: CGFloat(truncating: height))
+          if rect != CGRect.zero {
+            self.mapView.zoom(to: rect, animated: true)
+          }
         }
-        else if location == "1" {
-          point = CGPoint(x: 0, y: 425)
-        }
-        else if location == "2" {
-          point = CGPoint(x: 140, y: 0)
-        }
-        else if location == "3" {
-          point = CGPoint(x: 140, y: 425)
-        }
-        else if location == "4" {
-          point = CGPoint(x: 415, y: 0)
-        }
-        else if location == "5" {
-          point = CGPoint(x: 415, y: 400)
-        }
-        else if location == "6" {
-          point = CGPoint(x: 540, y: 0)
-        }
-        else if location == "7" {
-          point = CGPoint(x: 540, y: 425)
-        }
-        let rect = CGRect(x: point.x - 100, y: point.y - 100, width: point.x + 200, height: point.y + 200)
-        self.mapView.zoom(to: rect, animated: false)
-      }
-      else if CurrentFest == .columbus {
-        if location == "0" {
-          point = CGPoint(x: 182, y: 14)
-        }
-        else if location == "1" {
-          point = CGPoint(x: 151, y: 494)
-        }
-        else if location == "2" {
-          point = CGPoint(x: 69, y: 863)
-        }
-        else if location == "3" {
-          point = CGPoint(x: 491, y: 147)
-        }
-        else if location == "4" {
-          point = CGPoint(x: 570, y: 601)
-        }
-        else if location == "5" {
-          point = CGPoint(x: 587, y: 901)
-        }
-        let rect = CGRect(x: point.x, y: point.y, width: 350, height: 350)
-        self.mapView.zoom(to: rect, animated: false)
-      }
-      else if CurrentFest == .cleveland {
-        if location == "0" {
-          point = CGPoint(x: 58, y: 57)
-        }
-        else if location == "1" {
-          point = CGPoint(x: 145, y: 504)
-        }
-        else if location == "2" {
-          point = CGPoint(x: 153, y: 937)
-        }
-        else if location == "3" {
-          point = CGPoint(x: 484, y: 136)
-        }
-        else if location == "4" {
-          point = CGPoint(x: 522, y: 569)
-        }
-        else if location == "5" {
-          point = CGPoint(x: 522, y: 957)
-        }
-        else if location == "6" {
-          point = CGPoint(x: 686, y: 43)
-        }
-        else if location == "7" {
-          point = CGPoint(x: 686, y: 527)
-        }
-        else if location == "8" {
-          point = CGPoint(x: 686, y: 952)
-        }
-        let rect = CGRect(x: point.x, y: point.y, width: 470, height: 470)
-        self.mapView.zoom(to: rect, animated: false)
-      }
-      else if CurrentFest == .cincinnati {
-        if location == "0" {
-          point = CGPoint(x: 33, y: 35)
-        }
-        else if location == "1" {
-          point = CGPoint(x: 22, y: 374)
-        }
-        else if location == "2" {
-          point = CGPoint(x: 24, y: 843)
-        }
-        else if location == "3" {
-          point = CGPoint(x: 12, y: 1203)
-        }
-        else if location == "4" {
-          point = CGPoint(x: 318, y: 21)
-        }
-        else if location == "5" {
-          point = CGPoint(x: 324, y: 418)
-        }
-        else if location == "6" {
-          point = CGPoint(x: 326, y: 800)
-        }
-        else if location == "7" {
-          point = CGPoint(x: 350, y: 1178)
-        }
-        else if location == "8" {
-          point = CGPoint(x: 380, y: 1245)
-        }
-        let rect = CGRect(x: point.x, y: point.y, width: 275, height: 275)
-        self.mapView.zoom(to: rect, animated: false)
-      }
-      else if CurrentFest == .pittsburgh {
-        if location == "0" {
-          point = CGPoint(x: 47, y: 107)
-        }
-        else if location == "1" {
-          point = CGPoint(x: 45, y: 416)
-        }
-        else if location == "2" {
-          point = CGPoint(x: 102, y: 771)
-        }
-        else if location == "3" {
-          point = CGPoint(x: 111, y: 1001)
-        }
-        else if location == "4" {
-          point = CGPoint(x: 340, y: 76)
-        }
-        else if location == "5" {
-          point = CGPoint(x: 281, y: 350)
-        }
-        else if location == "6" {
-          point = CGPoint(x: 272, y: 656)
-        }
-        else if location == "7" {
-          point = CGPoint(x: 338, y: 974)
-        }
-        else if location == "8" {
-          point = CGPoint(x: 217, y: 1180)
-        }
-        let rect = CGRect(x: point.x, y: point.y, width: 345, height: 345)
-        self.mapView.zoom(to: rect, animated: false)
       }
     }
   }
@@ -296,7 +167,7 @@ extension BeerViewController: UIScrollViewDelegate {
   }
   
   func scrollViewDidScroll(_ scrollView: UIScrollView) {
-    print(scrollView.contentOffset)
+    print("\(scrollView.contentOffset.x),\(scrollView.contentOffset.y),\(scrollView.bounds.width),\(scrollView.bounds.height)|")
   }
   
 }
