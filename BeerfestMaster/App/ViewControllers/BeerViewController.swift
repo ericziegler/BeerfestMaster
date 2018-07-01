@@ -67,15 +67,7 @@ class BeerViewController: BaseViewController {
   }
   
   private func styleCommentBar() {
-    self.commentView.layer.borderColor = UIColor.mediumText.cgColor
-    self.commentView.layer.borderWidth = 0.5
-    self.commentView.layer.cornerRadius = 6.0
-    
-    if beer.rating > -1 || !beer.note.isEmpty {
-      self.commentLabel.text = "Update your note about this beer."
-    } else {
-      self.commentLabel.text = "Make a note about this beer."
-    }
+    self.commentLabel.textColor = UIColor.accent
   }
   
   private func scrollToLocation() {
