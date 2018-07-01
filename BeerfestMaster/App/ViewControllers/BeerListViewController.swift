@@ -61,18 +61,18 @@ class BeerListViewController: BaseTableViewController {
   }
   
   private func setupNavBar() {
-    if self.listType == .fullList {
-      self.navigationItem.title = "Beerfest".uppercased()
-      if let filterImage = UIImage(named: "Filter")?.maskedImageWithColor(UIColor.lightAccent) {
-        let filterButton = UIButton(type: .custom)
-        filterButton.addTarget(self, action: #selector(filterTapped(_:)), for: .touchUpInside)
-        filterButton.setImage(filterImage, for: .normal)
-        filterButton.frame = CGRect(x: 0, y: 0, width: filterImage.size.width, height: filterImage.size.height)
-        let filterItem = UIBarButtonItem(customView: filterButton)
-        
-        self.navigationItem.rightBarButtonItems = [filterItem]
-      }
-    }
+//    if self.listType == .fullList {
+//      self.navigationItem.title = "Beerfest".uppercased()
+//      if let filterImage = UIImage(named: "Filter")?.maskedImageWithColor(UIColor.lightAccent) {
+//        let filterButton = UIButton(type: .custom)
+//        filterButton.addTarget(self, action: #selector(filterTapped(_:)), for: .touchUpInside)
+//        filterButton.setImage(filterImage, for: .normal)
+//        filterButton.frame = CGRect(x: 0, y: 0, width: filterImage.size.width, height: filterImage.size.height)
+//        let filterItem = UIBarButtonItem(customView: filterButton)
+//        
+//        self.navigationItem.rightBarButtonItems = [filterItem]
+//      }
+//    }
   }
   
   // MARK: Actions

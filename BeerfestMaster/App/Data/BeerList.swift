@@ -54,10 +54,22 @@ class BeerList {
   // MARK: Loading
   
   func loadBeers() {
-    if self.loadBeersFromCache() == false {
+    if self.shouldLoadBeersFromCache() == false {
       self.loadBeersFromCSV()
-      // TODO: EZ - Comment in the caching of beer data
-      //self.saveBeersToCache()
+      self.purgeFavoritesAndTasted()
+    } else {
+      if self.loadBeersFromCache() == false {
+        self.loadBeersFromCSV()
+      }
+    }
+    saveAppVersionNumber()
+  }
+  
+  private func shouldLoadBeersFromCache() -> Bool {        
+    if loadAppVersionNumber() == versionNumber {
+      return true
+    } else {
+      return false
     }
   }
   
@@ -101,6 +113,13 @@ class BeerList {
     } catch{
       debugPrint(error)
     }
+  }
+  
+  func purgeFavoritesAndTasted() {
+    for beer in self.beers {
+      beer.purgeAnalytics()
+    }
+    self.saveBeersToCache()
   }
   
   // MARK: Saving

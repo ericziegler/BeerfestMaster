@@ -131,6 +131,13 @@ class Beer: NSObject, NSCoding {
     }
   }
   
+  func purgeAnalytics() {
+    self.privateHasTasted = false
+    self.privateIsFavorited = false
+    self.rating = -1
+    self.note = ""
+  }
+  
   // MARK: Analytics
   
   func toggleTasted() {
