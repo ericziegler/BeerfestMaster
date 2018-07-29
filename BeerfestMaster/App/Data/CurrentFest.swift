@@ -122,6 +122,15 @@ enum FestCity: String {
     }
   }
   
+  var hasBoothNumbers: Bool {
+    switch self {
+    case .pittsburgh:
+      return true
+    default:
+      return false
+    }
+  }
+  
 }
 
 let CurrentFest = FestCity.columbus

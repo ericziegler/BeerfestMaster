@@ -128,9 +128,14 @@ class Beer: NSObject, NSCoding {
       if isQuickPourString == "1" {
         self.isQuickPour = true
       }
-      self.boothNumber = props[9]
-      self.thirdPartyStyle = props[10]
-      self.thirdPartyABV = props[11]
+      if CurrentFest.hasBoothNumbers {
+        self.boothNumber = props[9]
+        self.thirdPartyStyle = props[10]
+        self.thirdPartyABV = props[11]
+      } else {
+        self.thirdPartyStyle = props[9]
+        self.thirdPartyABV = props[10]
+      }
     }
   }
   

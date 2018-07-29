@@ -54,7 +54,7 @@ class BeerViewController: BaseViewController {
   
   private func setupForBeer() {
     self.nameLabel.text = self.beer.name
-    if beer.boothNumber.isEmpty {
+    if beer.boothNumber.isEmpty || CurrentFest.hasBoothNumbers == false {
       self.breweryLabel.text = self.beer.brewery
     } else {
       self.breweryLabel.text = "\(self.beer.brewery) (Booth \(self.beer.boothNumber))"
@@ -72,7 +72,13 @@ class BeerViewController: BaseViewController {
   
   private func scrollToLocation() {
     var rect = CGRect.zero
-    if let location = MapLocationManager.shared.locationFor(boothNumber: self.beer.boothNumber) {
+    var location: String?
+    if CurrentFest.hasBoothNumbers {
+      location = MapLocationManager.shared.locationFor(boothNumber: self.beer.boothNumber)
+    } else {
+      location = MapLocationManager.shared.locationFor(brewery: self.beer.brewery)
+    }
+    if let location = location {
       let coords = location.components(separatedBy: ",")
       if coords.count > 3 {
         let numberFormatter = NumberFormatter()
@@ -95,7 +101,7 @@ class BeerViewController: BaseViewController {
     self.mapView.addSubview(self.mapImageView)
     self.mapView.contentSize = self.mapImageView.bounds.size
     self.mapView.clipsToBounds = true
-    self.mapView.maximumZoomScale = 2.5
+    self.mapView.maximumZoomScale = 1.5
     
     self.mapTapGestureRecognizer.numberOfTapsRequired = 2
   }
