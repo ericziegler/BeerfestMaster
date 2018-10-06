@@ -26,20 +26,36 @@ class MapLocationManager {
         for locationItem in locationArray {
           if !locationItem.isEmpty {
             let items = locationItem.components(separatedBy: "|")
-            //let brewery = items[0].replacingOccurrences(of: "'", with: "").replacingOccurrences(of: " ", with: "").lowercased()
-            let boothNumber = items[0]
-            if UIScreen.uiKitScreenSize == iPhone678Size {
-              self.locations[boothNumber] = items[1]
-            }
-            else if UIScreen.uiKitScreenSize == iPhone678PlusSize {
-              self.locations[boothNumber] = items[2]
-            }
-            else if UIScreen.uiKitScreenSize == iPhoneXSize {
-              self.locations[boothNumber] = items[3]
-            }
-            else {
-              // iPhone 5 / iPadSize
-              self.locations[boothNumber] = items[4]
+            if CurrentFest.hasBoothNumbers {
+              let boothNumber = items[0]
+              if UIScreen.uiKitScreenSize == iPhone678Size {
+                self.locations[boothNumber] = items[1]
+              }
+              else if UIScreen.uiKitScreenSize == iPhone678PlusSize {
+                self.locations[boothNumber] = items[2]
+              }
+              else if UIScreen.uiKitScreenSize == iPhoneXSize {
+                self.locations[boothNumber] = items[3]
+              }
+              else {
+                // iPhone 5 / iPadSize
+                self.locations[boothNumber] = items[4]
+              }
+            } else {
+              let brewery = items[0].replacingOccurrences(of: "'", with: "").replacingOccurrences(of: " ", with: "").lowercased()
+              if UIScreen.uiKitScreenSize == iPhone678Size {
+                self.locations[brewery] = items[1]
+              }
+              else if UIScreen.uiKitScreenSize == iPhone678PlusSize {                
+                self.locations[brewery] = items[2]
+              }
+              else if UIScreen.uiKitScreenSize == iPhoneXSize {
+                self.locations[brewery] = items[3]
+              }
+              else {
+                // iPhone 5 / iPadSize                
+                self.locations[brewery] = items[4]
+              }
             }
           }
         }
@@ -50,23 +66,23 @@ class MapLocationManager {
     }
   }
   
-  func locationFor(brewery: String) -> String? {
+  func locationFor(brewery: String) -> String {
     let formattedBrewery = brewery.replacingOccurrences(of: "'", with: "").replacingOccurrences(of: " ", with: "").lowercased()
-    for curItem in Array(self.locations.keys) {
+    for curItem in Array(self.locations.keys) {      
       if curItem.contains(formattedBrewery) {
-        return self.locations[curItem]
+        return self.locations[curItem]!
       }
     }
-    return nil
+    return ""
   }
   
-  func locationFor(boothNumber: String) -> String? {
+  func locationFor(boothNumber: String) -> String {
     for curItem in Array(self.locations.keys) {
       if curItem == boothNumber {
-        return self.locations[curItem]
+        return self.locations[curItem]!
       }
     }
-    return nil
+    return ""
   }
   
 }

@@ -30,6 +30,15 @@ class BeerViewController: BaseViewController {
   
   var beer: Beer!
   var mapImageView: UIImageView!
+  var boothLocation: String {
+    get {
+      if CurrentFest.hasBoothNumbers {
+        return MapLocationManager.shared.locationFor(boothNumber: self.beer.boothNumber)
+      } else {
+        return MapLocationManager.shared.locationFor(brewery: self.beer.brewery)
+      }
+    }
+  }
   
   // MARK: Init
   
@@ -72,38 +81,48 @@ class BeerViewController: BaseViewController {
   
   private func scrollToLocation() {
     var rect = CGRect.zero
-    var location: String?
-    if CurrentFest.hasBoothNumbers {
-      location = MapLocationManager.shared.locationFor(boothNumber: self.beer.boothNumber)
-    } else {
-      location = MapLocationManager.shared.locationFor(brewery: self.beer.brewery)
-    }
-    if let location = location {
-      let coords = location.components(separatedBy: ",")
-      if coords.count > 3 {
-        let numberFormatter = NumberFormatter()
-        if let xCoord = numberFormatter.number(from: coords[0]), let yCoord = numberFormatter.number(from: coords[1]),
-          let width = numberFormatter.number(from: coords[2]), let height = numberFormatter.number(from: coords[3]) {          
-          rect = CGRect(x: CGFloat(truncating: xCoord), y: CGFloat(truncating: yCoord), width: CGFloat(truncating: width), height: CGFloat(truncating: height))
-          if rect != CGRect.zero {
-            self.mapView.zoom(to: rect, animated: true)
-          }
+    if self.boothLocation.isEmpty == false {
+        let coords = self.boothLocation.components(separatedBy: ",")
+        if coords.count > 3 {
+            let numberFormatter = NumberFormatter()
+            if let xCoord = numberFormatter.number(from: coords[0]), let yCoord = numberFormatter.number(from: coords[1]),
+                let width = numberFormatter.number(from: coords[2]), let height = numberFormatter.number(from: coords[3]) {
+                rect = CGRect(x: CGFloat(truncating: xCoord), y: CGFloat(truncating: yCoord), width: CGFloat(truncating: width), height: CGFloat(truncating: height))
+                if rect != CGRect.zero {
+                    self.mapView.zoom(to: rect, animated: true)
+                }
+            }
         }
-      }
-    }
+    }    
   }
   
   private func styleMap() {
-    self.mapView.layer.borderColor = UIColor.mediumText.cgColor
-    self.mapView.layer.borderWidth = 0.5
+//    // TODO: EZ - Testing Only!!!
+//    self.mapView.layer.borderColor = UIColor.mediumText.cgColor
+//    self.mapView.layer.borderWidth = 0.5
+//
+//    self.mapImageView = UIImageView(image: CurrentFest.map)
+//    self.mapView.addSubview(self.mapImageView)
+//    self.mapView.contentSize = self.mapImageView.bounds.size
+//    self.mapView.clipsToBounds = true
+//    self.mapView.maximumZoomScale = 1.5
+//
+//    self.mapTapGestureRecognizer.numberOfTapsRequired = 2
     
-    self.mapImageView = UIImageView(image: CurrentFest.map)
-    self.mapView.addSubview(self.mapImageView)
-    self.mapView.contentSize = self.mapImageView.bounds.size
-    self.mapView.clipsToBounds = true
-    self.mapView.maximumZoomScale = 1.5
-    
-    self.mapTapGestureRecognizer.numberOfTapsRequired = 2
+    if self.boothLocation.isEmpty == true {
+      self.mapView.isHidden = true
+    } else {
+      self.mapView.layer.borderColor = UIColor.mediumText.cgColor
+      self.mapView.layer.borderWidth = 0.5
+      
+      self.mapImageView = UIImageView(image: CurrentFest.map)
+      self.mapView.addSubview(self.mapImageView)
+      self.mapView.contentSize = self.mapImageView.bounds.size
+      self.mapView.clipsToBounds = true
+      self.mapView.maximumZoomScale = 1.5
+      
+      self.mapTapGestureRecognizer.numberOfTapsRequired = 2
+    }
   }
   
   @IBAction func mapTapped(_ sender: UITapGestureRecognizer) {
@@ -113,7 +132,7 @@ class BeerViewController: BaseViewController {
   
   private func zoomToPoint(point: CGPoint) {
     let scale = min(self.mapView.zoomScale * 2, self.mapView.maximumZoomScale)
-      if scale != self.mapView.zoomScale {
+    if scale != self.mapView.zoomScale {
       let scrollSize = self.mapView.frame.size
       let size = CGSize(width: scrollSize.width / scale,
                         height: scrollSize.height / scale)
