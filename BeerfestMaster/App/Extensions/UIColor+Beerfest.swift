@@ -50,15 +50,15 @@ extension UIColor {
   }
   
   class var eventSpace: UIColor {
-    return UIColor(hex: 0xc6a660)
+    return UIColor(hex: 0xffb700)
   }
   
   class var annex: UIColor {
-    return UIColor.red
+    return UIColor(hex: 0xe53e30)
   }
   
   class var taproom: UIColor {
-    return UIColor.blue
+    return UIColor(hex: 0x57b7e3)
   }
   
   class var lightText: UIColor {

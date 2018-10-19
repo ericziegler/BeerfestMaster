@@ -31,6 +31,7 @@ class BeerViewController: BaseViewController {
   @IBOutlet var starThree: UIButton!
   @IBOutlet var starFour: UIButton!
   @IBOutlet var starFive: UIButton!
+  @IBOutlet var mapImageView: UIImageView!
 //  @IBOutlet var commentView: UIView!
 //  @IBOutlet var commentLabel: UILabel!
   
@@ -77,6 +78,7 @@ class BeerViewController: BaseViewController {
       if CurrentFest == .rarebeerfest {                
         var locationName = ""
         var locationColor = UIColor.blue
+        var map = UIImage(named: "Taproom")
         
         if beer.boothNumber == "0" {
           locationName = "Located in the Taproom"
@@ -85,12 +87,15 @@ class BeerViewController: BaseViewController {
         else if beer.boothNumber == "1" {
           locationName = "Located in the Annex"
           locationColor = UIColor.annex
+          map = UIImage(named: "Annex")
         } else {
           locationName = "Located in the Event Space"
           locationColor = UIColor.eventSpace
+          map = UIImage(named: "EventSpace")
         }
         self.boothLocationLabel.textColor = locationColor
         self.boothLocationLabel.text = locationName
+        self.mapImageView.image = map
       } else {
         self.breweryLabel.text = "\(self.beer.brewery) (Booth \(self.beer.boothNumber))"
       }

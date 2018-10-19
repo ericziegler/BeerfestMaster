@@ -249,10 +249,13 @@
                             </label>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Booth Location" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="NNr-84-GJZ" customClass="RegularLabel" customModule="BeerfestMaster" customModuleProvider="target">
                                 <rect key="frame" x="16" y="189" width="343" height="23"/>
-                                <fontDescription key="fontDescription" type="system" pointSize="19"/>
+                                <fontDescription key="fontDescription" type="system" weight="semibold" pointSize="19"/>
                                 <nil key="textColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="fQn-RK-uxC">
+                                <rect key="frame" x="16" y="220" width="343" height="368"/>
+                            </imageView>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                         <constraints>
@@ -274,9 +277,11 @@
                             <constraint firstItem="NNr-84-GJZ" firstAttribute="top" secondItem="hUe-lA-CM6" secondAttribute="bottom" constant="8" id="MsJ-gI-hka"/>
                             <constraint firstItem="YRa-m2-hxP" firstAttribute="top" secondItem="mmW-PE-qzq" secondAttribute="bottom" constant="10" id="NWj-T4-dr1"/>
                             <constraint firstItem="TaT-3T-iF9" firstAttribute="top" secondItem="GQc-gR-zR2" secondAttribute="top" constant="15" id="OgL-h5-Wft"/>
+                            <constraint firstItem="ETj-Pr-jv1" firstAttribute="top" secondItem="fQn-RK-uxC" secondAttribute="bottom" constant="13" id="Oqp-cA-Bdy"/>
                             <constraint firstItem="uR0-9Y-dP4" firstAttribute="centerY" secondItem="buZ-fv-gms" secondAttribute="centerY" constant="-1.5" id="PY0-32-JkJ"/>
                             <constraint firstItem="loh-cn-Ham" firstAttribute="leading" secondItem="ASS-Bk-CbW" secondAttribute="leading" id="RSm-UP-W5d"/>
                             <constraint firstItem="hk0-4B-NnA" firstAttribute="leading" secondItem="loh-cn-Ham" secondAttribute="trailing" constant="8" id="Rha-pW-Il4"/>
+                            <constraint firstItem="fQn-RK-uxC" firstAttribute="top" secondItem="NNr-84-GJZ" secondAttribute="bottom" constant="8" id="RoB-YT-rCk"/>
                             <constraint firstItem="NwI-0S-KHT" firstAttribute="width" secondItem="buZ-fv-gms" secondAttribute="width" id="Ssd-6M-4Is"/>
                             <constraint firstItem="3jU-0D-gSf" firstAttribute="height" secondItem="buZ-fv-gms" secondAttribute="height" id="TN3-Gb-JDs"/>
                             <constraint firstItem="3jU-0D-gSf" firstAttribute="width" secondItem="buZ-fv-gms" secondAttribute="width" id="VkD-nu-cQe"/>
@@ -285,6 +290,7 @@
                             <constraint firstItem="GQc-gR-zR2" firstAttribute="trailing" secondItem="NNr-84-GJZ" secondAttribute="trailing" constant="16" id="YTK-Ph-WFF"/>
                             <constraint firstItem="GQc-gR-zR2" firstAttribute="trailing" secondItem="ASS-Bk-CbW" secondAttribute="trailing" constant="16" id="abz-4d-oJ0"/>
                             <constraint firstItem="hUe-lA-CM6" firstAttribute="leading" secondItem="GQc-gR-zR2" secondAttribute="leading" constant="16" id="aoc-zp-dFj"/>
+                            <constraint firstItem="GQc-gR-zR2" firstAttribute="trailing" secondItem="fQn-RK-uxC" secondAttribute="trailing" constant="16" id="b4j-hB-SX5"/>
                             <constraint firstItem="NuM-w6-m9D" firstAttribute="leading" secondItem="buZ-fv-gms" secondAttribute="trailing" constant="8" id="bQL-pF-IzS"/>
                             <constraint firstItem="NwI-0S-KHT" firstAttribute="height" secondItem="buZ-fv-gms" secondAttribute="height" id="dg8-EC-9Tx"/>
                             <constraint firstItem="NwI-0S-KHT" firstAttribute="leading" secondItem="buZ-fv-gms" secondAttribute="trailing" constant="104" id="dvh-56-kjw"/>
@@ -298,6 +304,7 @@
                             <constraint firstItem="8u9-Zs-miO" firstAttribute="top" secondItem="YRa-m2-hxP" secondAttribute="bottom" constant="8" id="pRK-Kc-HiU"/>
                             <constraint firstItem="mmW-PE-qzq" firstAttribute="height" secondItem="ASS-Bk-CbW" secondAttribute="height" id="pZ1-ee-nmX"/>
                             <constraint firstItem="GQc-gR-zR2" firstAttribute="trailing" secondItem="TaT-3T-iF9" secondAttribute="trailing" constant="16" id="pqC-KX-SWK"/>
+                            <constraint firstItem="fQn-RK-uxC" firstAttribute="leading" secondItem="GQc-gR-zR2" secondAttribute="leading" constant="16" id="qFv-wi-xZg"/>
                             <constraint firstItem="ETj-Pr-jv1" firstAttribute="trailing" secondItem="Hkl-XN-Xbc" secondAttribute="trailingMargin" id="sCJ-H0-LuX"/>
                             <constraint firstItem="NuM-w6-m9D" firstAttribute="height" secondItem="buZ-fv-gms" secondAttribute="height" id="ukQ-Jc-AaP"/>
                             <constraint firstItem="NuM-w6-m9D" firstAttribute="top" secondItem="ETj-Pr-jv1" secondAttribute="bottom" constant="8" id="uqP-Xo-iHs"/>
@@ -314,6 +321,7 @@
                         <outlet property="breweryLabel" destination="8u9-Zs-miO" id="jPD-ns-HFZ"/>
                         <outlet property="cityLabel" destination="hUe-lA-CM6" id="91D-1z-IF4"/>
                         <outlet property="favoriteButton" destination="hk0-4B-NnA" id="f88-ed-vXD"/>
+                        <outlet property="mapImageView" destination="fQn-RK-uxC" id="R6u-LO-r0s"/>
                         <outlet property="nameLabel" destination="loh-cn-Ham" id="Ngb-dH-zVL"/>
                         <outlet property="starFive" destination="uR0-9Y-dP4" id="5Ms-9R-9ru"/>
                         <outlet property="starFour" destination="NwI-0S-KHT" id="KdI-Yr-nEF"/>
