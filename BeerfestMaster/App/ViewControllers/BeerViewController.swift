@@ -57,6 +57,7 @@ class BeerViewController: BaseViewController {
   override func viewDidLoad() {
     super.viewDidLoad()
     self.setupForBeer()
+    self.updateRating()
 //    self.styleMap()
 //    self.styleCommentBar()
   }
@@ -78,6 +79,12 @@ class BeerViewController: BaseViewController {
     self.cityLabel.text = beer.formattedLocation
     
     self.updateButtons()
+  }
+  
+  private func updateRating() {
+    if beer.rating > -1 {
+      updateStarsFor(rating: beer.rating)
+    }
   }
   
 //  private func styleCommentBar() {
@@ -169,6 +176,8 @@ class BeerViewController: BaseViewController {
     for i in rating..<stars.count {
       stars[i]?.setImage(UIImage(named: "StarOutline"), for: .normal)
     }
+    beer.rating = rating
+    BeerList.shared.saveBeersToCache()
   }
   
   // MARK: Actions
