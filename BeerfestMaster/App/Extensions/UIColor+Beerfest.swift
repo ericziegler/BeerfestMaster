@@ -49,6 +49,18 @@ extension UIColor {
     return CurrentFest.tabBarNormalColor
   }
   
+  class var eventSpace: UIColor {
+    return UIColor(hex: 0xc6a660)
+  }
+  
+  class var annex: UIColor {
+    return UIColor.red
+  }
+  
+  class var taproom: UIColor {
+    return UIColor.blue
+  }
+  
   class var lightText: UIColor {
     return UIColor(hex: 0xcccccc, alpha: 1)
   }

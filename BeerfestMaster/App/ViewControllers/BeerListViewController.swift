@@ -46,6 +46,8 @@ class BeerListViewController: BaseTableViewController {
     self.view.backgroundColor = UIColor.mainBackground
     self.tableView.sectionIndexBackgroundColor = UIColor.clear
     self.tableView.sectionIndexColor = UIColor.accent
+    self.tableView.rowHeight = UITableViewAutomaticDimension
+    self.tableView.estimatedRowHeight = BeerListViewCellHeight
   }
     
   override func viewWillAppear(_ animated: Bool) {
@@ -64,14 +66,9 @@ class BeerListViewController: BaseTableViewController {
     if CurrentFest == .rarebeerfest {
       if self.listType == .fullList {
         let navLabel = UILabel()
-        let navTitle = NSMutableAttributedString(string: "RARE BEER", attributes:[
-          NSAttributedStringKey.foregroundColor: CurrentFest.navBarTitleColor,
-          NSAttributedStringKey.font: UIFont.systemFont(ofSize: 20.0, weight: UIFont.Weight.bold)])
-        
-        navTitle.append(NSMutableAttributedString(string: " FEST", attributes:[
-          NSAttributedStringKey.font: UIFont.systemFont(ofSize: 20.0, weight: UIFont.Weight.bold),
-          NSAttributedStringKey.foregroundColor: CurrentFest.accentColor]))
-        
+        let navTitle = NSMutableAttributedString(string: "RARE BEER FEST", attributes:[
+        NSAttributedStringKey.foregroundColor: CurrentFest.navBarTitleColor,
+        NSAttributedStringKey.font: UIFont.systemFont(ofSize: 20.0, weight: UIFont.Weight.bold)])
         navLabel.attributedText = navTitle
         self.navigationItem.titleView = navLabel
       } else {
@@ -142,10 +139,11 @@ class BeerListViewController: BaseTableViewController {
   }
   
   // MARK: UITableViewDelegate
-  
-  override func tableView(_ tableView: UITableView, heightForRowAt indexPath: IndexPath) -> CGFloat {
-    return BeerListViewCellHeight
-  }
+
+  // TODO: EZ - Remove
+//  override func tableView(_ tableView: UITableView, heightForRowAt indexPath: IndexPath) -> CGFloat {
+//    return BeerListViewCellHeight
+//  }
   
   override func sectionIndexTitles(for tableView: UITableView) -> [String]? {
     if (self.listType == .fullList) {

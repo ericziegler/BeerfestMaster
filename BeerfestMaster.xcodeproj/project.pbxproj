@@ -19,6 +19,7 @@
 		072013D91FB5CFDF00A61BE8 /* GTZoomableImageView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 072013D81FB5CFDF00A61BE8 /* GTZoomableImageView.swift */; };
 		072013DB1FB5D22E00A61BE8 /* FiltersViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 072013DA1FB5D22E00A61BE8 /* FiltersViewController.swift */; };
 		072013DD1FB5D7D900A61BE8 /* SearchViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 072013DC1FB5D7D900A61BE8 /* SearchViewController.swift */; };
+		072C8E26217A088C00FA42B6 /* rarebeerfest.csv in Resources */ = {isa = PBXBuildFile; fileRef = 072C8E25217A088C00FA42B6 /* rarebeerfest.csv */; };
 		073FD31D1FB480E300DEE774 /* BeerListViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 073FD31C1FB480E300DEE774 /* BeerListViewController.swift */; };
 		073FD31F1FB483E200DEE774 /* BaseViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 073FD31E1FB483E200DEE774 /* BaseViewController.swift */; };
 		07482A67200FA8DD00432EE8 /* columbus-map.csv in Resources */ = {isa = PBXBuildFile; fileRef = 07482A66200FA8DD00432EE8 /* columbus-map.csv */; };
@@ -69,6 +70,7 @@
 		072013D81FB5CFDF00A61BE8 /* GTZoomableImageView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GTZoomableImageView.swift; sourceTree = "<group>"; };
 		072013DA1FB5D22E00A61BE8 /* FiltersViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FiltersViewController.swift; sourceTree = "<group>"; };
 		072013DC1FB5D7D900A61BE8 /* SearchViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SearchViewController.swift; sourceTree = "<group>"; };
+		072C8E25217A088C00FA42B6 /* rarebeerfest.csv */ = {isa = PBXFileReference; lastKnownFileType = text; path = rarebeerfest.csv; sourceTree = "<group>"; };
 		073FD31C1FB480E300DEE774 /* BeerListViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BeerListViewController.swift; sourceTree = "<group>"; };
 		073FD31E1FB483E200DEE774 /* BaseViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BaseViewController.swift; sourceTree = "<group>"; };
 		07482A66200FA8DD00432EE8 /* columbus-map.csv */ = {isa = PBXFileReference; lastKnownFileType = text; path = "columbus-map.csv"; sourceTree = "<group>"; };
@@ -297,6 +299,7 @@
 				07CE5BF9201956D900081211 /* cleveland-map.csv */,
 				075B4AE2201E0483004D0405 /* cincinnati-map.csv */,
 				07F7CDAD2028E21100624437 /* pittsburgh-map.csv */,
+				072C8E25217A088C00FA42B6 /* rarebeerfest.csv */,
 			);
 			path = Resources;
 			sourceTree = "<group>";
@@ -365,6 +368,7 @@
 				07F3BFC31FB3E41000AAA0AB /* Main.storyboard in Resources */,
 				0784F09C1FFDAD3E006686D0 /* philadelphia-map.csv in Resources */,
 				07955DFE1FC1DAF3000A14A9 /* columbus.csv in Resources */,
+				072C8E26217A088C00FA42B6 /* rarebeerfest.csv in Resources */,
 				072013CD1FB54F3200A61BE8 /* Assets.xcassets in Resources */,
 				07955DFD1FC1DAF3000A14A9 /* cleveland.csv in Resources */,
 				07482A67200FA8DD00432EE8 /* columbus-map.csv in Resources */,

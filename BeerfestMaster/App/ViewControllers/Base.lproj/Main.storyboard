@@ -131,26 +131,30 @@
                                 <nil key="textColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Style" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="ASS-Bk-CbW" customClass="LightLabel" customModule="BeerfestMaster" customModuleProvider="target">
-                                <rect key="frame" x="16" y="71" width="343" height="24"/>
-                                <constraints>
-                                    <constraint firstAttribute="height" constant="24" id="8kU-3h-WvS"/>
-                                </constraints>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Style" textAlignment="natural" lineBreakMode="wordWrap" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="ASS-Bk-CbW" customClass="LightLabel" customModule="BeerfestMaster" customModuleProvider="target">
+                                <rect key="frame" x="16" y="71" width="343" height="23"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="19"/>
                                 <color key="textColor" red="0.46666666666666667" green="0.46666666666666667" blue="0.46666666666666667" alpha="1" colorSpace="calibratedRGB"/>
                                 <nil key="highlightedColor"/>
                             </label>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="ABV" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="mmW-PE-qzq" customClass="LightLabel" customModule="BeerfestMaster" customModuleProvider="target">
-                                <rect key="frame" x="16" y="98" width="343" height="24"/>
+                                <rect key="frame" x="16" y="97" width="343" height="23"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="18"/>
                                 <color key="textColor" red="0.46666666670000001" green="0.46666666670000001" blue="0.46666666670000001" alpha="1" colorSpace="calibratedRGB"/>
                                 <nil key="highlightedColor"/>
                             </label>
                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="YRa-m2-hxP" userLabel="Separator">
-                                <rect key="frame" x="16" y="132" width="343" height="1"/>
+                                <rect key="frame" x="16" y="130" width="343" height="1"/>
                                 <color key="backgroundColor" red="0.46666666666666667" green="0.46666666666666667" blue="0.46666666666666667" alpha="1" colorSpace="calibratedRGB"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="1" id="7MF-Qf-MVN"/>
+                                </constraints>
+                            </view>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="ETj-Pr-jv1" userLabel="Separator">
+                                <rect key="frame" x="16" y="601" width="343" height="1"/>
+                                <color key="backgroundColor" red="0.46666666670000001" green="0.46666666670000001" blue="0.46666666670000001" alpha="1" colorSpace="calibratedRGB"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="1" id="BxP-sq-JzR"/>
                                 </constraints>
                             </view>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="TaT-3T-iF9">
@@ -175,17 +179,22 @@
                                     <action selector="favoriteTapped:" destination="Cgf-x4-j3b" eventType="touchUpInside" id="7Ht-6p-U5e"/>
                                 </connections>
                             </button>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Brewery" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="8u9-Zs-miO" customClass="RegularLabel" customModule="BeerfestMaster" customModuleProvider="target">
-                                <rect key="frame" x="16" y="141" width="343" height="21"/>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" usesAttributedText="YES" lineBreakMode="wordWrap" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="8u9-Zs-miO" customClass="RegularLabel" customModule="BeerfestMaster" customModuleProvider="target">
+                                <rect key="frame" x="16" y="139" width="343" height="21"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="21" id="vEK-Nf-zxs"/>
                                 </constraints>
-                                <fontDescription key="fontDescription" type="system" pointSize="19"/>
-                                <nil key="textColor"/>
+                                <attributedString key="attributedText">
+                                    <fragment content="Brewery">
+                                        <attributes>
+                                            <font key="NSFont" metaFont="system" size="19"/>
+                                        </attributes>
+                                    </fragment>
+                                </attributedString>
                                 <nil key="highlightedColor"/>
                             </label>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="City, ST" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="hUe-lA-CM6" customClass="LightLabel" customModule="BeerfestMaster" customModuleProvider="target">
-                                <rect key="frame" x="16" y="162" width="343" height="21"/>
+                                <rect key="frame" x="16" y="160" width="343" height="21"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="21" id="Xh8-6v-ZRg"/>
                                 </constraints>
@@ -194,21 +203,21 @@
                                 <nil key="highlightedColor"/>
                             </label>
                             <button opaque="NO" tag="2" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="NuM-w6-m9D">
-                                <rect key="frame" x="158" y="218" width="40" height="40"/>
+                                <rect key="frame" x="158" y="610" width="40" height="40"/>
                                 <state key="normal" image="StarOutline"/>
                                 <connections>
                                     <action selector="starTapped:" destination="Cgf-x4-j3b" eventType="touchUpInside" id="QVq-0O-DZP"/>
                                 </connections>
                             </button>
                             <button opaque="NO" tag="3" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="3jU-0D-gSf">
-                                <rect key="frame" x="206" y="218" width="40" height="40"/>
+                                <rect key="frame" x="206" y="610" width="40" height="40"/>
                                 <state key="normal" image="StarOutline"/>
                                 <connections>
                                     <action selector="starTapped:" destination="Cgf-x4-j3b" eventType="touchUpInside" id="FxF-5D-yAm"/>
                                 </connections>
                             </button>
                             <button opaque="NO" tag="1" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="buZ-fv-gms">
-                                <rect key="frame" x="110" y="219.5" width="40" height="40"/>
+                                <rect key="frame" x="110" y="611.5" width="40" height="40"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="40" id="ERH-wu-3Hg"/>
                                     <constraint firstAttribute="width" constant="40" id="qkK-hZ-blT"/>
@@ -219,23 +228,29 @@
                                 </connections>
                             </button>
                             <button opaque="NO" tag="4" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="NwI-0S-KHT">
-                                <rect key="frame" x="254" y="218" width="40" height="40"/>
+                                <rect key="frame" x="254" y="610" width="40" height="40"/>
                                 <state key="normal" image="StarOutline"/>
                                 <connections>
                                     <action selector="starTapped:" destination="Cgf-x4-j3b" eventType="touchUpInside" id="Beb-4T-s2N"/>
                                 </connections>
                             </button>
                             <button opaque="NO" tag="5" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="uR0-9Y-dP4">
-                                <rect key="frame" x="302" y="218" width="40" height="40"/>
+                                <rect key="frame" x="302" y="610" width="40" height="40"/>
                                 <state key="normal" image="StarOutline"/>
                                 <connections>
                                     <action selector="starTapped:" destination="Cgf-x4-j3b" eventType="touchUpInside" id="Tai-KE-LUI"/>
                                 </connections>
                             </button>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Rate:" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="ODY-wS-oSl">
-                                <rect key="frame" x="33" y="228" width="44" height="23"/>
+                                <rect key="frame" x="33" y="620" width="44" height="23"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="19"/>
                                 <color key="textColor" red="0.46666666670000001" green="0.46666666670000001" blue="0.46666666670000001" alpha="1" colorSpace="calibratedRGB"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Booth Location" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="NNr-84-GJZ" customClass="RegularLabel" customModule="BeerfestMaster" customModuleProvider="target">
+                                <rect key="frame" x="16" y="189" width="343" height="23"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="19"/>
+                                <nil key="textColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
                         </subviews>
@@ -248,6 +263,7 @@
                             <constraint firstItem="uR0-9Y-dP4" firstAttribute="height" secondItem="buZ-fv-gms" secondAttribute="height" id="9rx-i0-A7C"/>
                             <constraint firstItem="buZ-fv-gms" firstAttribute="leading" secondItem="ODY-wS-oSl" secondAttribute="trailing" constant="33" id="CMW-0a-Ald"/>
                             <constraint firstItem="uR0-9Y-dP4" firstAttribute="leading" secondItem="buZ-fv-gms" secondAttribute="trailing" constant="152" id="DJq-OQ-HpZ"/>
+                            <constraint firstItem="NNr-84-GJZ" firstAttribute="leading" secondItem="hUe-lA-CM6" secondAttribute="leading" id="ERF-Mr-1lY"/>
                             <constraint firstItem="loh-cn-Ham" firstAttribute="top" secondItem="GQc-gR-zR2" secondAttribute="top" constant="15" id="Esr-zs-EWl"/>
                             <constraint firstItem="TaT-3T-iF9" firstAttribute="leading" secondItem="hk0-4B-NnA" secondAttribute="trailing" constant="8" id="F5m-Pv-4Io"/>
                             <constraint firstItem="3jU-0D-gSf" firstAttribute="leading" secondItem="buZ-fv-gms" secondAttribute="trailing" constant="56" id="GPl-C8-DSc"/>
@@ -255,15 +271,18 @@
                             <constraint firstItem="mmW-PE-qzq" firstAttribute="top" secondItem="ASS-Bk-CbW" secondAttribute="bottom" constant="3" id="I1C-W1-r6y"/>
                             <constraint firstItem="8u9-Zs-miO" firstAttribute="leading" secondItem="GQc-gR-zR2" secondAttribute="leading" constant="16" id="J8e-Y6-tEP"/>
                             <constraint firstItem="YRa-m2-hxP" firstAttribute="leading" secondItem="Hkl-XN-Xbc" secondAttribute="leadingMargin" id="Jvq-3s-n3w"/>
+                            <constraint firstItem="NNr-84-GJZ" firstAttribute="top" secondItem="hUe-lA-CM6" secondAttribute="bottom" constant="8" id="MsJ-gI-hka"/>
                             <constraint firstItem="YRa-m2-hxP" firstAttribute="top" secondItem="mmW-PE-qzq" secondAttribute="bottom" constant="10" id="NWj-T4-dr1"/>
                             <constraint firstItem="TaT-3T-iF9" firstAttribute="top" secondItem="GQc-gR-zR2" secondAttribute="top" constant="15" id="OgL-h5-Wft"/>
-                            <constraint firstItem="loh-cn-Ham" firstAttribute="leading" secondItem="GQc-gR-zR2" secondAttribute="leading" constant="16" id="PK3-S1-5rN"/>
                             <constraint firstItem="uR0-9Y-dP4" firstAttribute="centerY" secondItem="buZ-fv-gms" secondAttribute="centerY" constant="-1.5" id="PY0-32-JkJ"/>
+                            <constraint firstItem="loh-cn-Ham" firstAttribute="leading" secondItem="ASS-Bk-CbW" secondAttribute="leading" id="RSm-UP-W5d"/>
                             <constraint firstItem="hk0-4B-NnA" firstAttribute="leading" secondItem="loh-cn-Ham" secondAttribute="trailing" constant="8" id="Rha-pW-Il4"/>
                             <constraint firstItem="NwI-0S-KHT" firstAttribute="width" secondItem="buZ-fv-gms" secondAttribute="width" id="Ssd-6M-4Is"/>
                             <constraint firstItem="3jU-0D-gSf" firstAttribute="height" secondItem="buZ-fv-gms" secondAttribute="height" id="TN3-Gb-JDs"/>
                             <constraint firstItem="3jU-0D-gSf" firstAttribute="width" secondItem="buZ-fv-gms" secondAttribute="width" id="VkD-nu-cQe"/>
                             <constraint firstItem="3jU-0D-gSf" firstAttribute="centerY" secondItem="buZ-fv-gms" secondAttribute="centerY" constant="-1.5" id="W6J-0j-5JF"/>
+                            <constraint firstItem="GQc-gR-zR2" firstAttribute="bottom" secondItem="ODY-wS-oSl" secondAttribute="bottom" constant="24" id="YBd-Pi-Mgn"/>
+                            <constraint firstItem="GQc-gR-zR2" firstAttribute="trailing" secondItem="NNr-84-GJZ" secondAttribute="trailing" constant="16" id="YTK-Ph-WFF"/>
                             <constraint firstItem="GQc-gR-zR2" firstAttribute="trailing" secondItem="ASS-Bk-CbW" secondAttribute="trailing" constant="16" id="abz-4d-oJ0"/>
                             <constraint firstItem="hUe-lA-CM6" firstAttribute="leading" secondItem="GQc-gR-zR2" secondAttribute="leading" constant="16" id="aoc-zp-dFj"/>
                             <constraint firstItem="NuM-w6-m9D" firstAttribute="leading" secondItem="buZ-fv-gms" secondAttribute="trailing" constant="8" id="bQL-pF-IzS"/>
@@ -271,15 +290,17 @@
                             <constraint firstItem="NwI-0S-KHT" firstAttribute="leading" secondItem="buZ-fv-gms" secondAttribute="trailing" constant="104" id="dvh-56-kjw"/>
                             <constraint firstItem="ODY-wS-oSl" firstAttribute="leading" secondItem="GQc-gR-zR2" secondAttribute="leading" constant="33" id="fIR-ol-Mwb"/>
                             <constraint firstItem="uR0-9Y-dP4" firstAttribute="width" secondItem="buZ-fv-gms" secondAttribute="width" id="fjo-IW-iw8"/>
+                            <constraint firstItem="ETj-Pr-jv1" firstAttribute="leading" secondItem="Hkl-XN-Xbc" secondAttribute="leadingMargin" id="fwC-Bd-3Bb"/>
                             <constraint firstItem="mmW-PE-qzq" firstAttribute="leading" secondItem="ASS-Bk-CbW" secondAttribute="leading" id="gAS-yE-39w"/>
                             <constraint firstItem="buZ-fv-gms" firstAttribute="centerY" secondItem="ODY-wS-oSl" secondAttribute="centerY" id="iOU-Cd-hCy"/>
-                            <constraint firstItem="ODY-wS-oSl" firstAttribute="top" secondItem="hUe-lA-CM6" secondAttribute="bottom" constant="45" id="kJb-Ry-Hu7"/>
                             <constraint firstItem="ASS-Bk-CbW" firstAttribute="top" secondItem="loh-cn-Ham" secondAttribute="bottom" id="lMM-ca-kTn"/>
                             <constraint firstItem="YRa-m2-hxP" firstAttribute="trailing" secondItem="Hkl-XN-Xbc" secondAttribute="trailingMargin" id="oQ0-b4-8Ku"/>
                             <constraint firstItem="8u9-Zs-miO" firstAttribute="top" secondItem="YRa-m2-hxP" secondAttribute="bottom" constant="8" id="pRK-Kc-HiU"/>
                             <constraint firstItem="mmW-PE-qzq" firstAttribute="height" secondItem="ASS-Bk-CbW" secondAttribute="height" id="pZ1-ee-nmX"/>
                             <constraint firstItem="GQc-gR-zR2" firstAttribute="trailing" secondItem="TaT-3T-iF9" secondAttribute="trailing" constant="16" id="pqC-KX-SWK"/>
+                            <constraint firstItem="ETj-Pr-jv1" firstAttribute="trailing" secondItem="Hkl-XN-Xbc" secondAttribute="trailingMargin" id="sCJ-H0-LuX"/>
                             <constraint firstItem="NuM-w6-m9D" firstAttribute="height" secondItem="buZ-fv-gms" secondAttribute="height" id="ukQ-Jc-AaP"/>
+                            <constraint firstItem="NuM-w6-m9D" firstAttribute="top" secondItem="ETj-Pr-jv1" secondAttribute="bottom" constant="8" id="uqP-Xo-iHs"/>
                             <constraint firstItem="NuM-w6-m9D" firstAttribute="centerY" secondItem="buZ-fv-gms" secondAttribute="centerY" constant="-1.5" id="vtB-NC-M8w"/>
                             <constraint firstItem="ASS-Bk-CbW" firstAttribute="leading" secondItem="GQc-gR-zR2" secondAttribute="leading" constant="16" id="w1f-Cv-Xxj"/>
                             <constraint firstItem="GQc-gR-zR2" firstAttribute="trailing" secondItem="8u9-Zs-miO" secondAttribute="trailing" constant="16" id="xNu-eE-GoY"/>
@@ -289,6 +310,7 @@
                     </view>
                     <connections>
                         <outlet property="abvLabel" destination="mmW-PE-qzq" id="1gG-sG-0WQ"/>
+                        <outlet property="boothLocationLabel" destination="NNr-84-GJZ" id="feH-Ry-EwL"/>
                         <outlet property="breweryLabel" destination="8u9-Zs-miO" id="jPD-ns-HFZ"/>
                         <outlet property="cityLabel" destination="hUe-lA-CM6" id="91D-1z-IF4"/>
                         <outlet property="favoriteButton" destination="hk0-4B-NnA" id="f88-ed-vXD"/>
@@ -454,7 +476,7 @@
                                             <nil key="textColor"/>
                                             <nil key="highlightedColor"/>
                                         </label>
-                                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Beer" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="slC-kS-XZn" customClass="LightLabel" customModule="BeerfestMaster" customModuleProvider="target">
+                                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Beer" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" minimumScaleFactor="0.80000000000000004" translatesAutoresizingMaskIntoConstraints="NO" id="slC-kS-XZn" customClass="LightLabel" customModule="BeerfestMaster" customModuleProvider="target">
                                             <rect key="frame" x="8" y="23" width="268" height="22"/>
                                             <fontDescription key="fontDescription" type="system" pointSize="13"/>
                                             <color key="textColor" red="0.26666666666666666" green="0.26666666666666666" blue="0.26666666666666666" alpha="1" colorSpace="calibratedRGB"/>
@@ -476,7 +498,7 @@
                                             <color key="textColor" red="0.46666666666666667" green="0.46666666666666667" blue="0.46666666666666667" alpha="1" colorSpace="calibratedRGB"/>
                                             <nil key="highlightedColor"/>
                                         </label>
-                                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" text="Location" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="MQj-gA-zyH" customClass="LightLabel" customModule="BeerfestMaster" customModuleProvider="target">
+                                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" text="Location" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" minimumScaleFactor="0.80000000000000004" translatesAutoresizingMaskIntoConstraints="NO" id="MQj-gA-zyH" customClass="LightLabel" customModule="BeerfestMaster" customModuleProvider="target">
                                             <rect key="frame" x="76" y="7.5" width="200" height="14.5"/>
                                             <constraints>
                                                 <constraint firstAttribute="height" constant="14.5" id="HfT-67-aKC"/>

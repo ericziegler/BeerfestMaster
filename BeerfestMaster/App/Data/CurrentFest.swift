@@ -135,8 +135,7 @@ enum FestCity: String {
     case .pittsburgh:
       return "pittsburgh"
     case .rarebeerfest:
-      // TODO: EZ - Change from cincinnati to rare beer fest
-      return "cincinnati"
+      return "rarebeerfest"
     }
   }
   
@@ -160,7 +159,7 @@ enum FestCity: String {
   
   var hasBoothNumbers: Bool {
     switch self {
-    case .pittsburgh:
+    case .pittsburgh, .rarebeerfest:
       return true
     default:
       return false

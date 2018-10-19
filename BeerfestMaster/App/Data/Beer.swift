@@ -116,26 +116,27 @@ class Beer: NSObject, NSCoding {
       self.privateABV = props[3]
       self.city = props[4]
       self.state = props[5]
-      let isConnoisseurString = props[6]
-      if isConnoisseurString == "1" {
-        self.isConnoisseur = true
-      }
-      let isEarlyAdmissionString = props[7]
-      if isEarlyAdmissionString == "1" {
-        self.isEarlyAdmission = true
-      }
-      let isQuickPourString = props[8]
-      if isQuickPourString == "1" {
-        self.isQuickPour = true
-      }
-      if CurrentFest.hasBoothNumbers {
-        self.boothNumber = props[9]
-        self.thirdPartyStyle = props[10]
-        self.thirdPartyABV = props[11]
-      } else {
-        self.thirdPartyStyle = props[9]
-        self.thirdPartyABV = props[10]
-      }
+      self.boothNumber = props[6]
+//      let isConnoisseurString = props[6]
+//      if isConnoisseurString == "1" {
+//        self.isConnoisseur = true
+//      }
+//      let isEarlyAdmissionString = props[7]
+//      if isEarlyAdmissionString == "1" {
+//        self.isEarlyAdmission = true
+//      }
+//      let isQuickPourString = props[8]
+//      if isQuickPourString == "1" {
+//        self.isQuickPour = true
+//      }
+//      if CurrentFest.hasBoothNumbers {
+//        self.boothNumber = props[9]
+//        self.thirdPartyStyle = props[10]
+//        self.thirdPartyABV = props[11]
+//      } else {
+//        self.thirdPartyStyle = props[9]
+//        self.thirdPartyABV = props[10]
+//      }
     }
   }
   

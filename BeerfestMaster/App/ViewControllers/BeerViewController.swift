@@ -21,6 +21,7 @@ class BeerViewController: BaseViewController {
   @IBOutlet var abvLabel: LightLabel!
   @IBOutlet var breweryLabel: RegularLabel!
   @IBOutlet var cityLabel: LightLabel!
+  @IBOutlet var boothLocationLabel: RegularLabel!
 //  @IBOutlet var mapView: UIScrollView!
   @IBOutlet var favoriteButton: UIButton!
   @IBOutlet var tastedButton: UIButton!
@@ -72,7 +73,27 @@ class BeerViewController: BaseViewController {
     if beer.boothNumber.isEmpty || CurrentFest.hasBoothNumbers == false {
       self.breweryLabel.text = self.beer.brewery
     } else {
-      self.breweryLabel.text = "\(self.beer.brewery) (Booth \(self.beer.boothNumber))"
+      self.breweryLabel.text = self.beer.brewery
+      if CurrentFest == .rarebeerfest {                
+        var locationName = ""
+        var locationColor = UIColor.blue
+        
+        if beer.boothNumber == "0" {
+          locationName = "Located in the Taproom"
+          locationColor = UIColor.taproom
+        }
+        else if beer.boothNumber == "1" {
+          locationName = "Located in the Annex"
+          locationColor = UIColor.annex
+        } else {
+          locationName = "Located in the Event Space"
+          locationColor = UIColor.eventSpace
+        }
+        self.boothLocationLabel.textColor = locationColor
+        self.boothLocationLabel.text = locationName
+      } else {
+        self.breweryLabel.text = "\(self.beer.brewery) (Booth \(self.beer.boothNumber))"
+      }
     }
     self.abvLabel.text = beer.abv
     self.styleLabel.text = beer.style
