@@ -15,6 +15,7 @@ enum FestCity: String {
   case columbus
   case philadelphia
   case pittsburgh
+  case rarebeerfest
   
   var displayString: String {
     switch self {
@@ -28,6 +29,16 @@ enum FestCity: String {
       return "Big Philly"
     case .pittsburgh:
       return "Pittsburgh"
+    case .rarebeerfest:
+      return "RARE BEER FEST"
+    }
+  }
+  
+  var navigationTitle: String {
+    if self == .rarebeerfest {
+      return "RARE BEER FEST"
+    } else {
+      return "Beerfest"
     }
   }
   
@@ -43,6 +54,8 @@ enum FestCity: String {
       return UIColor(hex: 0x4ba435)
     case .pittsburgh:
       return UIColor(hex: 0xffcc00)
+    case .rarebeerfest:
+      return UIColor(hex: 0x367c91)
     }
   }
   
@@ -58,22 +71,36 @@ enum FestCity: String {
       return UIColor(hex: 0x64d946)
     case .pittsburgh:
       return UIColor(hex: 0xffcc00)
+    case .rarebeerfest:
+      return UIColor(hex: 0x367c91)
     }
   }
   
   var navBarColor: UIColor {
+    if CurrentFest == .rarebeerfest {
+      return UIColor(hex: 0xfbedd8)
+    }
     return UIColor(hex: 0x242424)
   }
   
   var navBarTitleColor: UIColor {
+    if CurrentFest == .rarebeerfest {
+      return UIColor(hex: 0xd24a3a)
+    }
     return UIColor(hex: 0xffffff)
   }
   
   var tabBarNormalColor: UIColor {
+    if CurrentFest == .rarebeerfest {
+      return UIColor(hex: 0xd24a3a, alpha: 0.75)
+    }
     return UIColor(hex: 0xffffff)
   }
   
   var preferredStatusBarStyle: UIStatusBarStyle {
+    if CurrentFest == .rarebeerfest {
+      return .default
+    }
     return .lightContent
   }
   
@@ -89,6 +116,9 @@ enum FestCity: String {
       return UIImage(named: "Map-Philadelphia")
     case .pittsburgh:
       return UIImage(named: "Map-Pittsburgh")
+    case .rarebeerfest:
+      // TODO: EZ - Change from cincinnati to rare beer fest
+      return UIImage(named: "Map-Cincinnati")
     }
   }
   
@@ -104,6 +134,9 @@ enum FestCity: String {
       return "philadelphia"
     case .pittsburgh:
       return "pittsburgh"
+    case .rarebeerfest:
+      // TODO: EZ - Change from cincinnati to rare beer fest
+      return "cincinnati"
     }
   }
   
@@ -119,6 +152,9 @@ enum FestCity: String {
       return "philadelphia-map"
     case .pittsburgh:
       return "pittsburgh-map"
+    case .rarebeerfest:
+      // TODO: EZ - Change from cincinnati to rare beer fest
+      return "cincinnati-map"
     }
   }
   
@@ -133,4 +169,4 @@ enum FestCity: String {
   
 }
 
-let CurrentFest = FestCity.cincinnati
+let CurrentFest = FestCity.rarebeerfest

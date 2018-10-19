@@ -41,6 +41,9 @@ class SearchViewController: BaseViewController {
   }
   
   private func setupNavBar() {
+    if CurrentFest == .rarebeerfest {
+      self.navigationItem.title = "SEARCH"
+    }
     // TODO: Future - Rethink how to implement the close button
 //    if let closeImage = UIImage(named: "Close")?.maskedImageWithColor(UIColor.accent) {
 //      let closeButton = UIButton(type: .custom)

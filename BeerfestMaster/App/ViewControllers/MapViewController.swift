@@ -29,6 +29,9 @@ class MapViewController: BaseViewController {
   override func viewDidLoad() {
     super.viewDidLoad()
     self.imageView.image = CurrentFest.map
+    if CurrentFest == .rarebeerfest {
+      self.navigationItem.title = "MAP"
+    }
   }
   
 }

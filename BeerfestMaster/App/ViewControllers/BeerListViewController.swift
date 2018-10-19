@@ -61,18 +61,36 @@ class BeerListViewController: BaseTableViewController {
   }
   
   private func setupNavBar() {
-//    if self.listType == .fullList {
-//      self.navigationItem.title = "Beerfest".uppercased()
-//      if let filterImage = UIImage(named: "Filter")?.maskedImageWithColor(UIColor.lightAccent) {
-//        let filterButton = UIButton(type: .custom)
-//        filterButton.addTarget(self, action: #selector(filterTapped(_:)), for: .touchUpInside)
-//        filterButton.setImage(filterImage, for: .normal)
-//        filterButton.frame = CGRect(x: 0, y: 0, width: filterImage.size.width, height: filterImage.size.height)
-//        let filterItem = UIBarButtonItem(customView: filterButton)
-//        
-//        self.navigationItem.rightBarButtonItems = [filterItem]
-//      }
-//    }
+    if CurrentFest == .rarebeerfest {
+      if self.listType == .fullList {
+        let navLabel = UILabel()
+        let navTitle = NSMutableAttributedString(string: "RARE BEER", attributes:[
+          NSAttributedStringKey.foregroundColor: CurrentFest.navBarTitleColor,
+          NSAttributedStringKey.font: UIFont.systemFont(ofSize: 20.0, weight: UIFont.Weight.bold)])
+        
+        navTitle.append(NSMutableAttributedString(string: " FEST", attributes:[
+          NSAttributedStringKey.font: UIFont.systemFont(ofSize: 20.0, weight: UIFont.Weight.bold),
+          NSAttributedStringKey.foregroundColor: CurrentFest.accentColor]))
+        
+        navLabel.attributedText = navTitle
+        self.navigationItem.titleView = navLabel
+      } else {
+        self.navigationItem.title = self.navigationItem.title?.uppercased()
+      }
+    } else {
+        if self.listType == .fullList {
+          self.navigationItem.title = "Beerfest".uppercased()
+          if let filterImage = UIImage(named: "Filter")?.maskedImageWithColor(UIColor.lightAccent) {
+            let filterButton = UIButton(type: .custom)
+            filterButton.addTarget(self, action: #selector(filterTapped(_:)), for: .touchUpInside)
+            filterButton.setImage(filterImage, for: .normal)
+            filterButton.frame = CGRect(x: 0, y: 0, width: filterImage.size.width, height: filterImage.size.height)
+            let filterItem = UIBarButtonItem(customView: filterButton)
+
+            self.navigationItem.rightBarButtonItems = [filterItem]
+          }
+        }
+    }
   }
   
   // MARK: Actions
