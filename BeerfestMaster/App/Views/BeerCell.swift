@@ -11,7 +11,7 @@ import UIKit
 // MARK: Constants
 
 let BeerCellId = "BeerCellId"
-let BeerListViewCellHeight: CGFloat = 66.0
+let BeerListViewCellHeight: CGFloat = 88.0
 
 // MARK: Protocol
 

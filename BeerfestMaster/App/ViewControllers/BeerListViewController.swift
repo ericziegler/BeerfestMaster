@@ -45,9 +45,7 @@ class BeerListViewController: BaseTableViewController {
     
     self.view.backgroundColor = UIColor.mainBackground
     self.tableView.sectionIndexBackgroundColor = UIColor.clear
-    self.tableView.sectionIndexColor = UIColor.accent
-    self.tableView.rowHeight = UITableViewAutomaticDimension
-    self.tableView.estimatedRowHeight = BeerListViewCellHeight
+    self.tableView.sectionIndexColor = UIColor.accent        
   }
     
   override func viewWillAppear(_ animated: Bool) {
@@ -139,11 +137,10 @@ class BeerListViewController: BaseTableViewController {
   }
   
   // MARK: UITableViewDelegate
-
-  // TODO: EZ - Remove
-//  override func tableView(_ tableView: UITableView, heightForRowAt indexPath: IndexPath) -> CGFloat {
-//    return BeerListViewCellHeight
-//  }
+  
+  override func tableView(_ tableView: UITableView, heightForRowAt indexPath: IndexPath) -> CGFloat {
+    return BeerListViewCellHeight
+  }
   
   override func sectionIndexTitles(for tableView: UITableView) -> [String]? {
     if (self.listType == .fullList) {
