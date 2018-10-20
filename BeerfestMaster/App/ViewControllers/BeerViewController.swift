@@ -96,6 +96,8 @@ class BeerViewController: BaseViewController {
         self.boothLocationLabel.textColor = locationColor
         self.boothLocationLabel.text = locationName
         self.mapImageView.image = map
+        self.mapImageView.layer.borderColor = UIColor.mediumText.cgColor
+        self.mapImageView.layer.borderWidth = 1        
       } else {
         self.breweryLabel.text = "\(self.beer.brewery) (Booth \(self.beer.boothNumber))"
       }

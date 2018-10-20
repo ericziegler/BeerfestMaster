@@ -55,7 +55,7 @@ enum FestCity: String {
     case .pittsburgh:
       return UIColor(hex: 0xffcc00)
     case .rarebeerfest:
-      return UIColor(hex: 0x367c91)
+      return UIColor(hex: 0xeb695e)
     }
   }
   
@@ -72,35 +72,36 @@ enum FestCity: String {
     case .pittsburgh:
       return UIColor(hex: 0xffcc00)
     case .rarebeerfest:
-      return UIColor(hex: 0x367c91)
+      return UIColor(hex: 0xa5e3f6)
     }
   }
   
   var navBarColor: UIColor {
     if CurrentFest == .rarebeerfest {
-      return UIColor(hex: 0xfbedd8)
+      return UIColor(hex: 0x3b5762)
     }
     return UIColor(hex: 0x242424)
   }
   
   var navBarTitleColor: UIColor {
-    if CurrentFest == .rarebeerfest {
-      return UIColor(hex: 0xd24a3a)
-    }
     return UIColor(hex: 0xffffff)
   }
   
   var tabBarNormalColor: UIColor {
     if CurrentFest == .rarebeerfest {
-      return UIColor(hex: 0xd24a3a, alpha: 0.75)
+      return UIColor.lightAccent
     }
     return UIColor(hex: 0xffffff)
   }
   
-  var preferredStatusBarStyle: UIStatusBarStyle {
+  var tabBarSelectedColor: UIColor {
     if CurrentFest == .rarebeerfest {
-      return .default
+      return UIColor.white
     }
+    return UIColor.lightAccent
+  }
+  
+  var preferredStatusBarStyle: UIStatusBarStyle {
     return .lightContent
   }
   
@@ -117,8 +118,7 @@ enum FestCity: String {
     case .pittsburgh:
       return UIImage(named: "Map-Pittsburgh")
     case .rarebeerfest:
-      // TODO: EZ - Change from cincinnati to rare beer fest
-      return UIImage(named: "Map-Cincinnati")
+      return nil
     }
   }
   

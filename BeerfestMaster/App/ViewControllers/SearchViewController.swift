@@ -36,6 +36,7 @@ class SearchViewController: BaseViewController {
     self.searchIcon.image = self.searchIcon.image?.maskedImageWithColor(UIColor(hex: 0xc7c7cd))
     self.searchTextField.becomeFirstResponder()
     self.setupNavBar()
+    self.searchTable.backgroundColor = UIColor.lightTan
     NotificationCenter.default.addObserver(self, selector: #selector(handleKeyboardWillShowNotification(_:)), name: NSNotification.Name.UIKeyboardWillShow, object: nil)
     NotificationCenter.default.addObserver(self, selector: #selector(handleKeyboardWillHideNotification(_:)), name: NSNotification.Name.UIKeyboardWillHide, object: nil)
   }

@@ -20,6 +20,8 @@
 		072013DB1FB5D22E00A61BE8 /* FiltersViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 072013DA1FB5D22E00A61BE8 /* FiltersViewController.swift */; };
 		072013DD1FB5D7D900A61BE8 /* SearchViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 072013DC1FB5D7D900A61BE8 /* SearchViewController.swift */; };
 		072C8E26217A088C00FA42B6 /* rarebeerfest.csv in Resources */ = {isa = PBXBuildFile; fileRef = 072C8E25217A088C00FA42B6 /* rarebeerfest.csv */; };
+		072C8E28217B36D800FA42B6 /* RareFilters.swift in Sources */ = {isa = PBXBuildFile; fileRef = 072C8E27217B36D800FA42B6 /* RareFilters.swift */; };
+		072C8E2A217B379200FA42B6 /* RareFiltersViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 072C8E29217B379200FA42B6 /* RareFiltersViewController.swift */; };
 		073FD31D1FB480E300DEE774 /* BeerListViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 073FD31C1FB480E300DEE774 /* BeerListViewController.swift */; };
 		073FD31F1FB483E200DEE774 /* BaseViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 073FD31E1FB483E200DEE774 /* BaseViewController.swift */; };
 		07482A67200FA8DD00432EE8 /* columbus-map.csv in Resources */ = {isa = PBXBuildFile; fileRef = 07482A66200FA8DD00432EE8 /* columbus-map.csv */; };
@@ -71,6 +73,8 @@
 		072013DA1FB5D22E00A61BE8 /* FiltersViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FiltersViewController.swift; sourceTree = "<group>"; };
 		072013DC1FB5D7D900A61BE8 /* SearchViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SearchViewController.swift; sourceTree = "<group>"; };
 		072C8E25217A088C00FA42B6 /* rarebeerfest.csv */ = {isa = PBXFileReference; lastKnownFileType = text; path = rarebeerfest.csv; sourceTree = "<group>"; };
+		072C8E27217B36D800FA42B6 /* RareFilters.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RareFilters.swift; sourceTree = "<group>"; };
+		072C8E29217B379200FA42B6 /* RareFiltersViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RareFiltersViewController.swift; sourceTree = "<group>"; };
 		073FD31C1FB480E300DEE774 /* BeerListViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BeerListViewController.swift; sourceTree = "<group>"; };
 		073FD31E1FB483E200DEE774 /* BaseViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BaseViewController.swift; sourceTree = "<group>"; };
 		07482A66200FA8DD00432EE8 /* columbus-map.csv */ = {isa = PBXFileReference; lastKnownFileType = text; path = "columbus-map.csv"; sourceTree = "<group>"; };
@@ -243,6 +247,7 @@
 				07F3BFE11FB3E6B400AAA0AB /* FavoriteBeerList.swift */,
 				07F3BFE31FB3E6BF00AAA0AB /* TastedBeerList.swift */,
 				07F3BFE51FB3E6D100AAA0AB /* Filters.swift */,
+				072C8E27217B36D800FA42B6 /* RareFilters.swift */,
 				07F3BFE71FB3E6D900AAA0AB /* SearchManager.swift */,
 				072013D01FB557B000A61BE8 /* Utility.swift */,
 				072013D21FB5BBFD00A61BE8 /* CurrentFest.swift */,
@@ -268,6 +273,7 @@
 				07F7CDB12028EAFF00624437 /* NoteViewController.swift */,
 				072013D61FB5C73B00A61BE8 /* MapViewController.swift */,
 				072013DA1FB5D22E00A61BE8 /* FiltersViewController.swift */,
+				072C8E29217B379200FA42B6 /* RareFiltersViewController.swift */,
 				072013DC1FB5D7D900A61BE8 /* SearchViewController.swift */,
 				07F3BFC11FB3E41000AAA0AB /* Main.storyboard */,
 			);
@@ -391,6 +397,7 @@
 				072013D51FB5C22100A61BE8 /* BaseNavigationController.swift in Sources */,
 				072013C41FB4F5BF00A61BE8 /* BaseTableViewController.swift in Sources */,
 				07F3BFEC1FB3EA6400AAA0AB /* BeerfestUI.swift in Sources */,
+				072C8E28217B36D800FA42B6 /* RareFilters.swift in Sources */,
 				072013C71FB4FEBF00A61BE8 /* BeerViewController.swift in Sources */,
 				072013D31FB5BBFD00A61BE8 /* CurrentFest.swift in Sources */,
 				0784F09E1FFDB2E5006686D0 /* MapLocationManager.swift in Sources */,
@@ -415,6 +422,7 @@
 				07F3BFE41FB3E6BF00AAA0AB /* TastedBeerList.swift in Sources */,
 				07F3BFBE1FB3E41000AAA0AB /* AppDelegate.swift in Sources */,
 				07955E411FC1DF8F000A14A9 /* FlurryWatchEmpty.m in Sources */,
+				072C8E2A217B379200FA42B6 /* RareFiltersViewController.swift in Sources */,
 				0796ED5C20E50223007383BD /* UIScreen+Beerfest.swift in Sources */,
 				072013C21FB4F2EC00A61BE8 /* UIImage+Beerfest.swift in Sources */,
 				07F3BFE01FB3E6A800AAA0AB /* AlphabeticalBeerList.swift in Sources */,

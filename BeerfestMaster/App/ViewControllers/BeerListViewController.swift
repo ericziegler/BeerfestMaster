@@ -45,7 +45,9 @@ class BeerListViewController: BaseTableViewController {
     
     self.view.backgroundColor = UIColor.mainBackground
     self.tableView.sectionIndexBackgroundColor = UIColor.clear
-    self.tableView.sectionIndexColor = UIColor.accent        
+    self.tableView.sectionIndexColor = UIColor.accent
+    self.tableView.sectionIndexBackgroundColor = UIColor.lightTan
+    self.tableView.backgroundColor = UIColor.lightTan
   }
     
   override func viewWillAppear(_ animated: Bool) {
@@ -75,25 +77,31 @@ class BeerListViewController: BaseTableViewController {
     } else {
         if self.listType == .fullList {
           self.navigationItem.title = "Beerfest".uppercased()
-          if let filterImage = UIImage(named: "Filter")?.maskedImageWithColor(UIColor.lightAccent) {
-            let filterButton = UIButton(type: .custom)
-            filterButton.addTarget(self, action: #selector(filterTapped(_:)), for: .touchUpInside)
-            filterButton.setImage(filterImage, for: .normal)
-            filterButton.frame = CGRect(x: 0, y: 0, width: filterImage.size.width, height: filterImage.size.height)
-            let filterItem = UIBarButtonItem(customView: filterButton)
-
-            self.navigationItem.rightBarButtonItems = [filterItem]
-          }
         }
+    }
+    if let filterImage = UIImage(named: "Filter")?.maskedImageWithColor(UIColor.lightAccent) {
+      let filterButton = UIButton(type: .custom)
+      filterButton.addTarget(self, action: #selector(filterTapped(_:)), for: .touchUpInside)
+      filterButton.setImage(filterImage, for: .normal)
+      filterButton.frame = CGRect(x: 0, y: 0, width: filterImage.size.width, height: filterImage.size.height)
+      let filterItem = UIBarButtonItem(customView: filterButton)
+      
+      self.navigationItem.rightBarButtonItems = [filterItem]
     }
   }
   
   // MARK: Actions
   
   @IBAction func filterTapped(_ sender: AnyObject) {
-    let filtersVC = FiltersViewController.createController()
-    let navController = BaseNavigationController(rootViewController: filtersVC)
-    self.present(navController, animated: true, completion: nil)
+    if CurrentFest == .rarebeerfest {
+      let filtersVC = RareFiltersViewController.createController()
+      let navController = BaseNavigationController(rootViewController: filtersVC)
+      self.present(navController, animated: true, completion: nil)
+    } else {
+      let filtersVC = FiltersViewController.createController()
+      let navController = BaseNavigationController(rootViewController: filtersVC)
+      self.present(navController, animated: true, completion: nil)
+    }
   }
  
   // MARK: UITableViewDataSource

@@ -50,7 +50,7 @@ class BeerCell: UITableViewCell {
   
   // MARK: Layout
   
-  func layoutFor(beer: Beer) {
+  func layoutFor(beer: Beer) {    
     self.beer = beer
     
     self.breweryLabel.text = beer.brewery

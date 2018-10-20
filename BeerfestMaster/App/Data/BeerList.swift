@@ -20,23 +20,44 @@ class BeerList {
   var filteredBeers: [Beer] {
     var result = [Beer]()
     var canAddBeer = true
-    let filters = Filters.shared
     
-    for curBeer in self.beers {
-      canAddBeer = true
-      
-      if (filters.showConnoisseur == false && curBeer.isConnoisseur) {
-        canAddBeer = false
+    if CurrentFest == .rarebeerfest {
+      let filters = RareFilters.shared
+      for curBeer in self.beers {
+        canAddBeer = true
+        
+        if (filters.showTaproom == false && curBeer.boothNumber == "0") {
+          canAddBeer = false
+        }
+        else if (filters.showAnnex == false && curBeer.boothNumber == "1") {
+          canAddBeer = false
+        }
+        else if (filters.showEventSpace == false && curBeer.boothNumber == "2") {
+          canAddBeer = false
+        }
+        
+        if (canAddBeer) {
+          result.append(curBeer)
+        }
       }
-      else if (filters.showEarlyAdmission == false && curBeer.isEarlyAdmission) {
-        canAddBeer = false
-      }
-      else if (filters.showQuickPour == false && curBeer.isQuickPour) {
-        canAddBeer = false
-      }
-      
-      if (canAddBeer) {
-        result.append(curBeer)
+    } else {
+      let filters = Filters.shared
+      for curBeer in self.beers {
+        canAddBeer = true
+        
+        if (filters.showConnoisseur == false && curBeer.isConnoisseur) {
+          canAddBeer = false
+        }
+        else if (filters.showEarlyAdmission == false && curBeer.isEarlyAdmission) {
+          canAddBeer = false
+        }
+        else if (filters.showQuickPour == false && curBeer.isQuickPour) {
+          canAddBeer = false
+        }
+        
+        if (canAddBeer) {
+          result.append(curBeer)
+        }
       }
     }
     
