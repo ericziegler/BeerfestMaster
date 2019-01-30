@@ -106,29 +106,45 @@ class Beer: NSObject, NSCoding {
   }
   
   func load(_ beerString: String) {
-    if beerString.count > 0 {     
+    if beerString.count > 0 {
       let props = beerString.components(separatedBy: ",")
       self.brewery = props[0].capitalized
       self.name = props[1].capitalized
-      self.privateStyle = props[2]
-      self.privateABV = props[3]
-      self.city = props[4]
-      self.state = props[5]
-      let isConnoisseurString = props[6]
-      if isConnoisseurString == "1" {
-        self.isConnoisseur = true
-      }
-      let isEarlyAdmissionString = props[7]
-      if isEarlyAdmissionString == "1" {
+      let specialty = props[2]
+      if specialty == "E" {
         self.isEarlyAdmission = true
       }
-      let isQuickPourString = props[8]
-      if isQuickPourString == "1" {
+      else if specialty == "Q" {
         self.isQuickPour = true
-      } 
-      self.thirdPartyStyle = props[10]
-      self.thirdPartyABV = props[11]
+      }
+      else if specialty == "C" {
+        self.isConnoisseur = true
+      }
     }
+    // TODO: EZ - Standard loading. put back
+//    if beerString.count > 0 {
+//      let props = beerString.components(separatedBy: ",")
+//      self.brewery = props[0].capitalized
+//      self.name = props[1].capitalized
+//      self.privateStyle = props[2]
+//      self.privateABV = props[3]
+//      self.city = props[4]
+//      self.state = props[5]
+//      let isConnoisseurString = props[6]
+//      if isConnoisseurString == "1" {
+//        self.isConnoisseur = true
+//      }
+//      let isEarlyAdmissionString = props[7]
+//      if isEarlyAdmissionString == "1" {
+//        self.isEarlyAdmission = true
+//      }
+//      let isQuickPourString = props[8]
+//      if isQuickPourString == "1" {
+//        self.isQuickPour = true
+//      }
+//      self.thirdPartyStyle = props[10]
+//      self.thirdPartyABV = props[11]
+//    }
   }
   
   // MARK: Analytics

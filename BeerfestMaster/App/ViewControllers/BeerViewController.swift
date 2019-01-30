@@ -17,16 +17,16 @@ class BeerViewController: BaseViewController {
   // MARK: Properties
   
   @IBOutlet var nameLabel: RegularLabel!
-  @IBOutlet var styleLabel: LightLabel!
-  @IBOutlet var abvLabel: LightLabel!
+//  @IBOutlet var styleLabel: LightLabel!
+//  @IBOutlet var abvLabel: LightLabel!
   @IBOutlet var breweryLabel: RegularLabel!
-  @IBOutlet var cityLabel: LightLabel!
+//  @IBOutlet var cityLabel: LightLabel!
   @IBOutlet var mapView: UIScrollView!
   @IBOutlet var favoriteButton: UIButton!
   @IBOutlet var tastedButton: UIButton!
   @IBOutlet var mapTapGestureRecognizer: UITapGestureRecognizer!
-  @IBOutlet var commentView: UIView!
-  @IBOutlet var commentLabel: UILabel!
+//  @IBOutlet var commentView: UIView!
+//  @IBOutlet var commentLabel: UILabel!
   
   var beer: Beer!
   var mapImageView: UIImageView!
@@ -55,23 +55,23 @@ class BeerViewController: BaseViewController {
   private func setupForBeer() {
     self.nameLabel.text = self.beer.name
     self.breweryLabel.text = self.beer.brewery
-    self.abvLabel.text = beer.abv
-    self.styleLabel.text = beer.style
-    self.cityLabel.text = beer.formattedLocation
+//    self.abvLabel.text = beer.abv
+//    self.styleLabel.text = beer.style
+//    self.cityLabel.text = beer.formattedLocation
     
     self.updateButtons()
   }
   
   private func styleCommentBar() {
-    self.commentView.layer.borderColor = UIColor.mediumText.cgColor
-    self.commentView.layer.borderWidth = 0.5
-    self.commentView.layer.cornerRadius = 6.0
-    
-    if beer.rating > -1 || !beer.note.isEmpty {
-      self.commentLabel.text = "Update your note about this beer."
-    } else {
-      self.commentLabel.text = "Make a note about this beer."
-    }
+//    self.commentView.layer.borderColor = UIColor.mediumText.cgColor
+//    self.commentView.layer.borderWidth = 0.5
+//    self.commentView.layer.cornerRadius = 6.0
+//    
+//    if beer.rating > -1 || !beer.note.isEmpty {
+//      self.commentLabel.text = "Update your note about this beer."
+//    } else {
+//      self.commentLabel.text = "Make a note about this beer."
+//    }
   }
   
   private func scrollToLocation() {
@@ -161,33 +161,36 @@ class BeerViewController: BaseViewController {
       }
       else if CurrentFest == .cincinnati {
         if location == "0" {
-          point = CGPoint(x: 33, y: 35)
+          point = CGPoint(x: 373, y: 10)
         }
         else if location == "1" {
-          point = CGPoint(x: 22, y: 374)
+          point = CGPoint(x: 679, y: 18.5)
         }
         else if location == "2" {
-          point = CGPoint(x: 24, y: 843)
+          point = CGPoint(x: 277, y: 276.5)
         }
         else if location == "3" {
-          point = CGPoint(x: 12, y: 1203)
+          point = CGPoint(x: 545.5, y: 465)
         }
         else if location == "4" {
-          point = CGPoint(x: 318, y: 21)
+          point = CGPoint(x: 584, y: 954)
         }
         else if location == "5" {
-          point = CGPoint(x: 324, y: 418)
+          point = CGPoint(x: 290, y: 955)
         }
         else if location == "6" {
-          point = CGPoint(x: 326, y: 800)
+          point = CGPoint(x: 285, y: 1340)
         }
         else if location == "7" {
-          point = CGPoint(x: 350, y: 1178)
+          point = CGPoint(x: 549.5, y: 1178)
         }
         else if location == "8" {
-          point = CGPoint(x: 380, y: 1245)
+          point = CGPoint(x: 868.5, y: 1318)
         }
-        let rect = CGRect(x: point.x, y: point.y, width: 275, height: 275)
+        else if location == "9" {
+          point = CGPoint(x: 869, y: 1483)
+        }
+        let rect = CGRect(x: point.x, y: point.y, width: 250, height: 250)
         self.mapView.zoom(to: rect, animated: false)
       }
       else if CurrentFest == .pittsburgh {

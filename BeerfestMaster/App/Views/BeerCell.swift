@@ -26,8 +26,8 @@ class BeerCell: UITableViewCell {
   
   @IBOutlet weak var breweryLabel: RegularLabel!
   @IBOutlet weak var nameLabel: LightLabel!
-  @IBOutlet weak var styleLabel: LightLabel!
-  @IBOutlet weak var locationLabel: LightLabel!
+//  @IBOutlet weak var styleLabel: LightLabel!
+//  @IBOutlet weak var locationLabel: LightLabel!
   @IBOutlet weak var tastedButton: UIButton!
   @IBOutlet weak var favoriteButton: UIButton!
   
@@ -54,10 +54,11 @@ class BeerCell: UITableViewCell {
     self.beer = beer
     
     self.breweryLabel.text = beer.brewery
-    self.nameLabel.text = beer.name
+    let beerName = (beer.name.lowercased() == "tba") ? "TBA" : beer.name
+    self.nameLabel.text = beerName
     
-    self.styleLabel.text = String(format: "%@ • %@", beer.style, beer.abv)
-    self.locationLabel.text = beer.formattedLocation
+//    self.styleLabel.text = String(format: "%@ • %@", beer.style, beer.abv)
+//    self.locationLabel.text = beer.formattedLocation
     
     if (beer.isFavorited) {
       self.favoriteButton.setImage(UIImage(named: "FavoriteFilled"), for: .normal)

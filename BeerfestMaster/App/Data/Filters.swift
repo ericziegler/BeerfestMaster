@@ -35,9 +35,15 @@ class Filters {
   
   func loadFilters() {
     let defaults = UserDefaults.standard
-    self.showEarlyAdmission = defaults.bool(forKey: ShowEarlyAdmissionCacheKey)
-    self.showConnoisseur = defaults.bool(forKey: ShowConnoisseurCacheKey)
-    self.showQuickPour = defaults.bool(forKey: ShowQuickPourCacheKey)
+    if let _ = defaults.object(forKey: ShowEarlyAdmissionCacheKey) {
+      self.showEarlyAdmission = defaults.bool(forKey: ShowEarlyAdmissionCacheKey)
+    }
+    if let _ = defaults.object(forKey: ShowConnoisseurCacheKey) {
+      self.showConnoisseur = defaults.bool(forKey: ShowConnoisseurCacheKey)
+    }
+    if let _ = defaults.object(forKey: ShowQuickPourCacheKey) {
+      self.showQuickPour = defaults.bool(forKey: ShowQuickPourCacheKey)
+    }
   }
   
   func saveFilters() {
