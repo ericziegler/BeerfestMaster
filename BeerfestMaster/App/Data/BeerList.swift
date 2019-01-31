@@ -54,10 +54,15 @@ class BeerList {
   // MARK: Loading
   
   func loadBeers() {
-    if self.loadBeersFromCache() == false {
-      self.loadBeersFromCSV()
-      // TODO: EZ - Comment in the caching of beer data
-      //self.saveBeersToCache()
+    if versionUpToDate() == true {
+        if self.loadBeersFromCache() == false {
+          self.loadBeersFromCSV()
+          // TODO: EZ - Comment in the caching of beer data
+          //self.saveBeersToCache()
+        }
+    } else {
+        self.loadBeersFromCSV()
+        self.saveBeersToCache()
     }
   }
   
